@@ -2,13 +2,12 @@ package ua.epam.mishchenko.ticketbooking.model.impl;
 
 import ua.epam.mishchenko.ticketbooking.model.Event;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
 
-public class EventImpl implements Event {
+import static ua.epam.mishchenko.ticketbooking.utils.Constants.DATE_FORMATTER;
 
-    private static final SimpleDateFormat DATE_FORMATTER = new SimpleDateFormat("dd-MM-yyyy HH:mm");
+public class EventImpl implements Event {
 
     private long id;
 
