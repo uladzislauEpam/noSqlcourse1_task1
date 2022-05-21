@@ -42,8 +42,14 @@ public class TicketDAOImpl implements TicketDAO {
 
     private Ticket parseFromStringToTicket(String stringTicket) {
         final String delimiterBetweenFields = ", ";
+        stringTicket = removeBrackets(stringTicket);
         String[] stringFields = stringTicket.split(delimiterBetweenFields);
         return createTicketFromStringFields(stringFields);
+    }
+
+    private String removeBrackets(String text) {
+        text = text.replace("{", "");
+        return text.replace("}", "");
     }
 
     private Ticket createTicketFromStringFields(String[] stringFields) {

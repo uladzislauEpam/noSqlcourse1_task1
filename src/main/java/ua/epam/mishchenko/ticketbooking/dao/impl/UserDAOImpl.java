@@ -40,8 +40,14 @@ public class UserDAOImpl implements UserDAO {
 
     private User parseFromStringToUser(String stringUser) {
         final String delimiterBetweenFields = ",";
+        stringUser = removeBrackets(stringUser);
         String[] stringFields = stringUser.split(delimiterBetweenFields);
         return createUserFromStringFields(stringFields);
+    }
+
+    private String removeBrackets(String text) {
+        text = text.replace("{", "");
+        return text.replace("}", "");
     }
 
     private User createUserFromStringFields(String[] stringFields) {

@@ -45,8 +45,14 @@ public class EventDAOImpl implements EventDAO {
 
     private Event parseFromStringToEvent(String stringEvent) {
         final String delimiterBetweenFields = ",";
+        stringEvent = removeBrackets(stringEvent);
         String[] stringFields = stringEvent.split(delimiterBetweenFields);
         return createEventFromStringFields(stringFields);
+    }
+
+    private String removeBrackets(String text) {
+        text = text.replace("{", "");
+        return text.replace("}", "");
     }
 
     private Event createEventFromStringFields(String[] stringFields) {
