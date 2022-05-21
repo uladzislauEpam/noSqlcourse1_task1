@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+
+    <context:property-placeholder location="classpath:storage.properties"/>
+
+    <bean id="eventDAO" class="ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl">
+        <property name="storage" ref="storage"/>
+    </bean>
+
+    <bean id="ticketDAO" class="ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl">
+        <property name="storage" ref="storage"/>
+    </bean>
+
+    <bean id="userDAO" class="ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl">
+        <property name="storage" ref="storage"/>
+    </bean>
+
+    <bean id="eventService" class="ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl" autowire="byName">
+    </bean>
+
+    <bean id="ticketService" class="ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl" autowire="byName">
+    </bean>
+
+    <bean id="userService" class="ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl" autowire="byName">
+    </bean>
+
+    <bean id="bookingFacade" class="ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl">
+        <constructor-arg ref="eventService"/>
+        <constructor-arg ref="ticketService"/>
+        <constructor-arg ref="userService"/>
+    </bean>
+
+    <bean id="storage" class="ua.epam.mishchenko.ticketbooking.db.Storage">
+    </bean>
+
+    <bean id="storageBeanPostProcessor"
+          class="ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor">
+        <property name="filePath" value="${storage.path}"/>
+    </bean>
+
+</beans>
