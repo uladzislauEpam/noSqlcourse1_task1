@@ -10,16 +10,15 @@ import ua.epam.mishchenko.ticketbooking.model.Event;
 import ua.epam.mishchenko.ticketbooking.model.impl.EventImpl;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class EventDAOImpl implements EventDAO {
+import static ua.epam.mishchenko.ticketbooking.utils.Constants.DATE_FORMATTER;
 
-    private static final SimpleDateFormat DATE_FORMATTER = new SimpleDateFormat("dd-MM-yyyy HH:mm");
+public class EventDAOImpl implements EventDAO {
 
     private static final String NAMESPACE = "event:";
 

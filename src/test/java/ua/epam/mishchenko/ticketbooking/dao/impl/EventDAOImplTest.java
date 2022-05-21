@@ -11,7 +11,6 @@ import ua.epam.mishchenko.ticketbooking.model.Event;
 import ua.epam.mishchenko.ticketbooking.model.impl.EventImpl;
 
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.HashMap;
@@ -23,11 +22,10 @@ import static org.junit.Assert.assertTrue;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
+import static ua.epam.mishchenko.ticketbooking.utils.Constants.DATE_FORMATTER;
 
 @RunWith(MockitoJUnitRunner.class)
 public class EventDAOImplTest {
-
-    private static final SimpleDateFormat DATE_FORMATTER = new SimpleDateFormat("dd-MM-yyyy HH:mm");
 
     private EventDAOImpl eventDAO;
 
