@@ -4,17 +4,21 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
+import org.mockito.MockitoAnnotations;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+import org.springframework.test.context.junit4.SpringRunner;
 import ua.epam.mishchenko.ticketbooking.db.Storage;
 import ua.epam.mishchenko.ticketbooking.exception.DbException;
 import ua.epam.mishchenko.ticketbooking.model.Event;
 import ua.epam.mishchenko.ticketbooking.model.impl.EventImpl;
+import ua.epam.mishchenko.ticketbooking.postprocessor.FileReader;
 
 import java.text.ParseException;
 import java.util.Arrays;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertThrows;
@@ -23,9 +27,9 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static ua.epam.mishchenko.ticketbooking.utils.Constants.DATE_FORMATTER;
-import static ua.epam.mishchenko.ticketbooking.utils.StorageUtils.initInMemoryStorage;
 
-@RunWith(MockitoJUnitRunner.class)
+@RunWith(SpringRunner.class)
+@ContextConfiguration({"classpath:/test-applicationContext.xml"})
 public class EventDAOImplTest {
 
     private EventDAOImpl eventDAO;
@@ -33,9 +37,13 @@ public class EventDAOImplTest {
     @Mock
     private Storage storage;
 
+    @Autowired
+    private FileReader fileReader;
+
     @Before
     public void setUp() {
-        HashMap<String, String> inMemoryStorage = initInMemoryStorage();
+        MockitoAnnotations.openMocks(this);
+        Map<String, String> inMemoryStorage = fileReader.readPreparedDataFromFile();
         storage.setInMemoryStorage(inMemoryStorage);
         eventDAO = new EventDAOImpl();
         eventDAO.setStorage(storage);
