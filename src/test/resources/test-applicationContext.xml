@@ -7,8 +7,6 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
 
-    <context:property-placeholder location="classpath:test-storage.properties"/>
-
     <bean id="bookingFacadeTest" class="ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImplTest">
     </bean>
 
@@ -41,4 +39,5 @@
 
     <bean id="storage" class="ua.epam.mishchenko.ticketbooking.db.Storage">
     </bean>
+
 </beans>
