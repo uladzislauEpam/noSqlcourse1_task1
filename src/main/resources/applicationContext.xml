@@ -41,7 +41,11 @@
 
     <bean id="storageBeanPostProcessor"
           class="ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor">
-        <property name="filePath" value="${storage.path}"/>
+        <property name="fileReader" ref="fileReader"/>
+    </bean>
+
+    <bean id="fileReader" class="ua.epam.mishchenko.ticketbooking.postprocessor.FileReader">
+        <property name="file" value="${storage.path}"/>
     </bean>
 
 </beans>
