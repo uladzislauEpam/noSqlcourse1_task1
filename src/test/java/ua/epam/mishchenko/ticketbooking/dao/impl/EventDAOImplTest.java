@@ -164,16 +164,6 @@ public class EventDAOImplTest {
     }
 
     @Test
-    public void insertWithNullEventShouldThrowException() {
-        DbException dbException = assertThrows(DbException.class,
-                () -> eventDAO.insert(null));
-
-        verify(storage, times(0)).getInMemoryStorage();
-
-        assertEquals("The event can not equal a null", dbException.getMessage());
-    }
-
-    @Test
     public void insertWithExistsTitleAndDayShouldThrowException() {
         DbException dbException = assertThrows(DbException.class,
                 () -> eventDAO.insert(new EventImpl("Second event", DATE_FORMATTER.parse("15-05-2022 21:00"))));
@@ -203,16 +193,6 @@ public class EventDAOImplTest {
                 () -> eventDAO.update(event));
 
         assertEquals("These title and day are already exists for one event", dbException.getMessage());
-    }
-
-    @Test
-    public void updateWithNullEventShouldThrowException() {
-        DbException dbException = assertThrows(DbException.class,
-                () -> eventDAO.update(null));
-
-        verify(storage, times(0)).getInMemoryStorage();
-
-        assertEquals("The event can not equal a null", dbException.getMessage());
     }
 
     @Test

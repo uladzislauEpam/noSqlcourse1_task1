@@ -102,7 +102,7 @@ public class EventDAOImpl implements EventDAO {
     }
 
     private List<Event> getAllEventsFromStorageByIds() {
-        log.debug("Getting all tickets from storage by ids with \"event\" namespace");
+        log.debug("Getting all events from storage by ids with \"event\" namespace");
         List<Event> listOfAllEvents = new ArrayList<>();
         List<String> idsOfEvents = getIdsOfEvents();
         for (String id : idsOfEvents) {
@@ -242,10 +242,6 @@ public class EventDAOImpl implements EventDAO {
     public Event insert(Event event) {
         log.info("Start inserting of the event: {}", event);
 
-        if (event == null) {
-            log.warn("The event can not be a null");
-            throw new DbException("The event can not equal a null");
-        }
         if (existsByTitleAndDay(event)) {
             log.warn("These title and day are already exists for one event");
             throw new DbException("These title and day are already exists for one event");
@@ -291,10 +287,6 @@ public class EventDAOImpl implements EventDAO {
     public Event update(Event event) {
         log.info("Start updating of the event: {}", event);
 
-        if (event == null) {
-            log.warn("The event can not be a null");
-            throw new DbException("The event can not equal a null");
-        }
         if (!isEventExists(event.getId())) {
             log.warn("The event with id {} does not exist", event.getId());
             throw new DbException("The event with id " + event.getId() + " does not exist");

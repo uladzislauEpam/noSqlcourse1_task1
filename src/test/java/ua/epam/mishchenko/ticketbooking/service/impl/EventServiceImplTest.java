@@ -87,6 +87,13 @@ public class EventServiceImplTest {
     }
 
     @Test
+    public void getEventsByTitleWithEmptyTitleShouldReturnNull() {
+        List<Event> actualEventsByTitle = eventService.getEventsByTitle("", 1, 2);
+
+        assertNull(actualEventsByTitle);
+    }
+
+    @Test
     public void getEventsForDayWithExistsDayShouldBeOk() throws ParseException {
         Date day = DATE_FORMATTER.parse("15-05-2022 21:00");
         List<Event> expectedEvents = Arrays.asList(
@@ -113,10 +120,17 @@ public class EventServiceImplTest {
     }
 
     @Test
+    public void getEventsForDayWithNullDayShouldReturnNull() {
+        List<Event> actualEventsForDay = eventService.getEventsForDay(null, 1, 2);
+
+        assertNull(actualEventsForDay);
+    }
+
+    @Test
     public void createEventWithExceptionShouldReturnNull() {
         when(eventDAO.insert(any())).thenThrow(DbException.class);
 
-        Event actualEvent = eventService.createEvent(null);
+        Event actualEvent = eventService.createEvent(new EventImpl());
 
         assertNull(actualEvent);
     }
@@ -130,6 +144,13 @@ public class EventServiceImplTest {
         Event actualEvent = eventService.createEvent(expectedEvent);
 
         assertEquals(expectedEvent, actualEvent);
+    }
+
+    @Test
+    public void createEventWithNullEventShouldReturnNull() {
+        Event actualEvent = eventService.createEvent(null);
+
+        assertNull(actualEvent);
     }
 
     @Test
@@ -147,6 +168,13 @@ public class EventServiceImplTest {
     public void updateEventWithExceptionShouldReturnNull() {
         when(eventDAO.update(any())).thenThrow(DbException.class);
 
+        Event actualEvent = eventService.updateEvent(new EventImpl());
+
+        assertNull(actualEvent);
+    }
+
+    @Test
+    public void updateEventWithNullEventShouldReturnNull() {
         Event actualEvent = eventService.updateEvent(null);
 
         assertNull(actualEvent);
