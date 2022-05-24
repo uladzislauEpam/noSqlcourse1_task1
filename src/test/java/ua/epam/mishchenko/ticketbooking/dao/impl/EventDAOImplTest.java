@@ -174,11 +174,11 @@ public class EventDAOImplTest {
     }
 
     @Test
-    public void insertWithExistsTitleAndEmailShouldThrowException() {
+    public void insertWithExistsTitleAndDayShouldThrowException() {
         DbException dbException = assertThrows(DbException.class,
                 () -> eventDAO.insert(new EventImpl("Second event", DATE_FORMATTER.parse("15-05-2022 21:00"))));
 
-        assertEquals("This email already exists", dbException.getMessage());
+        assertEquals("These title and day are already exists for one event", dbException.getMessage());
     }
 
     @Test
@@ -189,6 +189,20 @@ public class EventDAOImplTest {
         Event actualEvent = eventDAO.update(expectedEvent);
 
         assertEquals(expectedEvent, actualEvent);
+    }
+
+    @Test
+    public void updateWithExistsEventAndExistTitleAndDayShouldBeOk() throws ParseException {
+        String newTitle = "Second event";
+        Date newDay = DATE_FORMATTER.parse("15-05-2022 21:00");
+        Event event = eventDAO.getById(1L);
+        event.setTitle(newTitle);
+        event.setDate(newDay);
+
+        DbException dbException = assertThrows(DbException.class,
+                () -> eventDAO.update(event));
+
+        assertEquals("These title and day are already exists for one event", dbException.getMessage());
     }
 
     @Test
