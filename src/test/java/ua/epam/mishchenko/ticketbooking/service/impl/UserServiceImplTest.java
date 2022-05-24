@@ -79,6 +79,13 @@ public class UserServiceImplTest {
     }
 
     @Test
+    public void getUserByEmailWithEmptyEmailShouldReturnNull() {
+        User actualUserByEmail = userService.getUserByEmail("");
+
+        assertNull(actualUserByEmail);
+    }
+
+    @Test
     public void getUserByNameWithExistsNameShouldBeOk() {
         List<User> expectedUsersByName = Arrays.asList(
                 new UserImpl(3L, "Max", "max@gmail.com"),
@@ -99,6 +106,13 @@ public class UserServiceImplTest {
         List<User> actualListOfUsers = userService.getUsersByName("Not exists", 1, 1);
 
         assertNull(actualListOfUsers);
+    }
+
+    @Test
+    public void getUserByNameWithEmptyNameShouldReturnNull() {
+        List<User> actualUsersByName = userService.getUsersByName("", 1, 1);
+
+        assertNull(actualUsersByName);
     }
 
     @Test
@@ -136,7 +150,7 @@ public class UserServiceImplTest {
     public void updateUserWithExceptionShouldThrowException() {
         when(userDAO.update(any())).thenThrow(DbException.class);
 
-        User actualUser = userService.updateUser(null);
+        User actualUser = userService.updateUser(new UserImpl());
 
         assertNull(actualUser);
     }

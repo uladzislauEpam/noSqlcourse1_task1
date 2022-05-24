@@ -209,10 +209,6 @@ public class UserDAOImpl implements UserDAO {
     public User insert(User user) {
         log.info("Start inserting of the user: {}", user);
 
-        if (user == null) {
-            log.warn("The user can not be a null");
-            throw new DbException("The user can not equal a null");
-        }
         if (existsUserByEmail(user)) {
             log.debug("This email already exists");
             throw new DbException("This email already exists");
@@ -258,10 +254,6 @@ public class UserDAOImpl implements UserDAO {
     public User update(User user) {
         log.info("Start updating of the user: {}", user);
 
-        if (user == null) {
-            log.warn("The user can not be a null");
-            throw new DbException("The user can not equal a null");
-        }
         if (!isUserExists(user.getId())) {
             log.warn("The user with id {} does not exist", user.getId());
             throw new DbException("The user with id " + user.getId() + " does not exist");

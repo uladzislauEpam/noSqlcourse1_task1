@@ -131,16 +131,6 @@ public class UserDAOImplTest {
     }
 
     @Test
-    public void insertWithNullUserShouldThrowException() {
-        DbException dbException = assertThrows(DbException.class,
-                () -> userDAO.insert(null));
-
-        verify(storage, times(0)).getInMemoryStorage();
-
-        assertEquals("The user can not equal a null", dbException.getMessage());
-    }
-
-    @Test
     public void insertWithExistsEmailShouldThrowException() {
         DbException dbException = assertThrows(DbException.class,
                 () -> userDAO.insert(new UserImpl("Max", "max@gmail.com")));
@@ -167,16 +157,6 @@ public class UserDAOImplTest {
                 () -> userDAO.update(user));
 
         assertEquals("This email already exists", dbException.getMessage());
-    }
-
-    @Test
-    public void updateWithNullUserShouldThrowException() {
-        DbException dbException = assertThrows(DbException.class,
-                () -> userDAO.update(null));
-
-        verify(storage, times(0)).getInMemoryStorage();
-
-        assertEquals("The user can not equal a null", dbException.getMessage());
     }
 
     @Test
