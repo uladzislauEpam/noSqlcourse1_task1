@@ -159,6 +159,17 @@ public class UserDAOImplTest {
     }
 
     @Test
+    public void updateWithExistsUserAndExistsEmailShouldBeOk() {
+        String newEmail = "alan@gmail.com";
+        User user = userDAO.getById(2L);
+        user.setEmail(newEmail);
+        DbException dbException = assertThrows(DbException.class,
+                () -> userDAO.update(user));
+
+        assertEquals("This email already exists", dbException.getMessage());
+    }
+
+    @Test
     public void updateWithNullUserShouldThrowException() {
         DbException dbException = assertThrows(DbException.class,
                 () -> userDAO.update(null));
