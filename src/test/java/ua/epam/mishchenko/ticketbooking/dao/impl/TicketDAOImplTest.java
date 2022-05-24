@@ -173,16 +173,6 @@ public class TicketDAOImplTest {
     }
 
     @Test
-    public void insertWithNullTicketShouldThrowException() {
-        DbException dbException = assertThrows(DbException.class,
-                () -> ticketDAO.insert(null));
-
-        verify(storage, times(0)).getInMemoryStorage();
-
-        assertEquals("The ticket can not equal a null", dbException.getMessage());
-    }
-
-    @Test
     public void updateWithExistsTicketShouldBeOk() {
         Ticket expectedTicket = ticketDAO.getById(5L);
         expectedTicket.setCategory(Ticket.Category.STANDARD);

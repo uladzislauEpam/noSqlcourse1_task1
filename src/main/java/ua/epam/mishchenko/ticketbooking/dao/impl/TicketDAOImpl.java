@@ -120,10 +120,6 @@ public class TicketDAOImpl implements TicketDAO {
             log.warn("The page size and page num must be greater than 0");
             throw new DbException("The page size and page num must be greater than 0");
         }
-        if (user == null) {
-            log.warn("The user can not be a null");
-            throw new DbException("The user can not be a null");
-        }
 
         List<String> stringListOfTicketsByUser = getListOfStringTicketsByUser(user);
         if (stringListOfTicketsByUser.isEmpty()) {
@@ -191,10 +187,6 @@ public class TicketDAOImpl implements TicketDAO {
             log.warn("The page size and page num must be greater than 0");
             throw new DbException("The page size and page num must be greater than 0");
         }
-        if (event == null) {
-            log.warn("The event can not be a null");
-            throw new DbException("The event can not be a null");
-        }
 
         List<String> stringListOfTicketsByEvent = getListOfStringTicketsByEvent(event);
         if (stringListOfTicketsByEvent.isEmpty()) {
@@ -240,10 +232,6 @@ public class TicketDAOImpl implements TicketDAO {
     public Ticket insert(Ticket ticket) {
         log.info("Start inserting of the ticket: {}", ticket);
 
-        if (ticket == null) {
-            log.warn("The ticket can not be a null");
-            throw new DbException("The ticket can not equal a null");
-        }
         if (isTicketBooked(ticket)) {
             log.warn("This ticket already booked");
             throw new DbException("This ticket already booked");

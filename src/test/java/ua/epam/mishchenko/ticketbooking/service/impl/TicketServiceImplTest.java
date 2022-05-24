@@ -79,11 +79,16 @@ public class TicketServiceImplTest {
 
     @Test
     public void getBookedTicketsByUserWithExceptionShouldReturnNull() {
-        when(ticketDAO.getAllByUser(any(), anyInt(), anyInt())).thenThrow(DbException.class);
-
         List<Ticket> actualListOfTicketsByUser = ticketService.getBookedTickets((User) null, 2, 1);
 
         assertNull(actualListOfTicketsByUser);
+    }
+
+    @Test
+    public void getBookedTicketsByUserWithNullUserShouldReturnNull() {
+        List<Ticket> actualTicketsByUser = ticketService.getBookedTickets((User) null, 1, 2);
+
+        assertNull(actualTicketsByUser);
     }
 
     @Test
@@ -103,11 +108,16 @@ public class TicketServiceImplTest {
 
     @Test
     public void getBookedTicketsByEventWithExceptionShouldReturnNull() {
-        when(ticketDAO.getAllByEvent(any(), anyInt(), anyInt())).thenThrow(DbException.class);
-
         List<Ticket> actualListOfTicketsByEvent = ticketService.getBookedTickets((Event) null, 2, 1);
 
         assertNull(actualListOfTicketsByEvent);
+    }
+
+    @Test
+    public void getBookedTicketsWithNullEventShouldReturnNull() {
+        List<Ticket> actualTicketsByEvent = ticketService.getBookedTickets((Event) null, 1, 2);
+
+        assertNull(actualTicketsByEvent);
     }
 
     @Test
