@@ -34,42 +34,55 @@ public class EventsController {
     }
 
     @GetMapping("/{id}")
-    public String getEventById(@PathVariable long id, Model model) {
+    public String showEventById(@PathVariable long id, Model model) {
+        log.info("Showing event by id: {}", id);
         Event eventById = bookingFacade.getEventById(id);
-        if (eventById == null) {
-            model.addAttribute("message", "Can not to get an event by id");
+        if (isNull(eventById)) {
+            model.addAttribute("message", "Can not to get an event by id: " + id);
+            log.info("Can not to get event by id: {}", id);
         } else {
             model.addAttribute("event", eventById);
+            log.info("Event by id: {} successfully found", id);
         }
         return "event";
     }
 
+    private boolean isNull(Object object) {
+        return object == null;
+    }
+
     @GetMapping("/title/{title}")
-    public String getEventsByTitle(@PathVariable String title,
-                                   @RequestParam int pageSize,
-                                   @RequestParam int pageNum,
-                                   Model model) {
+    public String showEventsByTitle(@PathVariable String title,
+                                    @RequestParam int pageSize,
+                                    @RequestParam int pageNum,
+                                    Model model) {
+        log.info("Showing events by title: {}", title);
         List<Event> eventsByTitle = bookingFacade.getEventsByTitle(title, pageSize, pageNum);
-        if (eventsByTitle == null) {
-            model.addAttribute("message", "Can not to get events by title");
+        if (isNull(eventsByTitle)) {
+            model.addAttribute("message", "Can not to get events by title: " + title);
+            log.info("Can not to get events by title: {}", title);
         } else {
             model.addAttribute("events", eventsByTitle);
+            log.info("Events by title '{}' successfully found", title);
         }
         return "events";
     }
 
     @GetMapping("/day/{day}")
-    public String getEventsForDay(@PathVariable String day,
-                                  @RequestParam int pageSize,
-                                  @RequestParam int pageNum,
-                                  Model model) {
+    public String showEventsForDay(@PathVariable String day,
+                                   @RequestParam int pageSize,
+                                   @RequestParam int pageNum,
+                                   Model model) {
+        log.info("Showing events for day: {}", day);
         try {
             Date date = parseFromStringToDate(day);
             List<Event> eventsForDay = bookingFacade.getEventsForDay(date, pageSize, pageNum);
-            if (eventsForDay == null) {
-                model.addAttribute("message", "Can not to get events for day");
+            if (isNull(eventsForDay)) {
+                model.addAttribute("message", "Can not to get events for day: " + day);
+                log.info("Can not to get events for day: {}", day);
             } else {
                 model.addAttribute("events", eventsForDay);
+                log.info("Events for day: {} successfully found", day);
             }
         } catch (RuntimeException e) {
             log.warn("Can not to get events for day={}", day, e);
@@ -79,13 +92,19 @@ public class EventsController {
     }
 
     @PostMapping
-    public String createEvent(@RequestParam String title, @RequestParam String day, Model model) {
+    public String createEvent(@RequestParam String title,
+                              @RequestParam String day,
+                              Model model) {
+        log.info("Creating an event with title={} and day={}", title, day);
         try {
             Event event = bookingFacade.createEvent(createEventEntityWithoutId(title, day));
-            if (event == null) {
+            if (isNull(event)) {
                 model.addAttribute("Can not to create an event");
+                log.info("Can not to create an event");
+            } else {
+                model.addAttribute("event", event);
+                log.info("The event successfully created");
             }
-            model.addAttribute("event", event);
         } catch (RuntimeException e) {
             log.error("Can not to create entity with title={}, day={}", title, day, e);
             model.addAttribute("message", "Can not to parse string " + day + " to date object");
@@ -114,12 +133,16 @@ public class EventsController {
                               @RequestParam String title,
                               @RequestParam String day,
                               Model model) {
+        log.info("Updating an event with id: {}", id);
         try {
             Event event = bookingFacade.updateEvent(createEventEntityWithId(id, title, day));
-            if (event == null) {
+            if (isNull(event)) {
                 model.addAttribute("Can not to update an event with id: " + id);
+                log.info("Can not to update an event with id: {}", id);
+            } else {
+                model.addAttribute("event", event);
+                log.info("The event with id: {} successfully updated", id);
             }
-            model.addAttribute("event", event);
         } catch (RuntimeException e) {
             log.error("Can not to update entity with id={}, title={}, day={}", id, title, day, e);
             model.addAttribute("message", "Can not to parse string " + day + " to date object");
@@ -135,11 +158,14 @@ public class EventsController {
 
     @DeleteMapping("/{id}")
     public String deleteEvent(@PathVariable long id, Model model) {
+        log.info("Deleting an event with id: {}", id);
         boolean isEventDeleted = bookingFacade.deleteEvent(id);
         if (isEventDeleted) {
             model.addAttribute("message", "The event with id " + id + " successfully deleted");
+            log.info("The event with id: {} successfully deleted", id);
         } else {
             model.addAttribute("message", "The event with id " + id + " not deleted");
+            log.info("The event with id: {} not deleted", id);
         }
         return "event";
     }
