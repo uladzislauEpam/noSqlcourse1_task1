@@ -47,8 +47,8 @@ public class EventsController {
         return "event";
     }
 
-    private boolean isNull(Object object) {
-        return object == null;
+    private boolean isNull(Event event) {
+        return event == null;
     }
 
     @GetMapping("/title/{title}")
@@ -58,7 +58,7 @@ public class EventsController {
                                     Model model) {
         log.info("Showing events by title: {}", title);
         List<Event> eventsByTitle = bookingFacade.getEventsByTitle(title, pageSize, pageNum);
-        if (isNull(eventsByTitle)) {
+        if (eventsByTitle.isEmpty()) {
             model.addAttribute("message", "Can not to get events by title: " + title);
             log.info("Can not to get events by title: {}", title);
         } else {
@@ -77,7 +77,7 @@ public class EventsController {
         try {
             Date date = parseFromStringToDate(day);
             List<Event> eventsForDay = bookingFacade.getEventsForDay(date, pageSize, pageNum);
-            if (isNull(eventsForDay)) {
+            if (eventsForDay.isEmpty()) {
                 model.addAttribute("message", "Can not to get events for day: " + day);
                 log.info("Can not to get events for day: {}", day);
             } else {

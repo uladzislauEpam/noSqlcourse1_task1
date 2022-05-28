@@ -43,8 +43,8 @@ public class UsersController {
         return "user";
     }
 
-    private boolean isNull(Object object) {
-        return object == null;
+    private boolean isNull(User user) {
+        return user == null;
     }
 
     @GetMapping("/name/{name}")
@@ -54,7 +54,7 @@ public class UsersController {
                                   Model model) {
         log.info("Showing users by name: {}", name);
         List<User> usersByName = bookingFacade.getUsersByName(name, pageSize, pageNum);
-        if (isNull(usersByName)) {
+        if (usersByName.isEmpty()) {
             model.addAttribute("message", "Can not to find users by name: " + name);
             log.info("Can not to find users by name: {}", name);
         } else {
