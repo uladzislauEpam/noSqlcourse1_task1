@@ -109,7 +109,7 @@ public class EventsController {
                 log.info("The event successfully created");
             }
         } catch (RuntimeException e) {
-            log.error("Can not to create entity with title={}, day={}", title, day, e);
+            log.error("Can not to parse string {} to date object", day, e);
             model.put("message", "Can not to parse string " + day + " to date object");
         }
         return new ModelAndView("event", model);
