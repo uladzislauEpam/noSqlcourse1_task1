@@ -100,19 +100,19 @@ public class UserServiceImplTest {
     }
 
     @Test
-    public void getUserByNameWithExceptionShouldReturnNull() {
+    public void getUserByNameWithExceptionShouldReturnEmptyList() {
         when(userDAO.getByName(anyString(), anyInt(), anyInt())).thenThrow(DbException.class);
 
         List<User> actualListOfUsers = userService.getUsersByName("Not exists", 1, 1);
 
-        assertNull(actualListOfUsers);
+        assertTrue(actualListOfUsers.isEmpty());
     }
 
     @Test
-    public void getUserByNameWithEmptyNameShouldReturnNull() {
+    public void getUserByNameWithEmptyNameShouldReturnEmptyList() {
         List<User> actualUsersByName = userService.getUsersByName("", 1, 1);
 
-        assertNull(actualUsersByName);
+        assertTrue(actualUsersByName.isEmpty());
     }
 
     @Test

@@ -78,19 +78,19 @@ public class EventServiceImplTest {
     }
 
     @Test
-    public void getEventsByTitleWithExceptionShouldReturnNull() {
+    public void getEventsByTitleWithExceptionShouldReturnEmptyList() {
         when(eventDAO.getEventsByTitle(anyString(), anyInt(), anyInt())).thenThrow(DbException.class);
 
         List<Event> actualEventsByTitle = eventService.getEventsByTitle("not exists title", 1, 1);
 
-        assertNull(actualEventsByTitle);
+        assertTrue(actualEventsByTitle.isEmpty());
     }
 
     @Test
-    public void getEventsByTitleWithEmptyTitleShouldReturnNull() {
+    public void getEventsByTitleWithEmptyTitleShouldReturnEmptyList() {
         List<Event> actualEventsByTitle = eventService.getEventsByTitle("", 1, 2);
 
-        assertNull(actualEventsByTitle);
+        assertTrue(actualEventsByTitle.isEmpty());
     }
 
     @Test
@@ -109,21 +109,21 @@ public class EventServiceImplTest {
     }
 
     @Test
-    public void getEventsForDayWithExceptionShouldReturnNull() throws ParseException {
+    public void getEventsForDayWithExceptionShouldReturnEmptyList() throws ParseException {
         Date day = DATE_FORMATTER.parse("15-05-2000 21:00");
 
         when(eventDAO.getEventsForDay(any(), anyInt(), anyInt())).thenThrow(DbException.class);
 
         List<Event> actualEventsForDay = eventService.getEventsForDay(day, 1, 1);
 
-        assertNull(actualEventsForDay);
+        assertTrue(actualEventsForDay.isEmpty());
     }
 
     @Test
-    public void getEventsForDayWithNullDayShouldReturnNull() {
+    public void getEventsForDayWithNullDayShouldReturnEmptyList() {
         List<Event> actualEventsForDay = eventService.getEventsForDay(null, 1, 2);
 
-        assertNull(actualEventsForDay);
+        assertTrue(actualEventsForDay.isEmpty());
     }
 
     @Test
