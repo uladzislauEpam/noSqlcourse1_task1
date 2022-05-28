@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tickets</title>
+</head>
+<body>
+<p style="color: red" th:if="${message != null}" th:text="${message}"></p>
+<table th:if="${tickets != null}">
+    <caption>Tickets</caption>
+    <tbody>
+    <tr>
+        <th id="id">ID</th>
+        <th id="userId">UserID</th>
+        <th id="eventId">EventID</th>
+        <th id="place">Place</th>
+        <th id="category">Category</th>
+    </tr>
+    <tr th:each="ticket : ${tickets}">
+        <th th:text="${ticket.getId()}">id</th>
+        <th th:text="${ticket.getUserId()}">userId</th>
+        <th th:text="${ticket.getEventId()}">eventId</th>
+        <th th:text="${ticket.getPlace()}">place</th>
+        <th th:text="${ticket.getCategory()}">category</th>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
