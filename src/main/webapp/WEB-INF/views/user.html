@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p style="color: red" th:if="${message != null}" th:text="${message}"></p>
+<table th:if="${user != null}">
+    <caption>Event</caption>
+    <tbody>
+    <tr>
+        <th id="id">ID</th>
+        <th id="name">Name</th>
+        <th id="email">Email</th>
+    </tr>
+    <tr>
+        <th th:text="${user.getId()}">id</th>
+        <th th:text="${user.getName()}">name</th>
+        <th th:text="${user.getEmail()}">email</th>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
