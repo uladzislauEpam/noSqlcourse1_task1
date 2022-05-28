@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl;
 import ua.epam.mishchenko.ticketbooking.model.Event;
 import ua.epam.mishchenko.ticketbooking.model.Ticket;
+import ua.epam.mishchenko.ticketbooking.model.User;
 
 import java.util.List;
 
@@ -49,6 +50,29 @@ public class TicketsController {
 
     private boolean isNull(Object object) {
         return object == null;
+    }
+
+    @GetMapping("/user/{userId}")
+    public String showTicketsByUser(@PathVariable long userId,
+                                     @RequestParam int pageSize,
+                                     @RequestParam int pageNum,
+                                     Model model) {
+        log.info("Showing the tickets by user with id: {}", userId);
+        User userById = bookingFacade.getUserById(userId);
+        if (isNull(userById)) {
+            model.addAttribute("message", "Can not to find a user by id: " + userId);
+            log.info("Can not to find a user by id: {}", userId);
+        } else {
+            List<Ticket> bookedTickets = bookingFacade.getBookedTickets(userById, pageSize, pageNum);
+            if (bookedTickets.isEmpty()) {
+                model.addAttribute("message", "Can not to find the tickets by user with id: " + userId);
+                log.info("Can not to find the tickets by user with id: {}", userId);
+            } else {
+                model.addAttribute("tickets", bookedTickets);
+                log.info("The tickets successfully found");
+            }
+        }
+        return "tickets";
     }
 
     @GetMapping("/event/{eventId}")
