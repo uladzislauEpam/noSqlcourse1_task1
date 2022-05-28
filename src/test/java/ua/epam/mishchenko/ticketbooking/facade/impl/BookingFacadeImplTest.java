@@ -52,8 +52,8 @@ public class BookingFacadeImplTest {
         List<Ticket> bookedTicketsByUserAfterCanceling = bookingFacade.getBookedTickets(user, 1, 1);
         List<Ticket> bookedTicketsByEventAfterCanceling = bookingFacade.getBookedTickets(event, 1, 1);
 
-        assertNull(bookedTicketsByUserAfterCanceling);
-        assertNull(bookedTicketsByEventAfterCanceling);
+        assertTrue(bookedTicketsByUserAfterCanceling.isEmpty());
+        assertTrue(bookedTicketsByEventAfterCanceling.isEmpty());
     }
 
 }
