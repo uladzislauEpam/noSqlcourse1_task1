@@ -7,6 +7,7 @@ import ua.epam.mishchenko.ticketbooking.exception.DbException;
 import ua.epam.mishchenko.ticketbooking.model.User;
 import ua.epam.mishchenko.ticketbooking.service.UserService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserServiceImpl implements UserService {
@@ -59,7 +60,7 @@ public class UserServiceImpl implements UserService {
         try {
             if (name.isEmpty()) {
                 log.warn("The name can not be null");
-                return null;
+                return new ArrayList<>();
             }
 
             List<User> usersByName = userDAO.getByName(name, pageSize, pageNum);
@@ -70,7 +71,7 @@ public class UserServiceImpl implements UserService {
             return usersByName;
         } catch (DbException e) {
             log.warn("Can not to find a list of users by name '{}'", name, e);
-            return null;
+            return new ArrayList<>();
         }
     }
 

@@ -10,6 +10,7 @@ import ua.epam.mishchenko.ticketbooking.model.User;
 import ua.epam.mishchenko.ticketbooking.model.impl.TicketImpl;
 import ua.epam.mishchenko.ticketbooking.service.TicketService;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class TicketServiceImpl implements TicketService {
@@ -48,7 +49,7 @@ public class TicketServiceImpl implements TicketService {
         try {
             if (isUserNull(user)) {
                 log.warn("The user can not be a null");
-                return null;
+                return new ArrayList<>();
             }
 
             List<Ticket> ticketsByUser = ticketDAO.getAllByUser(user, pageSize, pageNum);
@@ -59,7 +60,7 @@ public class TicketServiceImpl implements TicketService {
             return ticketsByUser;
         } catch (DbException e) {
             log.warn("Can not to find a list of booked tickets by user '{}'", user, e);
-            return null;
+            return new ArrayList<>();
         }
     }
 
@@ -75,7 +76,7 @@ public class TicketServiceImpl implements TicketService {
         try {
             if (isEventNull(event)) {
                 log.warn("The event can not be a null");
-                return null;
+                return new ArrayList<>();
             }
 
             List<Ticket> ticketsByUser = ticketDAO.getAllByEvent(event, pageSize, pageNum);
@@ -86,7 +87,7 @@ public class TicketServiceImpl implements TicketService {
             return ticketsByUser;
         } catch (DbException e) {
             log.warn("Can not to find a list of booked tickets by event '{}'", event, e);
-            return null;
+            return new ArrayList<>();
         }
     }
 

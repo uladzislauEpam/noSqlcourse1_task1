@@ -7,6 +7,7 @@ import ua.epam.mishchenko.ticketbooking.exception.DbException;
 import ua.epam.mishchenko.ticketbooking.model.Event;
 import ua.epam.mishchenko.ticketbooking.service.EventService;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -40,7 +41,7 @@ public class EventServiceImpl implements EventService {
         try {
             if (title.isEmpty()) {
                 log.warn("The title can not be empty");
-                return null;
+                return new ArrayList<>();
             }
 
             List<Event> eventsByTitle = eventDAO.getEventsByTitle(title, pageSize, pageNum);
@@ -51,7 +52,7 @@ public class EventServiceImpl implements EventService {
             return eventsByTitle;
         } catch (DbException e) {
             log.warn("Can not to find a list of events by title '{}'", title, e);
-            return null;
+            return new ArrayList<>();
         }
     }
 
@@ -63,7 +64,7 @@ public class EventServiceImpl implements EventService {
         try {
             if (day == null) {
                 log.warn("The day can not be null");
-                return null;
+                return new ArrayList<>();
             }
 
             List<Event> eventsByTitle = eventDAO.getEventsForDay(day, pageSize, pageNum);
@@ -74,7 +75,7 @@ public class EventServiceImpl implements EventService {
             return eventsByTitle;
         } catch (DbException e) {
             log.warn("Can not to find a list of events for day {}", day, e);
-            return null;
+            return new ArrayList<>();
         }
     }
 
