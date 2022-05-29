@@ -13,11 +13,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl;
 import ua.epam.mishchenko.ticketbooking.model.Ticket;
 import ua.epam.mishchenko.ticketbooking.model.User;
-import ua.epam.mishchenko.ticketbooking.utils.CreatePDF;
+import ua.epam.mishchenko.ticketbooking.utils.PDFUtils;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
@@ -32,8 +29,11 @@ public class BookedTicketsPDFController {
 
     private final BookingFacadeImpl bookingFacade;
 
-    public BookedTicketsPDFController(BookingFacadeImpl bookingFacade) {
+    private final PDFUtils pdfUtils;
+
+    public BookedTicketsPDFController(BookingFacadeImpl bookingFacade, PDFUtils pdfUtils) {
         this.bookingFacade = bookingFacade;
+        this.pdfUtils = pdfUtils;
     }
 
     @GetMapping("/{userId}")
@@ -47,32 +47,16 @@ public class BookedTicketsPDFController {
 
         log.info("The tickets successfully found");
 
-        CreatePDF.createPDFFileOfBookedTicketsByUser(bookedTickets);
-        return createResponseEntityWithPDFDocument(userId);
+        return createResponseEntityWithPDFDocument(bookedTickets);
     }
 
-    private ResponseEntity<Object> createResponseEntityWithPDFDocument(long userId) {
-        try {
-            Path path = Paths.get("Booked Tickets.pdf");
-            InputStream inputStream = Files.newInputStream(path);
-            InputStreamResource pdfDocument = new InputStreamResource(inputStream);
-            deletePDFDocument(path);
-            return new ResponseEntity<>(pdfDocument, HttpStatus.OK);
-        } catch (IOException e) {
-            log.warn("Can not to download pdf document of booked ticket by user with id: {}", userId, e);
-            throw new RuntimeException("Can not to download pdf document of booked tickets by user with id: " + userId, e);
+    private User getUserById(long userId) {
+        User userById = bookingFacade.getUserById(userId);
+        if (isNull(userById)) {
+            log.info("Can not to find a user by id: {}", userId);
+            throw new RuntimeException("Can not to find a user by id: " + userId);
         }
-    }
-
-    private static void deletePDFDocument(Path path) {
-        log.info("Removing pdf file with path: {}", path);
-        try {
-            Files.delete(path);
-            log.info("The pdf file with path: '{}' successfully removed", path);
-        } catch (IOException e) {
-            log.info("Can not to remove a pdf file with path: {}", path, e);
-            throw new RuntimeException("Can not to remove a pdf file with path: " + path, e);
-        }
+        return userById;
     }
 
     private List<Ticket> getBookedTickets(long userId, int pageSize, int pageNum, User userById) {
@@ -84,13 +68,18 @@ public class BookedTicketsPDFController {
         return bookedTickets;
     }
 
-    private User getUserById(long userId) {
-        User userById = bookingFacade.getUserById(userId);
-        if (isNull(userById)) {
-            log.info("Can not to find a user by id: {}", userId);
-            throw new RuntimeException("Can not to find a user by id: " + userId);
-        }
-        return userById;
+    private ResponseEntity<Object> createResponseEntityWithPDFDocument(List<Ticket> bookedTickets) {
+        createPDFDocument(bookedTickets);
+        InputStreamResource pdfDocument = pdfUtils.getPDFDocument();
+        pdfUtils.deletePDFDocument();
+        return new ResponseEntity<>(pdfDocument, HttpStatus.OK);
+    }
+
+    private void createPDFDocument(List<Ticket> bookedTickets) {
+        Path path = Paths.get("Booked Tickets.pdf");
+        pdfUtils.setTickets(bookedTickets);
+        pdfUtils.createPDFFileOfBookedTicketsByUser();
+        pdfUtils.setPath(path);
     }
 
     private boolean isNull(Object object) {
