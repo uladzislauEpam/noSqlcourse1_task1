@@ -71,7 +71,7 @@ public class EventsControllerTest {
     }
 
     @Test
-    public void showEventsByTitleWithExistingEventIdShouldReturnModelAndViewWithListOfEvents() {
+    public void showEventsByTitleWithExistingEventTitleShouldReturnModelAndViewWithListOfEvents() {
         Event event = new EventImpl(1L, "Test event", new Date(System.currentTimeMillis()));
 
         when(bookingFacade.getEventsByTitle(anyString(), anyInt(), anyInt()))
@@ -87,7 +87,7 @@ public class EventsControllerTest {
     }
 
     @Test
-    public void showEventsByTitleWithNotExistingEventIdShouldReturnModelAndViewWithWithMessage() {
+    public void showEventsByTitleWithNotExistingEventTitleShouldReturnModelAndViewWithMessage() {
         when(bookingFacade.getEventsByTitle(anyString(), anyInt(), anyInt())).thenReturn(new ArrayList<>());
 
         ModelAndView actualModelAndView = eventsController.showEventsByTitle("Not Existing Title", 1, 1);
