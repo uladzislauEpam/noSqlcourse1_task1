@@ -11,7 +11,7 @@
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>
-            /WEB-INF/data/prepared-data.txt
+            WEB-INF/data/prepared-data.txt
         </param-value>
     </context-param>
 
@@ -21,7 +21,7 @@
         <init-param>
             <param-name>contextConfigLocation</param-name>
             <param-value>
-                /WEB-INF/applicationContextMVC.xml,
+                classpath*:applicationContextMVC.xml,
                 classpath*:applicationContext.xml
             </param-value>
         </init-param>
