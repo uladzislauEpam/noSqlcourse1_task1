@@ -1,15 +1,15 @@
-package ua.epam.mishchenko.ticketbooking.web.controllers;
+package ua.epam.mishchenko.ticketbooking.web.controller;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 import ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl;
 import ua.epam.mishchenko.ticketbooking.model.Ticket;
 import ua.epam.mishchenko.ticketbooking.model.User;
@@ -24,14 +24,14 @@ import static org.springframework.http.MediaType.APPLICATION_PDF_VALUE;
 /**
  * The type Booked tickets pdf controller.
  */
-@Controller
-@RequestMapping(value = "/tickets/user", produces = APPLICATION_PDF_VALUE)
+@RestController
+@RequestMapping(value = "/tickets/user", consumes = APPLICATION_PDF_VALUE, produces = APPLICATION_PDF_VALUE)
 public class BookedTicketsPDFController {
 
     /**
      * The constant log.
      */
-    private static final Logger log = LoggerFactory.getLogger(TicketsController.class);
+    private static final Logger log = LoggerFactory.getLogger(BookedTicketsPDFController.class);
 
     /**
      * The Booking facade.
@@ -130,8 +130,8 @@ public class BookedTicketsPDFController {
     private void createPDFDocument(List<Ticket> bookedTickets) {
         Path path = Paths.get("Booked Tickets.pdf");
         pdfUtils.setTickets(bookedTickets);
-        pdfUtils.createPDFFileOfBookedTicketsByUser();
         pdfUtils.setPath(path);
+        pdfUtils.createPDFFileOfBookedTicketsByUser();
     }
 
     /**

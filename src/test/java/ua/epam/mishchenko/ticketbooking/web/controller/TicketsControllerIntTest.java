@@ -1,4 +1,4 @@
-package ua.epam.mishchenko.ticketbooking.web.controllers;
+package ua.epam.mishchenko.ticketbooking.web.controller;
 
 import org.junit.Before;
 import org.junit.Test;

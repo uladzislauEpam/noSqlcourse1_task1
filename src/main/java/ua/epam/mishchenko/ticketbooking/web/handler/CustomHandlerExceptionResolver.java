@@ -1,4 +1,4 @@
-package ua.epam.mishchenko.ticketbooking.web.handlers;
+package ua.epam.mishchenko.ticketbooking.web.handler;
 
 import org.springframework.stereotype.Component;
 import org.springframework.ui.Model;

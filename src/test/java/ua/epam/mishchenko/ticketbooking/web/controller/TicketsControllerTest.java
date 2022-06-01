@@ -1,4 +1,4 @@
-package ua.epam.mishchenko.ticketbooking.web.controllers;
+package ua.epam.mishchenko.ticketbooking.web.controller;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -13,6 +13,7 @@ import ua.epam.mishchenko.ticketbooking.model.User;
 import ua.epam.mishchenko.ticketbooking.model.impl.EventImpl;
 import ua.epam.mishchenko.ticketbooking.model.impl.TicketImpl;
 import ua.epam.mishchenko.ticketbooking.model.impl.UserImpl;
+import ua.epam.mishchenko.ticketbooking.web.controller.TicketsController;
 
 import java.util.ArrayList;
 import java.util.Collections;

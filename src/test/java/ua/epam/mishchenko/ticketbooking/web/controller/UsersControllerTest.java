@@ -1,4 +1,4 @@
-package ua.epam.mishchenko.ticketbooking.web.controllers;
+package ua.epam.mishchenko.ticketbooking.web.controller;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -8,6 +8,7 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.servlet.ModelAndView;
 import ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl;
 import ua.epam.mishchenko.ticketbooking.model.impl.UserImpl;
+import ua.epam.mishchenko.ticketbooking.web.controller.UsersController;
 
 import java.util.ArrayList;
 import java.util.Collections;
