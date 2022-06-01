@@ -4,6 +4,8 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
+import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.context.web.WebAppConfiguration;
@@ -21,24 +23,12 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @RunWith(SpringRunner.class)
-@WebAppConfiguration
-@ContextConfiguration(locations = {
-        "classpath:applicationContextMVC.xml",
-        "classpath:applicationContext.xml"
-})
+@SpringBootTest
+@AutoConfigureMockMvc
 public class EventsControllerIntTest {
 
     @Autowired
-    private WebApplicationContext context;
-
     private MockMvc mockMvc;
-
-    @Before
-    public void setUp() {
-        mockMvc = MockMvcBuilders
-                .webAppContextSetup(context)
-                .build();
-    }
 
     @Test
     public void showEventByIdWithExistingEventIdShouldReturnPageWithEvent() throws Exception {
@@ -107,7 +97,7 @@ public class EventsControllerIntTest {
 
     @Test
     public void createEventWithCorrectParametersShouldReturnPageWithEvent() throws Exception {
-        this.mockMvc.perform(post("/events?title=Test Title&day=15-05-2022 21:00"))
+        this.mockMvc.perform(post("/events?title=Test Title&day=15-05-2015 21:00"))
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(content().string(containsString("Test Title")));
@@ -131,7 +121,7 @@ public class EventsControllerIntTest {
 
     @Test
     public void updateEventWithCorrectParametersShouldReturnPageWithEvent() throws Exception {
-        this.mockMvc.perform(put("/events?id=2&title=Test Title&day=15-05-2022 21:00"))
+        this.mockMvc.perform(put("/events?id=3&title=Test Title&day=15-05-2022 21:00"))
                 .andDo(print())
                 .andExpect(status().isOk())
                 .andExpect(content().string(containsString("Test Title")));
