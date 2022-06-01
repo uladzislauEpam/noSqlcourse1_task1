@@ -11,7 +11,8 @@
     <context-param>
         <param-name>contextConfigLocation</param-name>
         <param-value>
-            WEB-INF/data/prepared-data.txt
+            classpath*:data/prepared-data.txt
+            classpath*:data/tickets.xml
         </param-value>
     </context-param>
 
