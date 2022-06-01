@@ -10,12 +10,27 @@ import ua.epam.mishchenko.ticketbooking.service.UserService;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The type User service.
+ */
 public class UserServiceImpl implements UserService {
 
+    /**
+     * The constant log.
+     */
     private static final Logger log = LoggerFactory.getLogger(UserServiceImpl.class);
 
+    /**
+     * The User dao.
+     */
     private UserDAOImpl userDAO;
 
+    /**
+     * Gets user by id.
+     *
+     * @param userId the user id
+     * @return the user by id
+     */
     @Override
     public User getUserById(long userId) {
         log.info("Finding a user by id: {}", userId);
@@ -32,6 +47,12 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    /**
+     * Gets user by email.
+     *
+     * @param email the email
+     * @return the user by email
+     */
     @Override
     public User getUserByEmail(String email) {
         log.info("Finding a user by email: {}", email);
@@ -53,6 +74,14 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    /**
+     * Gets users by name.
+     *
+     * @param name     the name
+     * @param pageSize the page size
+     * @param pageNum  the page num
+     * @return the users by name
+     */
     @Override
     public List<User> getUsersByName(String name, int pageSize, int pageNum) {
         log.info("Finding all users by name {} with page size {} and number of page {}", name, pageSize, pageNum);
@@ -75,6 +104,12 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    /**
+     * Create user user.
+     *
+     * @param user the user
+     * @return the user
+     */
     @Override
     public User createUser(User user) {
         log.info("Start creating an user: {}", user);
@@ -96,10 +131,22 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    /**
+     * Is user null boolean.
+     *
+     * @param user the user
+     * @return the boolean
+     */
     private boolean isUserNull(User user) {
         return user == null;
     }
 
+    /**
+     * Update user user.
+     *
+     * @param user the user
+     * @return the user
+     */
     @Override
     public User updateUser(User user) {
         log.info("Start updating an user: {}", user);
@@ -121,6 +168,12 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    /**
+     * Delete user boolean.
+     *
+     * @param userId the user id
+     * @return the boolean
+     */
     @Override
     public boolean deleteUser(long userId) {
         log.info("Start deleting an user with id: {}", userId);
@@ -137,6 +190,11 @@ public class UserServiceImpl implements UserService {
         }
     }
 
+    /**
+     * Sets user dao.
+     *
+     * @param userDAO the user dao
+     */
     public void setUserDAO(UserDAOImpl userDAO) {
         this.userDAO = userDAO;
     }

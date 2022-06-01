@@ -11,12 +11,27 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * The type Event service.
+ */
 public class EventServiceImpl implements EventService {
 
+    /**
+     * The constant log.
+     */
     private static final Logger log = LoggerFactory.getLogger(EventServiceImpl.class);
 
+    /**
+     * The Event dao.
+     */
     private EventDAOImpl eventDAO;
 
+    /**
+     * Gets event by id.
+     *
+     * @param eventId the event id
+     * @return the event by id
+     */
     @Override
     public Event getEventById(long eventId) {
         log.info("Finding an event by id: {}", eventId);
@@ -33,6 +48,14 @@ public class EventServiceImpl implements EventService {
         }
     }
 
+    /**
+     * Gets events by title.
+     *
+     * @param title    the title
+     * @param pageSize the page size
+     * @param pageNum  the page num
+     * @return the events by title
+     */
     @Override
     public List<Event> getEventsByTitle(String title, int pageSize, int pageNum) {
         log.warn("Finding all events by title {} with page size {} and number of page {}",
@@ -56,6 +79,14 @@ public class EventServiceImpl implements EventService {
         }
     }
 
+    /**
+     * Gets events for day.
+     *
+     * @param day      the day
+     * @param pageSize the page size
+     * @param pageNum  the page num
+     * @return the events for day
+     */
     @Override
     public List<Event> getEventsForDay(Date day, int pageSize, int pageNum) {
         log.info("Finding all events for day {} with page size {} and number of page {}",
@@ -79,6 +110,12 @@ public class EventServiceImpl implements EventService {
         }
     }
 
+    /**
+     * Create event event.
+     *
+     * @param event the event
+     * @return the event
+     */
     @Override
     public Event createEvent(Event event) {
         log.info("Start creating an event: {}", event);
@@ -100,10 +137,22 @@ public class EventServiceImpl implements EventService {
         }
     }
 
+    /**
+     * Is event null boolean.
+     *
+     * @param event the event
+     * @return the boolean
+     */
     private boolean isEventNull(Event event) {
         return event == null;
     }
 
+    /**
+     * Update event event.
+     *
+     * @param event the event
+     * @return the event
+     */
     @Override
     public Event updateEvent(Event event) {
         log.info("Start updating an event: {}", event);
@@ -125,6 +174,12 @@ public class EventServiceImpl implements EventService {
         }
     }
 
+    /**
+     * Delete event boolean.
+     *
+     * @param eventId the event id
+     * @return the boolean
+     */
     @Override
     public boolean deleteEvent(long eventId) {
         log.info("Start deleting an event with id: {}", eventId);
@@ -141,6 +196,11 @@ public class EventServiceImpl implements EventService {
         }
     }
 
+    /**
+     * Sets event dao.
+     *
+     * @param eventDAO the event dao
+     */
     public void setEventDAO(EventDAOImpl eventDAO) {
         this.eventDAO = eventDAO;
     }

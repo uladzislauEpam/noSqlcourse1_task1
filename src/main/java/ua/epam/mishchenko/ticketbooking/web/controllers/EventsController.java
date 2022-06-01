@@ -23,18 +23,38 @@ import java.util.Map;
 
 import static ua.epam.mishchenko.ticketbooking.utils.Constants.DATE_FORMATTER;
 
+/**
+ * The type Events controller.
+ */
 @Controller
 @RequestMapping("/events")
 public class EventsController {
 
+    /**
+     * The constant log.
+     */
     private static final Logger log = LoggerFactory.getLogger(EventsController.class);
 
+    /**
+     * The Booking facade.
+     */
     private final BookingFacadeImpl bookingFacade;
 
+    /**
+     * Instantiates a new Events controller.
+     *
+     * @param bookingFacade the booking facade
+     */
     public EventsController(BookingFacadeImpl bookingFacade) {
         this.bookingFacade = bookingFacade;
     }
 
+    /**
+     * Show event by id model and view.
+     *
+     * @param id the id
+     * @return the model and view
+     */
     @GetMapping("/{id}")
     public ModelAndView showEventById(@PathVariable long id) {
         log.info("Showing event by id: {}", id);
@@ -50,10 +70,24 @@ public class EventsController {
         return new ModelAndView("event", model);
     }
 
+    /**
+     * Is null boolean.
+     *
+     * @param event the event
+     * @return the boolean
+     */
     private boolean isNull(Event event) {
         return event == null;
     }
 
+    /**
+     * Show events by title model and view.
+     *
+     * @param title    the title
+     * @param pageSize the page size
+     * @param pageNum  the page num
+     * @return the model and view
+     */
     @GetMapping("/title/{title}")
     public ModelAndView showEventsByTitle(@PathVariable String title,
                                           @RequestParam int pageSize,
@@ -71,6 +105,14 @@ public class EventsController {
         return new ModelAndView("events", model);
     }
 
+    /**
+     * Show events for day model and view.
+     *
+     * @param day      the day
+     * @param pageSize the page size
+     * @param pageNum  the page num
+     * @return the model and view
+     */
     @GetMapping("/day/{day}")
     public ModelAndView showEventsForDay(@PathVariable String day,
                                          @RequestParam int pageSize,
@@ -94,6 +136,13 @@ public class EventsController {
         return new ModelAndView("events", model);
     }
 
+    /**
+     * Create event model and view.
+     *
+     * @param title the title
+     * @param day   the day
+     * @return the model and view
+     */
     @PostMapping
     public ModelAndView createEvent(@RequestParam String title,
                                     @RequestParam String day) {
@@ -115,6 +164,13 @@ public class EventsController {
         return new ModelAndView("event", model);
     }
 
+    /**
+     * Create event entity without id event.
+     *
+     * @param title the title
+     * @param day   the day
+     * @return the event
+     */
     private Event createEventEntityWithoutId(String title, String day) {
         Event event = new EventImpl();
         event.setTitle(title);
@@ -122,6 +178,12 @@ public class EventsController {
         return event;
     }
 
+    /**
+     * Parse from string to date date.
+     *
+     * @param date the date
+     * @return the date
+     */
     private Date parseFromStringToDate(String date) {
         try {
             return DATE_FORMATTER.parse(date);
@@ -131,6 +193,14 @@ public class EventsController {
         }
     }
 
+    /**
+     * Update event model and view.
+     *
+     * @param id    the id
+     * @param title the title
+     * @param day   the day
+     * @return the model and view
+     */
     @PutMapping
     public ModelAndView updateEvent(@RequestParam long id,
                                     @RequestParam String title,
@@ -153,12 +223,26 @@ public class EventsController {
         return new ModelAndView("event", model);
     }
 
+    /**
+     * Create event entity with id event.
+     *
+     * @param id    the id
+     * @param title the title
+     * @param day   the day
+     * @return the event
+     */
     private Event createEventEntityWithId(long id, String title, String day) {
         Event eventEntity = createEventEntityWithoutId(title, day);
         eventEntity.setId(id);
         return eventEntity;
     }
 
+    /**
+     * Delete event model and view.
+     *
+     * @param id the id
+     * @return the model and view
+     */
     @DeleteMapping("/{id}")
     public ModelAndView deleteEvent(@PathVariable long id) {
         log.info("Deleting an event with id: {}", id);

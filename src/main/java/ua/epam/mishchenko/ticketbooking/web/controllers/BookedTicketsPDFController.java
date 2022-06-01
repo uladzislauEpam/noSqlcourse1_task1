@@ -21,21 +21,47 @@ import java.util.List;
 
 import static org.springframework.http.MediaType.APPLICATION_PDF_VALUE;
 
+/**
+ * The type Booked tickets pdf controller.
+ */
 @Controller
 @RequestMapping(value = "/tickets/user", produces = APPLICATION_PDF_VALUE)
 public class BookedTicketsPDFController {
 
+    /**
+     * The constant log.
+     */
     private static final Logger log = LoggerFactory.getLogger(TicketsController.class);
 
+    /**
+     * The Booking facade.
+     */
     private final BookingFacadeImpl bookingFacade;
 
+    /**
+     * The Pdf utils.
+     */
     private final PDFUtils pdfUtils;
 
+    /**
+     * Instantiates a new Booked tickets pdf controller.
+     *
+     * @param bookingFacade the booking facade
+     * @param pdfUtils      the pdf utils
+     */
     public BookedTicketsPDFController(BookingFacadeImpl bookingFacade, PDFUtils pdfUtils) {
         this.bookingFacade = bookingFacade;
         this.pdfUtils = pdfUtils;
     }
 
+    /**
+     * Gets booked tickets by user pdf.
+     *
+     * @param userId   the user id
+     * @param pageSize the page size
+     * @param pageNum  the page num
+     * @return the booked tickets by user pdf
+     */
     @GetMapping("/{userId}")
     public ResponseEntity<Object> getBookedTicketsByUserPDF(@PathVariable long userId,
                                                             @RequestParam int pageSize,
@@ -50,6 +76,12 @@ public class BookedTicketsPDFController {
         return createResponseEntityWithPDFDocument(bookedTickets);
     }
 
+    /**
+     * Gets user by id.
+     *
+     * @param userId the user id
+     * @return the user by id
+     */
     private User getUserById(long userId) {
         User userById = bookingFacade.getUserById(userId);
         if (isNull(userById)) {
@@ -59,6 +91,15 @@ public class BookedTicketsPDFController {
         return userById;
     }
 
+    /**
+     * Gets booked tickets.
+     *
+     * @param userId   the user id
+     * @param pageSize the page size
+     * @param pageNum  the page num
+     * @param userById the user by id
+     * @return the booked tickets
+     */
     private List<Ticket> getBookedTickets(long userId, int pageSize, int pageNum, User userById) {
         List<Ticket> bookedTickets = bookingFacade.getBookedTickets(userById, pageSize, pageNum);
         if (bookedTickets.isEmpty()) {
@@ -68,6 +109,12 @@ public class BookedTicketsPDFController {
         return bookedTickets;
     }
 
+    /**
+     * Create response entity with pdf document response entity.
+     *
+     * @param bookedTickets the booked tickets
+     * @return the response entity
+     */
     private ResponseEntity<Object> createResponseEntityWithPDFDocument(List<Ticket> bookedTickets) {
         createPDFDocument(bookedTickets);
         InputStreamResource pdfDocument = pdfUtils.getPDFDocument();
@@ -75,6 +122,11 @@ public class BookedTicketsPDFController {
         return new ResponseEntity<>(pdfDocument, HttpStatus.OK);
     }
 
+    /**
+     * Create pdf document.
+     *
+     * @param bookedTickets the booked tickets
+     */
     private void createPDFDocument(List<Ticket> bookedTickets) {
         Path path = Paths.get("Booked Tickets.pdf");
         pdfUtils.setTickets(bookedTickets);
@@ -82,6 +134,12 @@ public class BookedTicketsPDFController {
         pdfUtils.setPath(path);
     }
 
+    /**
+     * Is null boolean.
+     *
+     * @param object the object
+     * @return the boolean
+     */
     private boolean isNull(Object object) {
         return object == null;
     }

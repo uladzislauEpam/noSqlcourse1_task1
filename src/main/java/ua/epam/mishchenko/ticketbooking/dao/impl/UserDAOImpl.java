@@ -15,14 +15,32 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * The type User dao.
+ */
 public class UserDAOImpl implements UserDAO {
 
+    /**
+     * The constant NAMESPACE.
+     */
     private static final String NAMESPACE = "user:";
 
+    /**
+     * The constant log.
+     */
     private static final Logger log = LoggerFactory.getLogger(UserDAOImpl.class);
 
+    /**
+     * The Storage.
+     */
     private Storage storage;
 
+    /**
+     * Gets by id.
+     *
+     * @param id the id
+     * @return the by id
+     */
     @Override
     public User getById(long id) {
         log.info("Finding a user by id: {}", id);
@@ -39,6 +57,12 @@ public class UserDAOImpl implements UserDAO {
         return user;
     }
 
+    /**
+     * Parse from string to user user.
+     *
+     * @param stringUser the string user
+     * @return the user
+     */
     private User parseFromStringToUser(String stringUser) {
         log.debug("Parsing from string ticket to ticket object: {}", stringUser);
         final String delimiterBetweenFields = ",";
@@ -47,12 +71,24 @@ public class UserDAOImpl implements UserDAO {
         return createUserFromStringFields(stringFields);
     }
 
+    /**
+     * Remove brackets string.
+     *
+     * @param text the text
+     * @return the string
+     */
     private String removeBrackets(String text) {
         log.debug("Removing brackets from string ticket: {}", text);
         text = text.replace("{", "");
         return text.replace("}", "");
     }
 
+    /**
+     * Create user from string fields user.
+     *
+     * @param stringFields the string fields
+     * @return the user
+     */
     private User createUserFromStringFields(String[] stringFields) {
         log.debug("Creating ticket from string fields: {}", Arrays.toString(stringFields));
         int index = 0;
@@ -63,17 +99,36 @@ public class UserDAOImpl implements UserDAO {
         return user;
     }
 
+    /**
+     * Gets field value from fields.
+     *
+     * @param stringFields the string fields
+     * @param index        the index
+     * @return the field value from fields
+     */
     private String getFieldValueFromFields(String[] stringFields, int index) {
         log.debug("Getting field value by index {} from the array: {}", index, Arrays.toString(stringFields));
         final String delimiterBetweenKeyAndValue = " : ";
         return removeSingleQuotesIfExist(stringFields[index].split(delimiterBetweenKeyAndValue)[1]);
     }
 
+    /**
+     * Remove single quotes if exist string.
+     *
+     * @param text the text
+     * @return the string
+     */
     private String removeSingleQuotesIfExist(String text) {
         log.debug("Removing single quotes from string values if exists: {}", text);
         return text.replaceAll("'", "");
     }
 
+    /**
+     * Gets by email.
+     *
+     * @param email the email
+     * @return the by email
+     */
     public User getByEmail(String email) {
         log.info("Finding a user by email: {}", email);
 
@@ -85,6 +140,12 @@ public class UserDAOImpl implements UserDAO {
         return userByEmail;
     }
 
+    /**
+     * Gets user by email from storage.
+     *
+     * @param email the email
+     * @return the user by email from storage
+     */
     private User getUserByEmailFromStorage(String email) {
         log.debug("Getting user by email {} from storage", email);
         List<String> idsOfUsers = getIdsOfUsers();
@@ -98,6 +159,11 @@ public class UserDAOImpl implements UserDAO {
         return null;
     }
 
+    /**
+     * Gets ids of users.
+     *
+     * @return the ids of users
+     */
     private List<String> getIdsOfUsers() {
         log.debug("Getting all user entities by \"user\" namespace");
         return storage.getInMemoryStorage().keySet().stream()
@@ -105,16 +171,37 @@ public class UserDAOImpl implements UserDAO {
                 .collect(Collectors.toList());
     }
 
+    /**
+     * Is user entity boolean.
+     *
+     * @param entity the entity
+     * @return the boolean
+     */
     private boolean isUserEntity(String entity) {
         log.debug("Checking if entity is a user entity: {}", entity);
         return entity.contains(NAMESPACE);
     }
 
+    /**
+     * Email equals boolean.
+     *
+     * @param entity the entity
+     * @param email  the email
+     * @return the boolean
+     */
     private boolean emailEquals(String entity, String email) {
         log.debug("Checking if user entity email {} equals to {}", entity, email);
         return entity.contains("'email' : '" + email + "'");
     }
 
+    /**
+     * Gets by name.
+     *
+     * @param name     the name
+     * @param pageSize the page size
+     * @param pageNum  the page num
+     * @return the by name
+     */
     public List<User> getByName(String name, int pageSize, int pageNum) {
         log.info("Finding all users by name '{}' in the database using pagination", name);
 
@@ -144,6 +231,12 @@ public class UserDAOImpl implements UserDAO {
         return listOfUsersByNameInRange;
     }
 
+    /**
+     * Gets list of string users by name.
+     *
+     * @param name the name
+     * @return the list of string users by name
+     */
     private List<String> getListOfStringUsersByName(String name) {
         log.debug("Getting users by name {} from storage", name);
         List<String> stringListOfUsersByName = new ArrayList<>();
@@ -157,6 +250,12 @@ public class UserDAOImpl implements UserDAO {
         return stringListOfUsersByName;
     }
 
+    /**
+     * Parse from string list to user list list.
+     *
+     * @param stringListOfUsers the string list of users
+     * @return the list
+     */
     private List<User> parseFromStringListToUserList(List<String> stringListOfUsers) {
         log.debug("Parsing from string list of users to object list of users: {}", stringListOfUsers);
         List<User> users = new ArrayList<>();
@@ -166,21 +265,47 @@ public class UserDAOImpl implements UserDAO {
         return users;
     }
 
+    /**
+     * Name equals boolean.
+     *
+     * @param entity the entity
+     * @param name   the name
+     * @return the boolean
+     */
     private boolean nameEquals(String entity, String name) {
         log.debug("Checking if user entity name {} equals to {}", entity, name);
         return entity.contains("'name' : '" + name + "'");
     }
 
+    /**
+     * Gets start index.
+     *
+     * @param pageSize the page size
+     * @param pageNum  the page num
+     * @return the start index
+     */
     private int getStartIndex(int pageSize, int pageNum) {
         log.debug("Getting start index by page size = {} and page num = {}", pageSize, pageNum);
         return pageSize * (pageNum - 1);
     }
 
+    /**
+     * Gets end index.
+     *
+     * @param start    the start
+     * @param pageSize the page size
+     * @return the end index
+     */
     private int getEndIndex(int start, int pageSize) {
         log.debug("Getting end index by start index {} and page size {}", start, pageSize);
         return start + pageSize;
     }
 
+    /**
+     * Gets all.
+     *
+     * @return the all
+     */
     @Override
     public List<User> getAll() {
         log.info("Finding all users in the database");
@@ -195,6 +320,11 @@ public class UserDAOImpl implements UserDAO {
         return listOfAllUsers;
     }
 
+    /**
+     * Gets all users from storage by ids.
+     *
+     * @return the all users from storage by ids
+     */
     private List<User> getAllUsersFromStorageByIds() {
         log.debug("Getting all users from storage by ids with \"user\" namespace");
         List<User> listOfAllUsers = new ArrayList<>();
@@ -205,6 +335,12 @@ public class UserDAOImpl implements UserDAO {
         return listOfAllUsers;
     }
 
+    /**
+     * Insert user.
+     *
+     * @param user the user
+     * @return the user
+     */
     @Override
     public User insert(User user) {
         log.info("Start inserting of the user: {}", user);
@@ -222,6 +358,12 @@ public class UserDAOImpl implements UserDAO {
         return user;
     }
 
+    /**
+     * Exists user by email boolean.
+     *
+     * @param user the user
+     * @return the boolean
+     */
     private boolean existsUserByEmail(User user) {
         log.debug("Checking if user with email {} already exists", user.getEmail());
         List<String> idsOfUsers = getIdsOfUsers();
@@ -234,6 +376,11 @@ public class UserDAOImpl implements UserDAO {
         return false;
     }
 
+    /**
+     * Sets id for user.
+     *
+     * @param user the user
+     */
     private void setIdForUser(User user) {
         log.debug("Setting id for user: {}", user);
         List<String> idsOfUsers = getIdsOfUsers();
@@ -250,6 +397,12 @@ public class UserDAOImpl implements UserDAO {
         user.setId(newId);
     }
 
+    /**
+     * Update user.
+     *
+     * @param user the user
+     * @return the user
+     */
     @Override
     public User update(User user) {
         log.info("Start updating of the user: {}", user);
@@ -270,6 +423,12 @@ public class UserDAOImpl implements UserDAO {
         return user;
     }
 
+    /**
+     * Check if user with exists email equals to updating user boolean.
+     *
+     * @param user the user
+     * @return the boolean
+     */
     private boolean checkIfUserWithExistsEmailEqualsToUpdatingUser(User user) {
         log.debug("Check if user with exists email equals to updating user");
         try {
@@ -280,11 +439,23 @@ public class UserDAOImpl implements UserDAO {
         }
     }
 
+    /**
+     * Is user exists boolean.
+     *
+     * @param id the id
+     * @return the boolean
+     */
     private boolean isUserExists(long id) {
         log.debug("Checking if id {} exists", id);
         return storage.getInMemoryStorage().containsKey(NAMESPACE + id);
     }
 
+    /**
+     * Delete boolean.
+     *
+     * @param userId the user id
+     * @return the boolean
+     */
     @Override
     public boolean delete(long userId) {
         log.info("Start deleting of the user with id: {}", userId);
@@ -306,6 +477,11 @@ public class UserDAOImpl implements UserDAO {
         return true;
     }
 
+    /**
+     * Sets storage.
+     *
+     * @param storage the storage
+     */
     public void setStorage(Storage storage) {
         this.storage = storage;
     }

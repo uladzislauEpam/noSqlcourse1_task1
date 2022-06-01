@@ -19,18 +19,38 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * The type Users controller.
+ */
 @Controller
 @RequestMapping("/users")
 public class UsersController {
 
+    /**
+     * The constant log.
+     */
     private static final Logger log = LoggerFactory.getLogger(TicketsController.class);
 
+    /**
+     * The Booking facade.
+     */
     private final BookingFacadeImpl bookingFacade;
 
+    /**
+     * Instantiates a new Users controller.
+     *
+     * @param bookingFacade the booking facade
+     */
     public UsersController(BookingFacadeImpl bookingFacade) {
         this.bookingFacade = bookingFacade;
     }
 
+    /**
+     * Show user by id model and view.
+     *
+     * @param id the id
+     * @return the model and view
+     */
     @GetMapping("/{id}")
     public ModelAndView showUserById(@PathVariable long id) {
         log.info("Showing user by id: {}", id);
@@ -46,10 +66,24 @@ public class UsersController {
         return new ModelAndView("user", model);
     }
 
+    /**
+     * Is null boolean.
+     *
+     * @param user the user
+     * @return the boolean
+     */
     private boolean isNull(User user) {
         return user == null;
     }
 
+    /**
+     * Show users by name model and view.
+     *
+     * @param name     the name
+     * @param pageSize the page size
+     * @param pageNum  the page num
+     * @return the model and view
+     */
     @GetMapping("/name/{name}")
     public ModelAndView showUsersByName(@PathVariable String name,
                                         @RequestParam int pageSize,
@@ -67,6 +101,12 @@ public class UsersController {
         return new ModelAndView("users", model);
     }
 
+    /**
+     * Show user by email model and view.
+     *
+     * @param email the email
+     * @return the model and view
+     */
     @GetMapping("/email/{email}")
     public ModelAndView showUserByEmail(@PathVariable String email) {
         log.info("Showing the user by email: {}", email);
@@ -82,6 +122,13 @@ public class UsersController {
         return new ModelAndView("user", model);
     }
 
+    /**
+     * Create user model and view.
+     *
+     * @param name  the name
+     * @param email the email
+     * @return the model and view
+     */
     @PostMapping
     public ModelAndView createUser(@RequestParam String name,
                                    @RequestParam String email) {
@@ -99,6 +146,13 @@ public class UsersController {
         return new ModelAndView("user", model);
     }
 
+    /**
+     * Create user entity without id user.
+     *
+     * @param name  the name
+     * @param email the email
+     * @return the user
+     */
     private User createUserEntityWithoutId(String name, String email) {
         User user = new UserImpl();
         user.setName(name);
@@ -106,6 +160,14 @@ public class UsersController {
         return user;
     }
 
+    /**
+     * Update user model and view.
+     *
+     * @param id    the id
+     * @param name  the name
+     * @param email the email
+     * @return the model and view
+     */
     @PutMapping
     public ModelAndView updateUser(@RequestParam long id,
                                    @RequestParam String name,
@@ -123,12 +185,26 @@ public class UsersController {
         return new ModelAndView("user", model);
     }
 
+    /**
+     * Create user entity with id user.
+     *
+     * @param id    the id
+     * @param name  the name
+     * @param email the email
+     * @return the user
+     */
     private User createUserEntityWithId(long id, String name, String email) {
         User user = createUserEntityWithoutId(name, email);
         user.setId(id);
         return user;
     }
 
+    /**
+     * Delete user model and view.
+     *
+     * @param id the id
+     * @return the model and view
+     */
     @DeleteMapping("/{id}")
     public ModelAndView deleteUser(@PathVariable long id) {
         log.info("Deleting the user with id: {}", id);

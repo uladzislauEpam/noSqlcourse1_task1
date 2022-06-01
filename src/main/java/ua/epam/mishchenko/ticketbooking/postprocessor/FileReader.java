@@ -10,12 +10,26 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Stream;
 
+/**
+ * The type File reader.
+ */
 public class FileReader {
 
+    /**
+     * The constant log.
+     */
     private static final Logger log = LoggerFactory.getLogger(FileReader.class);
 
+    /**
+     * The File.
+     */
     private File file;
 
+    /**
+     * Read prepared data from file map.
+     *
+     * @return the map
+     */
     public Map<String, String> readPreparedDataFromFile() {
         log.info("Trying to read prepared data from file: {}", file);
 
@@ -34,6 +48,11 @@ public class FileReader {
         return map;
     }
 
+    /**
+     * Sets file.
+     *
+     * @param file the file
+     */
     public void setFile(File file) {
         this.file = file;
     }

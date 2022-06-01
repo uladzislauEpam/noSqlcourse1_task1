@@ -19,18 +19,41 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * The type Tickets controller.
+ */
 @Controller
 @RequestMapping("/tickets")
 public class TicketsController {
 
+    /**
+     * The constant log.
+     */
     private static final Logger log = LoggerFactory.getLogger(TicketsController.class);
 
+    /**
+     * The Booking facade.
+     */
     private final BookingFacadeImpl bookingFacade;
 
+    /**
+     * Instantiates a new Tickets controller.
+     *
+     * @param bookingFacade the booking facade
+     */
     public TicketsController(BookingFacadeImpl bookingFacade) {
         this.bookingFacade = bookingFacade;
     }
 
+    /**
+     * Book ticket model and view.
+     *
+     * @param userId   the user id
+     * @param eventId  the event id
+     * @param place    the place
+     * @param category the category
+     * @return the model and view
+     */
     @PostMapping
     public ModelAndView bookTicket(@RequestParam long userId,
                                    @RequestParam long eventId,
@@ -50,10 +73,24 @@ public class TicketsController {
         return new ModelAndView("ticket", model);
     }
 
+    /**
+     * Is null boolean.
+     *
+     * @param object the object
+     * @return the boolean
+     */
     private boolean isNull(Object object) {
         return object == null;
     }
 
+    /**
+     * Show tickets by user model and view.
+     *
+     * @param userId   the user id
+     * @param pageSize the page size
+     * @param pageNum  the page num
+     * @return the model and view
+     */
     @GetMapping("/user/{userId}")
     public ModelAndView showTicketsByUser(@PathVariable long userId,
                                           @RequestParam int pageSize,
@@ -77,6 +114,14 @@ public class TicketsController {
         return new ModelAndView("tickets", model);
     }
 
+    /**
+     * Show tickets by event model and view.
+     *
+     * @param eventId  the event id
+     * @param pageSize the page size
+     * @param pageNum  the page num
+     * @return the model and view
+     */
     @GetMapping("/event/{eventId}")
     public ModelAndView showTicketsByEvent(@PathVariable long eventId,
                                            @RequestParam int pageSize,
@@ -100,6 +145,12 @@ public class TicketsController {
         return new ModelAndView("tickets", model);
     }
 
+    /**
+     * Cancel ticket model and view.
+     *
+     * @param id the id
+     * @return the model and view
+     */
     @DeleteMapping("/{id}")
     public ModelAndView cancelTicket(@PathVariable long id) {
         log.info("Canceling ticket with id: {}", id);

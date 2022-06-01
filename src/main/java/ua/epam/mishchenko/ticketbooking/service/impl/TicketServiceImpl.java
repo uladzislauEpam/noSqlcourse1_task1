@@ -13,12 +13,30 @@ import ua.epam.mishchenko.ticketbooking.service.TicketService;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * The type Ticket service.
+ */
 public class TicketServiceImpl implements TicketService {
 
+    /**
+     * The constant log.
+     */
     private static final Logger log = LoggerFactory.getLogger(TicketServiceImpl.class);
 
+    /**
+     * The Ticket dao.
+     */
     private TicketDAOImpl ticketDAO;
 
+    /**
+     * Book ticket ticket.
+     *
+     * @param userId   the user id
+     * @param eventId  the event id
+     * @param place    the place
+     * @param category the category
+     * @return the ticket
+     */
     @Override
     public Ticket bookTicket(long userId, long eventId, int place, Ticket.Category category) {
         log.info("Start booking a ticket for user with id {}, event with id event {}, place {}, category {}",
@@ -37,10 +55,27 @@ public class TicketServiceImpl implements TicketService {
         }
     }
 
+    /**
+     * Create new ticket ticket.
+     *
+     * @param userId   the user id
+     * @param eventId  the event id
+     * @param place    the place
+     * @param category the category
+     * @return the ticket
+     */
     private Ticket createNewTicket(long userId, long eventId, int place, Ticket.Category category) {
         return new TicketImpl(userId, eventId, place, category);
     }
 
+    /**
+     * Gets booked tickets.
+     *
+     * @param user     the user
+     * @param pageSize the page size
+     * @param pageNum  the page num
+     * @return the booked tickets
+     */
     @Override
     public List<Ticket> getBookedTickets(User user, int pageSize, int pageNum) {
         log.info("Finding all booked tickets by user {} with page size {} and number of page {}",
@@ -64,10 +99,24 @@ public class TicketServiceImpl implements TicketService {
         }
     }
 
+    /**
+     * Is user null boolean.
+     *
+     * @param user the user
+     * @return the boolean
+     */
     private boolean isUserNull(User user) {
         return user == null;
     }
 
+    /**
+     * Gets booked tickets.
+     *
+     * @param event    the event
+     * @param pageSize the page size
+     * @param pageNum  the page num
+     * @return the booked tickets
+     */
     @Override
     public List<Ticket> getBookedTickets(Event event, int pageSize, int pageNum) {
         log.info("Finding all booked tickets by event {} with page size {} and number of page {}",
@@ -91,10 +140,22 @@ public class TicketServiceImpl implements TicketService {
         }
     }
 
+    /**
+     * Is event null boolean.
+     *
+     * @param event the event
+     * @return the boolean
+     */
     private boolean isEventNull(Event event) {
         return event == null;
     }
 
+    /**
+     * Cancel ticket boolean.
+     *
+     * @param ticketId the ticket id
+     * @return the boolean
+     */
     @Override
     public boolean cancelTicket(long ticketId) {
         log.info("Start canceling a ticket with id: {}", ticketId);
@@ -111,6 +172,11 @@ public class TicketServiceImpl implements TicketService {
         }
     }
 
+    /**
+     * Sets ticket dao.
+     *
+     * @param ticketDAO the ticket dao
+     */
     public void setTicketDAO(TicketDAOImpl ticketDAO) {
         this.ticketDAO = ticketDAO;
     }

@@ -16,14 +16,32 @@ import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
+/**
+ * The type Ticket dao.
+ */
 public class TicketDAOImpl implements TicketDAO {
 
+    /**
+     * The constant log.
+     */
     private static final Logger log = LoggerFactory.getLogger(TicketDAOImpl.class);
 
+    /**
+     * The constant NAMESPACE.
+     */
     private static final String NAMESPACE = "ticket:";
 
+    /**
+     * The Storage.
+     */
     private Storage storage;
 
+    /**
+     * Gets by id.
+     *
+     * @param id the id
+     * @return the by id
+     */
     @Override
     public Ticket getById(long id) {
         log.info("Finding a ticket by id: {}", id);
@@ -40,6 +58,12 @@ public class TicketDAOImpl implements TicketDAO {
         return ticket;
     }
 
+    /**
+     * Parse from string to ticket ticket.
+     *
+     * @param stringTicket the string ticket
+     * @return the ticket
+     */
     private Ticket parseFromStringToTicket(String stringTicket) {
         log.debug("Parsing from string ticket to ticket object: {}", stringTicket);
         final String delimiterBetweenFields = ", ";
@@ -48,12 +72,24 @@ public class TicketDAOImpl implements TicketDAO {
         return createTicketFromStringFields(stringFields);
     }
 
+    /**
+     * Remove brackets string.
+     *
+     * @param text the text
+     * @return the string
+     */
     private String removeBrackets(String text) {
         log.debug("Removing brackets from string ticket: {}", text);
         text = text.replace("{", "");
         return text.replace("}", "");
     }
 
+    /**
+     * Create ticket from string fields ticket.
+     *
+     * @param stringFields the string fields
+     * @return the ticket
+     */
     private Ticket createTicketFromStringFields(String[] stringFields) {
         log.debug("Creating ticket from string fields: {}", Arrays.toString(stringFields));
         int index = 0;
@@ -66,17 +102,35 @@ public class TicketDAOImpl implements TicketDAO {
         return ticket;
     }
 
+    /**
+     * Gets field value from fields.
+     *
+     * @param stringFields the string fields
+     * @param index        the index
+     * @return the field value from fields
+     */
     private String getFieldValueFromFields(String[] stringFields, int index) {
         log.debug("Getting field value by index {} from the array: {}", index, Arrays.toString(stringFields));
         final String delimiterBetweenKeyAndValue = " : ";
         return removeSingleQuotesIfExist(stringFields[index].split(delimiterBetweenKeyAndValue)[1]);
     }
 
+    /**
+     * Remove single quotes if exist string.
+     *
+     * @param text the text
+     * @return the string
+     */
     private String removeSingleQuotesIfExist(String text) {
         log.debug("Removing single quotes from string values if exists: {}", text);
         return text.replaceAll("'", "");
     }
 
+    /**
+     * Gets all.
+     *
+     * @return the all
+     */
     @Override
     public List<Ticket> getAll() {
         log.info("Finding all tickets in the database");
@@ -91,6 +145,11 @@ public class TicketDAOImpl implements TicketDAO {
         return listOfAllTickets;
     }
 
+    /**
+     * Gets all tickets from storage by ids.
+     *
+     * @return the all tickets from storage by ids
+     */
     private List<Ticket> getAllTicketsFromStorageByIds() {
         log.debug("Getting all tickets from storage by ids with \"ticket\" namespace");
         List<Ticket> listOfAllTickets = new ArrayList<>();
@@ -101,6 +160,11 @@ public class TicketDAOImpl implements TicketDAO {
         return listOfAllTickets;
     }
 
+    /**
+     * Gets ids of tickets.
+     *
+     * @return the ids of tickets
+     */
     private List<String> getIdsOfTickets() {
         log.debug("Getting all ticket entities by \"ticket\" namespace");
         return storage.getInMemoryStorage().keySet().stream()
@@ -108,11 +172,25 @@ public class TicketDAOImpl implements TicketDAO {
                 .collect(Collectors.toList());
     }
 
+    /**
+     * Is ticket entity boolean.
+     *
+     * @param entity the entity
+     * @return the boolean
+     */
     private boolean isTicketEntity(String entity) {
         log.debug("Checking if entity is a ticket entity: {}", entity);
         return entity.contains(NAMESPACE);
     }
 
+    /**
+     * Gets all by user.
+     *
+     * @param user     the user
+     * @param pageSize the page size
+     * @param pageNum  the page num
+     * @return the all by user
+     */
     public List<Ticket> getAllByUser(User user, int pageSize, int pageNum) {
         log.info("Finding all booked tickets by user '{}' in the database using pagination", user);
 
@@ -143,6 +221,12 @@ public class TicketDAOImpl implements TicketDAO {
         return listOfTicketsByUserInRange;
     }
 
+    /**
+     * Parse from string list to user list list.
+     *
+     * @param stringListOfUsers the string list of users
+     * @return the list
+     */
     private List<Ticket> parseFromStringListToUserList(List<String> stringListOfUsers) {
         log.debug("Parsing from string list of tickets to object list of tickets: {}", stringListOfUsers);
         List<Ticket> tickets = new ArrayList<>();
@@ -152,6 +236,12 @@ public class TicketDAOImpl implements TicketDAO {
         return tickets;
     }
 
+    /**
+     * Gets list of string tickets by user.
+     *
+     * @param user the user
+     * @return the list of string tickets by user
+     */
     private List<String> getListOfStringTicketsByUser(User user) {
         log.debug("Getting list of string tickets by user: {}", user);
         List<String> idsOfTickets = getIdsOfTickets();
@@ -165,21 +255,50 @@ public class TicketDAOImpl implements TicketDAO {
         return stringListOfUsersByName;
     }
 
+    /**
+     * User id equals boolean.
+     *
+     * @param entity the entity
+     * @param id     the id
+     * @return the boolean
+     */
     private boolean userIdEquals(String entity, long id) {
         log.debug("Checking if user entity id {} equals to {}", entity, id);
         return entity.contains("'userId' : " + id);
     }
 
+    /**
+     * Gets start index.
+     *
+     * @param pageSize the page size
+     * @param pageNum  the page num
+     * @return the start index
+     */
     private int getStartIndex(int pageSize, int pageNum) {
         log.debug("Getting start index by page size = {} and page num = {}", pageSize, pageNum);
         return pageSize * (pageNum - 1);
     }
 
+    /**
+     * Gets end index.
+     *
+     * @param start    the start
+     * @param pageSize the page size
+     * @return the end index
+     */
     private int getEndIndex(int start, int pageSize) {
         log.debug("Getting end index by start index {} and page size {}", start, pageSize);
         return start + pageSize;
     }
 
+    /**
+     * Gets all by event.
+     *
+     * @param event    the event
+     * @param pageSize the page size
+     * @param pageNum  the page num
+     * @return the all by event
+     */
     public List<Ticket> getAllByEvent(Event event, int pageSize, int pageNum) {
         log.info("Finding all booked tickets by event '{}' in the database using pagination", event);
 
@@ -210,6 +329,12 @@ public class TicketDAOImpl implements TicketDAO {
         return listOfTicketsByEventInRange;
     }
 
+    /**
+     * Gets list of string tickets by event.
+     *
+     * @param event the event
+     * @return the list of string tickets by event
+     */
     private List<String> getListOfStringTicketsByEvent(Event event) {
         log.debug("Getting list of string tickets by event: {}", event);
         List<String> idsOfTickets = getIdsOfTickets();
@@ -223,11 +348,24 @@ public class TicketDAOImpl implements TicketDAO {
         return stringListOfUsersByName;
     }
 
+    /**
+     * Event id equals boolean.
+     *
+     * @param entity the entity
+     * @param id     the id
+     * @return the boolean
+     */
     private boolean eventIdEquals(String entity, long id) {
         log.debug("Checking if event entity id {} equals to {}", entity, id);
         return entity.contains("'eventId' : " + id);
     }
 
+    /**
+     * Insert ticket.
+     *
+     * @param ticket the ticket
+     * @return the ticket
+     */
     @Override
     public Ticket insert(Ticket ticket) {
         log.info("Start inserting of the ticket: {}", ticket);
@@ -245,6 +383,12 @@ public class TicketDAOImpl implements TicketDAO {
         return ticket;
     }
 
+    /**
+     * Is ticket booked boolean.
+     *
+     * @param ticket the ticket
+     * @return the boolean
+     */
     private boolean isTicketBooked(Ticket ticket) {
         log.debug("Checking if this ticket is booked");
         List<String> idsOfTickets = getIdsOfTickets();
@@ -257,11 +401,24 @@ public class TicketDAOImpl implements TicketDAO {
         return false;
     }
 
+    /**
+     * Exists by event id and place boolean.
+     *
+     * @param entity  the entity
+     * @param eventId the event id
+     * @param place   the place
+     * @return the boolean
+     */
     private boolean existsByEventIdAndPlace(String entity, long eventId, int place) {
         log.debug("Checking if ticket exists by event id {} and place {}", eventId, place);
         return entity.contains("'eventId' : " + eventId) && entity.contains("'place' : " + place);
     }
 
+    /**
+     * Sets id for ticket.
+     *
+     * @param ticket the ticket
+     */
     private void setIdForTicket(Ticket ticket) {
         log.debug("Setting id for ticket: {}", ticket);
         List<String> idsOfTickets = getIdsOfTickets();
@@ -278,6 +435,12 @@ public class TicketDAOImpl implements TicketDAO {
         ticket.setId(newId);
     }
 
+    /**
+     * Update ticket.
+     *
+     * @param ticket the ticket
+     * @return the ticket
+     */
     @Override
     public Ticket update(Ticket ticket) {
         log.info("Start updating of the ticket: {}", ticket);
@@ -298,11 +461,23 @@ public class TicketDAOImpl implements TicketDAO {
         return ticket;
     }
 
+    /**
+     * Is ticket exists boolean.
+     *
+     * @param id the id
+     * @return the boolean
+     */
     private boolean isTicketExists(long id) {
         log.debug("Checking if id {} exists", id);
         return storage.getInMemoryStorage().containsKey(NAMESPACE + id);
     }
 
+    /**
+     * Delete boolean.
+     *
+     * @param ticketId the ticket id
+     * @return the boolean
+     */
     @Override
     public boolean delete(long ticketId) {
         log.info("Start deleting of the ticket with id: {}", ticketId);
@@ -324,6 +499,11 @@ public class TicketDAOImpl implements TicketDAO {
         return true;
     }
 
+    /**
+     * Sets storage.
+     *
+     * @param storage the storage
+     */
     public void setStorage(Storage storage) {
         this.storage = storage;
     }
