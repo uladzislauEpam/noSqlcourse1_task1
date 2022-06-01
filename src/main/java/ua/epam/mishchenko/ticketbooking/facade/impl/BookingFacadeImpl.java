@@ -18,6 +18,7 @@ import javax.xml.transform.stream.StreamSource;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -260,10 +261,10 @@ public class BookingFacadeImpl implements BookingFacade {
     /**
      * Preload tickets.
      */
-    public void preloadTickets() {
+    public void preloadTickets(InputStream xmlFile) {
         List<Ticket> bookedTickets = new ArrayList<>();
         try {
-            readTicketsFromFileAndSaveToDB(bookedTickets);
+            readTicketsFromFileAndSaveToDB(bookedTickets, xmlFile);
         } catch (RuntimeException e) {
             log.warn("Can not to save tickets in the data base from tickets.xml", e);
             rollbackTickets(bookedTickets);
@@ -281,12 +282,11 @@ public class BookingFacadeImpl implements BookingFacade {
      * Read tickets from file and save to db.
      *
      * @param bookedTickets the booked tickets
+     * @param xmlFile the xml file with tickets
      * @throws IOException the io exception
      */
-    private void readTicketsFromFileAndSaveToDB(List<Ticket> bookedTickets) throws IOException {
-        ClassPathResource classPathResource = new ClassPathResource("data/tickets.xml");
-        FileInputStream is = new FileInputStream(classPathResource.getFile());
-        TicketsDTO ticketsDTO = (TicketsDTO) unmarshaller.unmarshal(new StreamSource(is));
+    private void readTicketsFromFileAndSaveToDB(List<Ticket> bookedTickets, InputStream xmlFile) throws IOException {
+        TicketsDTO ticketsDTO = (TicketsDTO) unmarshaller.unmarshal(new StreamSource(xmlFile));
         saveToDB(bookedTickets, ticketsDTO);
     }
 
