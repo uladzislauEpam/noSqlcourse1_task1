@@ -2,8 +2,8 @@ package ua.epam.mishchenko.ticketbooking.postprocessor;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.io.ClassPathResource;
 
-import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.util.HashMap;
@@ -21,9 +21,9 @@ public class FileReader {
     private static final Logger log = LoggerFactory.getLogger(FileReader.class);
 
     /**
-     * The File.
+     * The Path to the file.
      */
-    private File file;
+    private String path;
 
     /**
      * Read prepared data from file map.
@@ -31,16 +31,17 @@ public class FileReader {
      * @return the map
      */
     public Map<String, String> readPreparedDataFromFile() {
-        log.info("Trying to read prepared data from file: {}", file);
+        log.info("Trying to read prepared data from file: {}", path);
 
         String delimiter = "=";
         Map<String, String> map = new HashMap<>();
-        try (Stream<String> lines = Files.lines(file.toPath())) {
+        ClassPathResource classPathResource = new ClassPathResource(path);
+        try (Stream<String> lines = Files.lines(classPathResource.getFile().toPath())) {
             lines.filter(line -> line.contains(delimiter)).forEach(
                     line -> map.putIfAbsent(line.split(delimiter)[0], line.split(delimiter)[1])
             );
         } catch (IOException e) {
-            log.warn("Can not to retrieve prepared data from file: {}", file);
+            log.warn("Can not to retrieve prepared data from file: {}", path);
             throw new RuntimeException("Can not to retrieve prepared data from file", e);
         }
 
@@ -49,11 +50,11 @@ public class FileReader {
     }
 
     /**
-     * Sets file.
+     * Sets path.
      *
-     * @param file the file
+     * @param path the path
      */
-    public void setFile(File file) {
-        this.file = file;
+    public void setPath(String path) {
+        this.path = path;
     }
 }

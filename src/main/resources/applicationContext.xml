@@ -42,7 +42,7 @@
           p:fileReader-ref="fileReader">
     </bean>
 
-    <bean id="fileReader" class="ua.epam.mishchenko.ticketbooking.postprocessor.FileReader" p:file="${storage.path}">
+    <bean id="fileReader" class="ua.epam.mishchenko.ticketbooking.postprocessor.FileReader" p:path="${storage.path}">
     </bean>
 
     <oxm:jaxb2-marshaller id="jaxbMarshaller">
