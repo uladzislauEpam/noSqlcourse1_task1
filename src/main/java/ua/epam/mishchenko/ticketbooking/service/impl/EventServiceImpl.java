@@ -2,9 +2,11 @@ package ua.epam.mishchenko.ticketbooking.service.impl;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl;
-import ua.epam.mishchenko.ticketbooking.exception.DbException;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.stereotype.Service;
 import ua.epam.mishchenko.ticketbooking.model.Event;
+import ua.epam.mishchenko.ticketbooking.repository.EventRepository;
 import ua.epam.mishchenko.ticketbooking.service.EventService;
 
 import java.util.ArrayList;
@@ -14,6 +16,7 @@ import java.util.List;
 /**
  * The type Event service.
  */
+@Service
 public class EventServiceImpl implements EventService {
 
     /**
@@ -22,9 +25,18 @@ public class EventServiceImpl implements EventService {
     private static final Logger log = LoggerFactory.getLogger(EventServiceImpl.class);
 
     /**
-     * The Event dao.
+     * The event repository.
      */
-    private EventDAOImpl eventDAO;
+    private final EventRepository eventRepository;
+
+    /**
+     * Instantiates a new EventServiceImpl.
+     *
+     * @param eventRepository the event repository
+     */
+    public EventServiceImpl(EventRepository eventRepository) {
+        this.eventRepository = eventRepository;
+    }
 
     /**
      * Gets event by id.
@@ -35,14 +47,12 @@ public class EventServiceImpl implements EventService {
     @Override
     public Event getEventById(long eventId) {
         log.info("Finding an event by id: {}", eventId);
-
         try {
-            Event event = eventDAO.getById(eventId);
-
+            Event event = eventRepository.findById(eventId)
+                    .orElseThrow(() -> new RuntimeException("Can not to find an event by id: " + eventId));
             log.info("Event with id {} successfully found ", eventId);
-
             return event;
-        } catch (DbException e) {
+        } catch (RuntimeException e) {
             log.warn("Can not to find an event by id: " + eventId);
             return null;
         }
@@ -60,21 +70,20 @@ public class EventServiceImpl implements EventService {
     public List<Event> getEventsByTitle(String title, int pageSize, int pageNum) {
         log.warn("Finding all events by title {} with page size {} and number of page {}",
                 title, pageSize, pageNum);
-
         try {
             if (title.isEmpty()) {
                 log.warn("The title can not be empty");
                 return new ArrayList<>();
             }
-
-            List<Event> eventsByTitle = eventDAO.getEventsByTitle(title, pageSize, pageNum);
-
+            Page<Event> eventsByTitle = eventRepository.getAllByTitle(PageRequest.of(pageNum - 1, pageSize), title);
+            if (!eventsByTitle.hasContent()) {
+                throw new RuntimeException("Can not to find a list of events by title: " + title);
+            }
             log.info("All events successfully found by title {} with page size {} and number of page {}",
                     title, pageSize, pageNum);
-
-            return eventsByTitle;
-        } catch (DbException e) {
-            log.warn("Can not to find a list of events by title '{}'", title, e);
+            return eventsByTitle.getContent();
+        } catch (RuntimeException e) {
+            log.warn("Can not to find a list of events by title {}", title, e);
             return new ArrayList<>();
         }
     }
@@ -91,27 +100,27 @@ public class EventServiceImpl implements EventService {
     public List<Event> getEventsForDay(Date day, int pageSize, int pageNum) {
         log.info("Finding all events for day {} with page size {} and number of page {}",
                 day, pageSize, pageNum);
-
         try {
             if (day == null) {
                 log.warn("The day can not be null");
                 return new ArrayList<>();
             }
-
-            List<Event> eventsByTitle = eventDAO.getEventsForDay(day, pageSize, pageNum);
-
+            Page<Event> eventsByTitle = eventRepository.getAllByDate(PageRequest.of(pageNum - 1, pageSize), day);
+            if (!eventsByTitle.hasContent()) {
+                throw new RuntimeException("Can not to find a list of events for day: " + day);
+            }
             log.info("All events successfully found for day {} with page size {} and number of page {}",
                     day, pageSize, pageNum);
 
-            return eventsByTitle;
-        } catch (DbException e) {
+            return eventsByTitle.getContent();
+        } catch (RuntimeException e) {
             log.warn("Can not to find a list of events for day {}", day, e);
             return new ArrayList<>();
         }
     }
 
     /**
-     * Create event event.
+     * Create event.
      *
      * @param event the event
      * @return the event
@@ -119,22 +128,26 @@ public class EventServiceImpl implements EventService {
     @Override
     public Event createEvent(Event event) {
         log.info("Start creating an event: {}", event);
-
         try {
             if (isEventNull(event)) {
                 log.warn("The event can not be null");
                 return null;
             }
-
-            event = eventDAO.insert(event);
-
+            if (eventExistsByTitleAndDay(event)) {
+                log.warn("These title and day are already exists for one event");
+                return null;
+            }
+            event = eventRepository.save(event);
             log.info("Successfully creation of the event: {}", event);
-
             return event;
-        } catch (DbException e) {
+        } catch (RuntimeException e) {
             log.warn("Can not to create an event: {}", event, e);
             return null;
         }
+    }
+
+    private boolean eventExistsByTitleAndDay(Event event) {
+        return eventRepository.existsByTitleAndDate(event.getTitle(), event.getDate());
     }
 
     /**
@@ -148,7 +161,7 @@ public class EventServiceImpl implements EventService {
     }
 
     /**
-     * Update event event.
+     * Update event.
      *
      * @param event the event
      * @return the event
@@ -156,22 +169,27 @@ public class EventServiceImpl implements EventService {
     @Override
     public Event updateEvent(Event event) {
         log.info("Start updating an event: {}", event);
-
         try {
             if (isEventNull(event)) {
-                log.warn("The event can not be null");
-                return null;
+                throw new RuntimeException("The event can not be null");
             }
-
-            event = eventDAO.update(event);
-
+            if (!eventExistsById(event)) {
+                throw new RuntimeException("This event does not exist");
+            }
+            if (eventExistsByTitleAndDay(event)) {
+                throw new RuntimeException("These title and day are already exists for one event");
+            }
+            event = eventRepository.save(event);
             log.info("Successfully updating of the event: {}", event);
-
             return event;
-        } catch (DbException e) {
+        } catch (RuntimeException e) {
             log.warn("Can not to update an event: {}", event, e);
             return null;
         }
+    }
+
+    private boolean eventExistsById(Event event) {
+        return eventRepository.existsById(event.getId());
     }
 
     /**
@@ -183,25 +201,13 @@ public class EventServiceImpl implements EventService {
     @Override
     public boolean deleteEvent(long eventId) {
         log.info("Start deleting an event with id: {}", eventId);
-
         try {
-            boolean isRemoved = eventDAO.delete(eventId);
-
+            eventRepository.deleteById(eventId);
             log.info("Successfully deletion of the event with id: {}", eventId);
-
-            return isRemoved;
-        } catch (DbException e) {
+            return true;
+        } catch (RuntimeException e) {
             log.warn("Can not to delete an event with id: {}", eventId, e);
             return false;
         }
-    }
-
-    /**
-     * Sets event dao.
-     *
-     * @param eventDAO the event dao
-     */
-    public void setEventDAO(EventDAOImpl eventDAO) {
-        this.eventDAO = eventDAO;
     }
 }

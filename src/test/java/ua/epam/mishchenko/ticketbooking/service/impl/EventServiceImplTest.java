@@ -1,61 +1,55 @@
 package ua.epam.mishchenko.ticketbooking.service.impl;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
-import ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl;
-import ua.epam.mishchenko.ticketbooking.exception.DbException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
+import org.springframework.test.context.junit4.SpringRunner;
 import ua.epam.mishchenko.ticketbooking.model.Event;
-import ua.epam.mishchenko.ticketbooking.model.impl.EventImpl;
+import ua.epam.mishchenko.ticketbooking.repository.EventRepository;
 
+import java.math.BigDecimal;
 import java.text.ParseException;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.ArgumentMatchers.anyLong;
-import static org.mockito.ArgumentMatchers.anyString;
-import static org.mockito.ArgumentMatchers.eq;
+import static org.junit.Assert.*;
+import static org.mockito.ArgumentMatchers.*;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.when;
 import static ua.epam.mishchenko.ticketbooking.utils.Constants.DATE_FORMATTER;
 
-@RunWith(MockitoJUnitRunner.class)
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class EventServiceImplTest {
 
+    @Autowired
     private EventServiceImpl eventService;
 
-    @Mock
-    private EventDAOImpl eventDAO;
-
-    @Before
-    public void setUp() {
-        eventService = new EventServiceImpl();
-        eventService.setEventDAO(eventDAO);
-    }
+    @MockBean
+    private EventRepository eventRepository;
 
     @Test
     public void getEventByIdWithExistsIdShouldBeOk() throws ParseException {
-        long userId = 3L;
-        Event expectedEvent = new EventImpl(userId, "Third event", DATE_FORMATTER.parse("16-05-2022 12:00"));
+        long eventId = 3L;
+        Event expectedEvent = new Event(eventId, "Third event", DATE_FORMATTER.parse("16-05-2022 12:00"), BigDecimal.ONE);
 
-        when(eventDAO.getById(userId)).thenReturn(expectedEvent);
+        when(eventRepository.findById(eventId)).thenReturn(Optional.of(expectedEvent));
 
-        Event actualEvent = eventService.getEventById(userId);
+        Event actualEvent = eventService.getEventById(eventId);
 
         assertEquals(expectedEvent, actualEvent);
     }
 
     @Test
     public void getEventByIdWithExceptionShouldReturnNull() {
-        when(eventDAO.getById(anyLong())).thenThrow(DbException.class);
+        when(eventRepository.findById(anyLong())).thenReturn(Optional.empty());
 
         Event actualEvent = eventService.getEventById(10L);
 
@@ -65,21 +59,22 @@ public class EventServiceImplTest {
     @Test
     public void getEventsByTitleWithExistsTitleShouldBeOk() throws ParseException {
         String title = "Third event";
-        List<Event> expectedEvents = Arrays.asList(
-                new EventImpl(3L, title, DATE_FORMATTER.parse("16-05-2022 12:00")),
-                new EventImpl(5L, title, DATE_FORMATTER.parse("25-05-2022 9:10"))
+        List<Event> content = Arrays.asList(
+                new Event(3L, title, DATE_FORMATTER.parse("16-05-2022 12:00"), BigDecimal.ONE),
+                new Event(5L, title, DATE_FORMATTER.parse("25-05-2022 9:10"), BigDecimal.ONE)
         );
+        Page<Event> page = new PageImpl<>(content);
 
-        when(eventDAO.getEventsByTitle(eq(title), anyInt(), anyInt())).thenReturn(expectedEvents);
+        when(eventRepository.getAllByTitle(any(Pageable.class), eq(title))).thenReturn(page);
 
         List<Event> actualEvents = eventService.getEventsByTitle(title, 2, 1);
 
-        assertEquals(expectedEvents, actualEvents);
+        assertTrue(page.getContent().containsAll(actualEvents));
     }
 
     @Test
     public void getEventsByTitleWithExceptionShouldReturnEmptyList() {
-        when(eventDAO.getEventsByTitle(anyString(), anyInt(), anyInt())).thenThrow(DbException.class);
+        when(eventRepository.getAllByTitle(any(Pageable.class), anyString())).thenReturn(Page.empty());
 
         List<Event> actualEventsByTitle = eventService.getEventsByTitle("not exists title", 1, 1);
 
@@ -96,23 +91,24 @@ public class EventServiceImplTest {
     @Test
     public void getEventsForDayWithExistsDayShouldBeOk() throws ParseException {
         Date day = DATE_FORMATTER.parse("15-05-2022 21:00");
-        List<Event> expectedEvents = Arrays.asList(
-                new EventImpl(2L, "Second event", DATE_FORMATTER.parse("15-05-2022 21:00")),
-                new EventImpl(4L, "Fourth event", DATE_FORMATTER.parse("15-05-2022 21:00"))
+        List<Event> content = Arrays.asList(
+                new Event(2L, "Second event", DATE_FORMATTER.parse("15-05-2022 21:00"), BigDecimal.ONE),
+                new Event(4L, "Fourth event", DATE_FORMATTER.parse("15-05-2022 21:00"), BigDecimal.ONE)
         );
+        Page<Event> page = new PageImpl<>(content);
 
-        when(eventDAO.getEventsForDay(eq(day), anyInt(), anyInt())).thenReturn(expectedEvents);
+        when(eventRepository.getAllByDate(any(Pageable.class), eq(day))).thenReturn(page);
 
         List<Event> actualEvents = eventService.getEventsForDay(day, 2, 1);
 
-        assertTrue(expectedEvents.containsAll(actualEvents));
+        assertTrue(page.getContent().containsAll(actualEvents));
     }
 
     @Test
     public void getEventsForDayWithExceptionShouldReturnEmptyList() throws ParseException {
         Date day = DATE_FORMATTER.parse("15-05-2000 21:00");
 
-        when(eventDAO.getEventsForDay(any(), anyInt(), anyInt())).thenThrow(DbException.class);
+        when(eventRepository.getAllByDate(any(Pageable.class), eq(day))).thenThrow(RuntimeException.class);
 
         List<Event> actualEventsForDay = eventService.getEventsForDay(day, 1, 1);
 
@@ -128,18 +124,18 @@ public class EventServiceImplTest {
 
     @Test
     public void createEventWithExceptionShouldReturnNull() {
-        when(eventDAO.insert(any())).thenThrow(DbException.class);
+        when(eventRepository.save(any(Event.class))).thenThrow(RuntimeException.class);
 
-        Event actualEvent = eventService.createEvent(new EventImpl());
+        Event actualEvent = eventService.createEvent(new Event());
 
         assertNull(actualEvent);
     }
 
     @Test
     public void createEventWithExistsTitleAndEmailShouldReturnNull() throws ParseException {
-        EventImpl expectedEvent = new EventImpl(1L, "Second event", DATE_FORMATTER.parse("15-05-2022 21:00"));
+        Event expectedEvent = new Event(1L, "Second event", DATE_FORMATTER.parse("15-05-2022 21:00"), BigDecimal.ONE);
 
-        when(eventDAO.insert(expectedEvent)).thenReturn(expectedEvent);
+        when(eventRepository.save(expectedEvent)).thenReturn(expectedEvent);
 
         Event actualEvent = eventService.createEvent(expectedEvent);
 
@@ -155,9 +151,9 @@ public class EventServiceImplTest {
 
     @Test
     public void updateEventWithExistsEventShouldBeOk() throws ParseException {
-        Event expectedEvent = new EventImpl(1L, "Second event", DATE_FORMATTER.parse("15-05-2022 21:00"));
+        Event expectedEvent = new Event(1L, "Second event", DATE_FORMATTER.parse("15-05-2022 21:00"), BigDecimal.ONE);
 
-        when(eventDAO.update(any())).thenReturn(expectedEvent);
+        when(eventRepository.save(any(Event.class))).thenReturn(expectedEvent);
 
         Event actualEvent = eventService.updateEvent(expectedEvent);
 
@@ -166,9 +162,9 @@ public class EventServiceImplTest {
 
     @Test
     public void updateEventWithExceptionShouldReturnNull() {
-        when(eventDAO.update(any())).thenThrow(DbException.class);
+        when(eventRepository.save(any(Event.class))).thenThrow(RuntimeException.class);
 
-        Event actualEvent = eventService.updateEvent(new EventImpl());
+        Event actualEvent = eventService.updateEvent(new Event());
 
         assertNull(actualEvent);
     }
@@ -182,8 +178,6 @@ public class EventServiceImplTest {
 
     @Test
     public void deleteEventExistsEventShouldReturnTrue() {
-        when(eventDAO.delete(anyLong())).thenReturn(true);
-
         boolean actualIsDeleted = eventService.deleteEvent(6L);
 
         assertTrue(actualIsDeleted);
@@ -191,7 +185,7 @@ public class EventServiceImplTest {
 
     @Test
     public void deleteEventWithExceptionShouldReturnFalse() {
-        when(eventDAO.delete(anyLong())).thenThrow(DbException.class);
+        doThrow(new RuntimeException()).when(eventRepository).deleteById(anyLong());
 
         boolean actualIsDeleted = eventService.deleteEvent(10L);
 

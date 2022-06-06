@@ -1,48 +1,41 @@
 package ua.epam.mishchenko.ticketbooking.service.impl;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
-import org.mockito.junit.MockitoJUnitRunner;
-import ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl;
-import ua.epam.mishchenko.ticketbooking.exception.DbException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.Pageable;
+import org.springframework.test.context.junit4.SpringRunner;
 import ua.epam.mishchenko.ticketbooking.model.User;
-import ua.epam.mishchenko.ticketbooking.model.impl.UserImpl;
+import ua.epam.mishchenko.ticketbooking.repository.UserRepository;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNull;
-import static org.junit.Assert.assertTrue;
-import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.ArgumentMatchers.anyInt;
-import static org.mockito.ArgumentMatchers.anyLong;
-import static org.mockito.ArgumentMatchers.anyString;
+import static org.junit.Assert.*;
+import static org.mockito.ArgumentMatchers.*;
+import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.when;
 
-@RunWith(MockitoJUnitRunner.class)
+@RunWith(SpringRunner.class)
+@SpringBootTest
 public class UserServiceImplTest {
 
+    @Autowired
     private UserServiceImpl userService;
 
-    @Mock
-    private UserDAOImpl userDAO;
-
-    @Before
-    public void setUp() {
-        userService = new UserServiceImpl();
-        userService.setUserDAO(userDAO);
-    }
-
+    @MockBean
+    private UserRepository userRepository;
 
     @Test
     public void getUserByIdWithExistsIdShouldBeOk() {
-        User expectedUser = new UserImpl(3, "Max", "max@gmail.com");
+        User expectedUser = new User(3L, "Max", "max@gmail.com");
 
-        when(userDAO.getById(anyLong())).thenReturn(expectedUser);
+        when(userRepository.findById(anyLong())).thenReturn(Optional.of(expectedUser));
 
         User actualUser = userService.getUserById(3L);
 
@@ -51,7 +44,16 @@ public class UserServiceImplTest {
 
     @Test
     public void getUserByIdWithExceptionShouldReturnNull() {
-        when(userDAO.getById(anyLong())).thenThrow(DbException.class);
+        when(userRepository.findById(anyLong())).thenThrow(RuntimeException.class);
+
+        User actualUser = userService.getUserById(10L);
+
+        assertNull(actualUser);
+    }
+
+    @Test
+    public void getUserByIdWithNotExistIdShouldReturnNull() {
+        when(userRepository.findById(anyLong())).thenReturn(null);
 
         User actualUser = userService.getUserById(10L);
 
@@ -60,9 +62,9 @@ public class UserServiceImplTest {
 
     @Test
     public void getUserByEmailWithExistsEmailShouldBeOk() {
-        User expectedUser = new UserImpl(3, "Max", "max@gmail.com");
+        User expectedUser = new User(3L, "Max", "max@gmail.com");
 
-        when(userDAO.getByEmail(anyString())).thenReturn(expectedUser);
+        when(userRepository.getByEmail(anyString())).thenReturn(Optional.of(expectedUser));
 
         User actualUser = userService.getUserByEmail("max@gmail.com");
 
@@ -70,8 +72,17 @@ public class UserServiceImplTest {
     }
 
     @Test
+    public void getUserByEmailWithNotExistEmailShouldBeOk() {
+        when(userRepository.getByEmail(anyString())).thenReturn(null);
+
+        User actualUser = userService.getUserByEmail("max@gmail.com");
+
+        assertNull(actualUser);
+    }
+
+    @Test
     public void getUserByEmailWithExceptionShouldReturnNull() {
-        when(userDAO.getByEmail(anyString())).thenThrow(DbException.class);
+        when(userRepository.getByEmail(anyString())).thenThrow(RuntimeException.class);
 
         User actualUser = userService.getUserByEmail("notexists@gmail.com");
 
@@ -87,21 +98,22 @@ public class UserServiceImplTest {
 
     @Test
     public void getUserByNameWithExistsNameShouldBeOk() {
-        List<User> expectedUsersByName = Arrays.asList(
-                new UserImpl(3L, "Max", "max@gmail.com"),
-                new UserImpl(4L, "Max", "max123@gmail.com")
+        List<User> content = Arrays.asList(
+                new User(3L, "Max", "max@gmail.com"),
+                new User(4L, "Max", "max123@gmail.com")
         );
+        Page<User> page = new PageImpl<>(content);
 
-        when(userDAO.getByName(anyString(), anyInt(), anyInt())).thenReturn(expectedUsersByName);
+        when(userRepository.getAllByName(any(Pageable.class), anyString())).thenReturn(page);
 
         List<User> actualUsersByName = userService.getUsersByName("Max", 2, 1);
 
-        assertEquals(expectedUsersByName, actualUsersByName);
+        assertTrue(content.containsAll(actualUsersByName));
     }
 
     @Test
     public void getUserByNameWithExceptionShouldReturnEmptyList() {
-        when(userDAO.getByName(anyString(), anyInt(), anyInt())).thenThrow(DbException.class);
+        when(userRepository.getAllByName(any(Pageable.class), anyString())).thenThrow(RuntimeException.class);
 
         List<User> actualListOfUsers = userService.getUsersByName("Not exists", 1, 1);
 
@@ -117,9 +129,9 @@ public class UserServiceImplTest {
 
     @Test
     public void createUserWithUserShouldBeOk() {
-        User expectedUser = new UserImpl(1L, "Test User", "testuser@gmail.com");
+        User expectedUser = new User(1L, "Test User", "testuser@gmail.com");
 
-        when(userDAO.insert(any())).thenReturn(expectedUser);
+        when(userRepository.save(any())).thenReturn(expectedUser);
 
         User actualUser = userService.createUser(expectedUser);
 
@@ -128,18 +140,18 @@ public class UserServiceImplTest {
 
     @Test
     public void createUserWithExceptionShouldReturnNull() {
-        when(userDAO.insert(any())).thenThrow(DbException.class);
+        when(userRepository.save(any())).thenThrow(RuntimeException.class);
 
-        User actualUser = userService.createUser(new UserImpl("Max", "max@gmail.com"));
+        User actualUser = userService.createUser(new User("Max", "max@gmail.com"));
 
         assertNull(actualUser);
     }
 
     @Test
     public void updateUserWithExistsUserShouldBeOk() {
-        User expectedUser = new UserImpl(1L, "Test User", "testuser@gmail.com");
+        User expectedUser = new User(1L, "Test User", "testuser@gmail.com");
 
-        when(userDAO.update(any())).thenReturn(expectedUser);
+        when(userRepository.save(any())).thenReturn(expectedUser);
 
         User actualUser = userService.updateUser(expectedUser);
 
@@ -148,17 +160,15 @@ public class UserServiceImplTest {
 
     @Test
     public void updateUserWithExceptionShouldThrowException() {
-        when(userDAO.update(any())).thenThrow(DbException.class);
+        when(userRepository.save(any())).thenThrow(RuntimeException.class);
 
-        User actualUser = userService.updateUser(new UserImpl());
+        User actualUser = userService.updateUser(new User());
 
         assertNull(actualUser);
     }
 
     @Test
     public void deleteUserExistsUserShouldReturnTrue() {
-        when(userDAO.delete(anyLong())).thenReturn(true);
-
         boolean actualIsDeleted = userService.deleteUser(2);
 
         assertTrue(actualIsDeleted);
@@ -166,7 +176,7 @@ public class UserServiceImplTest {
 
     @Test
     public void deleteUserWhichNotExistsShouldReturnFalse() {
-        when(userDAO.delete(anyLong())).thenThrow(DbException.class);
+        doThrow(new RuntimeException()).when(userRepository).deleteById(anyLong());
 
         boolean isRemoved = userService.deleteUser(10L);
 
