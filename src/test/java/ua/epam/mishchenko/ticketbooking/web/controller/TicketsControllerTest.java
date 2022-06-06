@@ -7,13 +7,10 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.servlet.ModelAndView;
 import ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl;
+import ua.epam.mishchenko.ticketbooking.model.Category;
 import ua.epam.mishchenko.ticketbooking.model.Event;
 import ua.epam.mishchenko.ticketbooking.model.Ticket;
 import ua.epam.mishchenko.ticketbooking.model.User;
-import ua.epam.mishchenko.ticketbooking.model.impl.EventImpl;
-import ua.epam.mishchenko.ticketbooking.model.impl.TicketImpl;
-import ua.epam.mishchenko.ticketbooking.model.impl.UserImpl;
-import ua.epam.mishchenko.ticketbooking.web.controller.TicketsController;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -44,11 +41,11 @@ public class TicketsControllerTest {
 
     @Test
     public void bookTicketWithCorrectParametersShouldReturnModelAndViewWithBookedTicket() {
-        Ticket ticket = new TicketImpl();
+        Ticket ticket = new Ticket();
 
         when(bookingFacade.bookTicket(anyLong(), anyLong(), anyInt(), any())).thenReturn(ticket);
 
-        ModelAndView actualModelAndView = ticketsController.bookTicket(1L, 1L, 1, Ticket.Category.BAR);
+        ModelAndView actualModelAndView = ticketsController.bookTicket(1L, 1L, 1, Category.BAR);
 
         verify(bookingFacade, times(1)).bookTicket(anyLong(), anyLong(), anyInt(), any());
 
@@ -63,7 +60,7 @@ public class TicketsControllerTest {
     public void bookTicketWithCorrectParametersShouldReturnModelAndViewWithMessage() {
         when(bookingFacade.bookTicket(anyLong(), anyLong(), anyInt(), any())).thenReturn(null);
 
-        ModelAndView actualModelAndView = ticketsController.bookTicket(1L, 1L, 1, Ticket.Category.BAR);
+        ModelAndView actualModelAndView = ticketsController.bookTicket(1L, 1L, 1, Category.BAR);
 
         verify(bookingFacade, times(1)).bookTicket(anyLong(), anyLong(), anyInt(), any());
 
@@ -94,7 +91,7 @@ public class TicketsControllerTest {
 
     @Test
     public void showTicketsByUserWithExistingUserIdShouldReturnModelAndViewWithMessage() {
-        when(bookingFacade.getUserById(anyLong())).thenReturn(new UserImpl());
+        when(bookingFacade.getUserById(anyLong())).thenReturn(new User());
         when(bookingFacade.getBookedTickets(any(User.class), anyInt(), anyInt())).thenReturn(new ArrayList<>());
 
         ModelAndView actualModelAndView = ticketsController.showTicketsByUser(1L, 1, 1);
@@ -112,9 +109,9 @@ public class TicketsControllerTest {
 
     @Test
     public void showTicketsByUserWithExistingUserIdShouldReturnModelAndViewWithListOfBookedTickets() {
-        when(bookingFacade.getUserById(anyLong())).thenReturn(new UserImpl());
+        when(bookingFacade.getUserById(anyLong())).thenReturn(new User());
         when(bookingFacade.getBookedTickets(any(User.class), anyInt(), anyInt()))
-                .thenReturn(Collections.singletonList(new TicketImpl()));
+                .thenReturn(Collections.singletonList(new Ticket()));
 
         ModelAndView actualModelAndView = ticketsController.showTicketsByUser(1L, 1, 1);
 
@@ -147,7 +144,7 @@ public class TicketsControllerTest {
 
     @Test
     public void showTicketsByEventWithExistingEventIdShouldReturnModelAndViewWithMessage() {
-        when(bookingFacade.getEventById(anyLong())).thenReturn(new EventImpl());
+        when(bookingFacade.getEventById(anyLong())).thenReturn(new Event());
         when(bookingFacade.getBookedTickets(any(Event.class), anyInt(), anyInt())).thenReturn(new ArrayList<>());
 
         ModelAndView actualModelAndView = ticketsController.showTicketsByEvent(1L, 1, 1);
@@ -165,9 +162,9 @@ public class TicketsControllerTest {
 
     @Test
     public void showTicketsByEventWithExistingEventIdShouldReturnModelAndViewWithListOfBookedTickets() {
-        when(bookingFacade.getEventById(anyLong())).thenReturn(new EventImpl());
+        when(bookingFacade.getEventById(anyLong())).thenReturn(new Event());
         when(bookingFacade.getBookedTickets(any(Event.class), anyInt(), anyInt()))
-                .thenReturn(Collections.singletonList(new TicketImpl()));
+                .thenReturn(Collections.singletonList(new Ticket()));
 
         ModelAndView actualModelAndView = ticketsController.showTicketsByEvent(1L, 1, 1);
 

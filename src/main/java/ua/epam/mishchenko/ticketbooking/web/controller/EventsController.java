@@ -13,8 +13,8 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl;
 import ua.epam.mishchenko.ticketbooking.model.Event;
-import ua.epam.mishchenko.ticketbooking.model.impl.EventImpl;
 
+import java.math.BigDecimal;
 import java.text.ParseException;
 import java.util.Date;
 import java.util.HashMap;
@@ -145,11 +145,12 @@ public class EventsController {
      */
     @PostMapping
     public ModelAndView createEvent(@RequestParam String title,
-                                    @RequestParam String day) {
-        log.info("Creating an event with title={} and day={}", title, day);
+                                    @RequestParam String day,
+                                    @RequestParam BigDecimal price) {
+        log.info("Creating an event with title={} and day={} and price={}", title, day, price);
         Map<String, Object> model = new HashMap<>();
         try {
-            Event event = bookingFacade.createEvent(createEventEntityWithoutId(title, day));
+            Event event = bookingFacade.createEvent(createEventEntityWithoutId(title, day, price));
             if (isNull(event)) {
                 model.put("message", "Can not to create an event");
                 log.info("Can not to create an event");
@@ -169,12 +170,14 @@ public class EventsController {
      *
      * @param title the title
      * @param day   the day
+     * @param price the price
      * @return the event
      */
-    private Event createEventEntityWithoutId(String title, String day) {
-        Event event = new EventImpl();
+    private Event createEventEntityWithoutId(String title, String day, BigDecimal price) {
+        Event event = new Event();
         event.setTitle(title);
         event.setDate(parseFromStringToDate(day));
+        event.setTicketPrice(price);
         return event;
     }
 
@@ -204,11 +207,12 @@ public class EventsController {
     @PutMapping
     public ModelAndView updateEvent(@RequestParam long id,
                                     @RequestParam String title,
-                                    @RequestParam String day) {
+                                    @RequestParam String day,
+                                    @RequestParam BigDecimal price) {
         log.info("Updating an event with id: {}", id);
         Map<String, Object> model = new HashMap<>();
         try {
-            Event event = bookingFacade.updateEvent(createEventEntityWithId(id, title, day));
+            Event event = bookingFacade.updateEvent(createEventEntityWithId(id, title, day, price));
             if (isNull(event)) {
                 model.put("message", "Can not to update an event with id: " + id);
                 log.info("Can not to update an event with id: {}", id);
@@ -229,10 +233,11 @@ public class EventsController {
      * @param id    the id
      * @param title the title
      * @param day   the day
+     * @param price the price
      * @return the event
      */
-    private Event createEventEntityWithId(long id, String title, String day) {
-        Event eventEntity = createEventEntityWithoutId(title, day);
+    private Event createEventEntityWithId(long id, String title, String day, BigDecimal price) {
+        Event eventEntity = createEventEntityWithoutId(title, day, price);
         eventEntity.setId(id);
         return eventEntity;
     }

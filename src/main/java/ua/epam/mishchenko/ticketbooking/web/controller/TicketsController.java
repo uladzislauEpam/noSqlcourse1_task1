@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl;
+import ua.epam.mishchenko.ticketbooking.model.Category;
 import ua.epam.mishchenko.ticketbooking.model.Event;
 import ua.epam.mishchenko.ticketbooking.model.Ticket;
 import ua.epam.mishchenko.ticketbooking.model.User;
@@ -60,7 +61,7 @@ public class TicketsController {
     public ModelAndView bookTicket(@RequestParam long userId,
                                    @RequestParam long eventId,
                                    @RequestParam int place,
-                                   @RequestParam Ticket.Category category) {
+                                   @RequestParam Category category) {
         log.info("Booking a ticket: userId={}, eventId={}, place={}, category={}", userId, eventId, place, category);
         Map<String, Object> model = new HashMap<>();
         Ticket ticket = bookingFacade.bookTicket(userId, eventId, place, category);

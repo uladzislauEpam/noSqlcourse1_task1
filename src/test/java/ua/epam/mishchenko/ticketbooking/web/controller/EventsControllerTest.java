@@ -8,9 +8,8 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.servlet.ModelAndView;
 import ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl;
 import ua.epam.mishchenko.ticketbooking.model.Event;
-import ua.epam.mishchenko.ticketbooking.model.impl.EventImpl;
-import ua.epam.mishchenko.ticketbooking.web.controller.EventsController;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Date;
@@ -42,7 +41,7 @@ public class EventsControllerTest {
 
     @Test
     public void showEventByIdWithExistingEventIdShouldReturnModelAndViewWithEvent() {
-        Event event = new EventImpl(1L, "Test event", new Date(System.currentTimeMillis()));
+        Event event = new Event(1L, "Test event", new Date(System.currentTimeMillis()), BigDecimal.ONE);
 
         when(bookingFacade.getEventById(anyLong())).thenReturn(event);
 
@@ -73,7 +72,7 @@ public class EventsControllerTest {
 
     @Test
     public void showEventsByTitleWithExistingEventTitleShouldReturnModelAndViewWithListOfEvents() {
-        Event event = new EventImpl(1L, "Test event", new Date(System.currentTimeMillis()));
+        Event event = new Event(1L, "Test event", new Date(System.currentTimeMillis()), BigDecimal.ONE);
 
         when(bookingFacade.getEventsByTitle(anyString(), anyInt(), anyInt()))
                 .thenReturn(Collections.singletonList(event));
@@ -105,7 +104,7 @@ public class EventsControllerTest {
 
     @Test
     public void showEventsForDayWithCorrectDateFormatAndExistingDayShouldReturnModelAndViewWithListOfEvents() {
-        Event event = new EventImpl(1L, "Test event", new Date(System.currentTimeMillis()));
+        Event event = new Event(1L, "Test event", new Date(System.currentTimeMillis()), BigDecimal.ONE);
 
         when(bookingFacade.getEventsForDay(any(), anyInt(), anyInt())).thenReturn(Collections.singletonList(event));
 
@@ -153,11 +152,11 @@ public class EventsControllerTest {
 
     @Test
     public void createEventWithCorrectFormatOfDateShouldReturnModelAndViewWithEvent() {
-        Event event = new EventImpl(1L, "Test event", new Date(System.currentTimeMillis()));
+        Event event = new Event(1L, "Test event", new Date(System.currentTimeMillis()), BigDecimal.ONE);
 
         when(bookingFacade.createEvent(any())).thenReturn(event);
 
-        ModelAndView actualModelAndView = eventsController.createEvent("Test event", "18-05-2022 15:30");
+        ModelAndView actualModelAndView = eventsController.createEvent("Test event", "18-05-2022 15:30", BigDecimal.TEN);
 
         verify(bookingFacade, times(1)).createEvent(any());
 
@@ -172,7 +171,7 @@ public class EventsControllerTest {
     public void createEventWithCorrectFormatOfDateShouldReturnModelAndViewWithMessage() {
         when(bookingFacade.createEvent(any())).thenReturn(null);
 
-        ModelAndView actualModelAndView = eventsController.createEvent("Test event", "18-05-2022 15:30");
+        ModelAndView actualModelAndView = eventsController.createEvent("Test event", "18-05-2022 15:30", BigDecimal.ZERO);
 
         verify(bookingFacade, times(1)).createEvent(any());
 
@@ -186,7 +185,7 @@ public class EventsControllerTest {
 
     @Test
     public void createEventWithWrongFormatOfDateShouldReturnModelAndViewWithMessage() {
-        ModelAndView actualModelAndView = eventsController.createEvent("Test event", "18.05.2022 15:30");
+        ModelAndView actualModelAndView = eventsController.createEvent("Test event", "18.05.2022 15:30", BigDecimal.ZERO);
 
         verify(bookingFacade, times(0)).createEvent(any());
 
@@ -200,11 +199,11 @@ public class EventsControllerTest {
 
     @Test
     public void updateEventWithCorrectDateFormatShouldReturnModelAndViewWithEvent() {
-        Event event = new EventImpl(1L, "Test event", new Date(System.currentTimeMillis()));
+        Event event = new Event(1L, "Test event", new Date(System.currentTimeMillis()), BigDecimal.ONE);
 
         when(bookingFacade.updateEvent(any())).thenReturn(event);
 
-        ModelAndView actualModelAndView = eventsController.updateEvent(1L, "Test title", "18-05-2022 15:30");
+        ModelAndView actualModelAndView = eventsController.updateEvent(1L, "Test title", "18-05-2022 15:30", BigDecimal.ZERO);
 
         verify(bookingFacade, times(1)).updateEvent(any());
 
@@ -219,7 +218,7 @@ public class EventsControllerTest {
     public void updateEventWithCorrectDateFormatShouldReturnModelAndViewWithMessage() {
         when(bookingFacade.updateEvent(any())).thenReturn(null);
 
-        ModelAndView actualModelAndView = eventsController.updateEvent(1L, "Test title", "18-05-2022 15:30");
+        ModelAndView actualModelAndView = eventsController.updateEvent(1L, "Test title", "18-05-2022 15:30", BigDecimal.ZERO);
 
         verify(bookingFacade, times(1)).updateEvent(any());
 
@@ -233,7 +232,7 @@ public class EventsControllerTest {
 
     @Test
     public void updateEventWithWrongDateFormatShouldReturnModelAndViewWithMessage() {
-        ModelAndView actualModelAndView = eventsController.updateEvent(1L, "Test title", "18.05-2022 15:30");
+        ModelAndView actualModelAndView = eventsController.updateEvent(1L, "Test title", "18.05-2022 15:30", BigDecimal.ZERO);
 
         verify(bookingFacade, times(0)).updateEvent(any());
 

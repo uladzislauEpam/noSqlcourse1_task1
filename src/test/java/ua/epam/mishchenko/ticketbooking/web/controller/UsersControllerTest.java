@@ -7,8 +7,7 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.servlet.ModelAndView;
 import ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl;
-import ua.epam.mishchenko.ticketbooking.model.impl.UserImpl;
-import ua.epam.mishchenko.ticketbooking.web.controller.UsersController;
+import ua.epam.mishchenko.ticketbooking.model.User;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -40,7 +39,7 @@ public class UsersControllerTest {
 
     @Test
     public void showUserByIdWithExistingUserIdShouldReturnModelAndViewWithUser() {
-        when(bookingFacade.getUserById(anyLong())).thenReturn(new UserImpl());
+        when(bookingFacade.getUserById(anyLong())).thenReturn(new User());
 
         ModelAndView actualModelAndView = usersController.showUserById(1L);
 
@@ -70,7 +69,7 @@ public class UsersControllerTest {
     @Test
     public void showUsersByNameWithExistingUsersNameShouldReturnModelAndViewWithListOfUsers() {
         when(bookingFacade.getUsersByName(anyString(), anyInt(), anyInt()))
-                .thenReturn(Collections.singletonList(new UserImpl()));
+                .thenReturn(Collections.singletonList(new User()));
 
         ModelAndView actualModelAndView = usersController.showUsersByName("Not Existing Name", 1, 1);
 
@@ -101,7 +100,7 @@ public class UsersControllerTest {
 
     @Test
     public void showUserByEmailWithExistingUserEmailShouldReturnModelAndViewWithListOfUsers() {
-        when(bookingFacade.getUserByEmail(anyString())).thenReturn(new UserImpl());
+        when(bookingFacade.getUserByEmail(anyString())).thenReturn(new User());
 
         ModelAndView actualModelAndView = usersController.showUserByEmail("Not Existing Email");
 
@@ -132,7 +131,7 @@ public class UsersControllerTest {
 
     @Test
     public void createUserWithCorrectParametersShouldReturnModelAndViewWithUser() {
-        when(bookingFacade.createUser(any())).thenReturn(new UserImpl());
+        when(bookingFacade.createUser(any())).thenReturn(new User());
 
         ModelAndView actualModelAndView = usersController.createUser("Test Name", "test@mail.com");
 
@@ -163,7 +162,7 @@ public class UsersControllerTest {
 
     @Test
     public void updateUserWithCorrectParametersShouldReturnModelAndViewWithUser() {
-        when(bookingFacade.updateUser(any())).thenReturn(new UserImpl());
+        when(bookingFacade.updateUser(any())).thenReturn(new User());
 
         ModelAndView actualModelAndView = usersController.updateUser(1L, "Test Name", "test@mail.com");
 

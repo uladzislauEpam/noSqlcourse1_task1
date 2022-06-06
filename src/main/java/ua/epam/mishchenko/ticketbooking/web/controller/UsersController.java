@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl;
 import ua.epam.mishchenko.ticketbooking.model.User;
-import ua.epam.mishchenko.ticketbooking.model.impl.UserImpl;
 
 import java.util.HashMap;
 import java.util.List;
@@ -29,7 +28,7 @@ public class UsersController {
     /**
      * The constant log.
      */
-    private static final Logger log = LoggerFactory.getLogger(TicketsController.class);
+    private static final Logger log = LoggerFactory.getLogger(UsersController.class);
 
     /**
      * The Booking facade.
@@ -154,7 +153,7 @@ public class UsersController {
      * @return the user
      */
     private User createUserEntityWithoutId(String name, String email) {
-        User user = new UserImpl();
+        User user = new User();
         user.setName(name);
         user.setEmail(email);
         return user;
