@@ -3,32 +3,42 @@ package ua.epam.mishchenko.ticketbooking.facade.impl;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.test.context.ContextConfiguration;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.TestPropertySource;
+import org.springframework.test.context.jdbc.Sql;
 import org.springframework.test.context.junit4.SpringRunner;
+import ua.epam.mishchenko.ticketbooking.model.Category;
 import ua.epam.mishchenko.ticketbooking.model.Event;
 import ua.epam.mishchenko.ticketbooking.model.Ticket;
 import ua.epam.mishchenko.ticketbooking.model.User;
-import ua.epam.mishchenko.ticketbooking.model.impl.EventImpl;
-import ua.epam.mishchenko.ticketbooking.model.impl.UserImpl;
+import ua.epam.mishchenko.ticketbooking.model.UserAccount;
+import ua.epam.mishchenko.ticketbooking.repository.UserAccountRepository;
 
+import java.math.BigDecimal;
 import java.util.Date;
 import java.util.List;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
 
 @RunWith(SpringRunner.class)
-@ContextConfiguration({"classpath:/test-applicationContext.xml"})
+@SpringBootTest
+@TestPropertySource(properties = {"spring.config.location = classpath:application-test.yml"})
+@Sql(value = {"classpath:sql/clear-database.sql"}, executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
+@Sql(value = {"classpath:sql/clear-database.sql"}, executionPhase = Sql.ExecutionPhase.AFTER_TEST_METHOD)
 public class BookingFacadeImplTest {
 
     @Autowired
     private BookingFacadeImpl bookingFacade;
 
+    @Autowired
+    private UserAccountRepository userAccountRepository;
+
     @Test
     public void createUserThenCreateEventThenBookTicketForThisEventForUserAndThenCancelItShouldBeOk() {
-        User user = new UserImpl("Andrii", "andrii@gmail.com");
-        Event event = new EventImpl("Integration Event", new Date(System.currentTimeMillis()));
+        User user = new User("Andrii", "andrii@gmail.com");
+        Event event = new Event("Integration Event", new Date(System.currentTimeMillis()), BigDecimal.valueOf(250));
         int place = 10;
 
         user = bookingFacade.createUser(user);
@@ -39,7 +49,13 @@ public class BookingFacadeImplTest {
 
         assertNotNull(bookingFacade.getEventById(event.getId()));
 
-        Ticket ticket = bookingFacade.bookTicket(user.getId(), event.getId(), place, Ticket.Category.STANDARD);
+        UserAccount userAccount = bookingFacade.refillUserAccount(user.getId(), BigDecimal.valueOf(500));
+
+        assertEquals(BigDecimal.valueOf(500), userAccount.getMoney());
+
+        Ticket ticket = bookingFacade.bookTicket(user.getId(), event.getId(), place, Category.STANDARD);
+
+        assertEquals(250, userAccountRepository.findById(user.getId()).get().getMoney().intValue());
 
         List<Ticket> bookedTicketsByUserBeforeCanceling = bookingFacade.getBookedTickets(user, 1, 1);
         List<Ticket> bookedTicketsByEventBeforeCanceling = bookingFacade.getBookedTickets(event, 1, 1);

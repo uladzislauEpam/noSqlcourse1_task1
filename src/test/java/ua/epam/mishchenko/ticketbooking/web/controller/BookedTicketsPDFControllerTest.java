@@ -7,12 +7,10 @@ import org.mockito.MockitoAnnotations;
 import org.springframework.core.io.InputStreamResource;
 import org.springframework.http.ResponseEntity;
 import ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl;
+import ua.epam.mishchenko.ticketbooking.model.Ticket;
 import ua.epam.mishchenko.ticketbooking.model.User;
-import ua.epam.mishchenko.ticketbooking.model.impl.TicketImpl;
-import ua.epam.mishchenko.ticketbooking.model.impl.UserImpl;
 import ua.epam.mishchenko.ticketbooking.utils.PDFUtils;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -59,7 +57,7 @@ public class BookedTicketsPDFControllerTest {
 
     @Test
     public void getBookedTicketsByUserPDFExistingUserIdAndEmptyListShouldThrowException() {
-        when(bookingFacade.getUserById(anyLong())).thenReturn(new UserImpl());
+        when(bookingFacade.getUserById(anyLong())).thenReturn(new User());
         when(bookingFacade.getBookedTickets(any(User.class), anyInt(), anyInt())).thenReturn(new ArrayList<>());
 
         RuntimeException actualException = assertThrows(RuntimeException.class,
@@ -75,9 +73,9 @@ public class BookedTicketsPDFControllerTest {
 
     @Test
     public void getBookedTicketsByUserPDFExistingUserIdAndNotExistingDocumentShouldThrowException() {
-        when(bookingFacade.getUserById(anyLong())).thenReturn(new UserImpl());
+        when(bookingFacade.getUserById(anyLong())).thenReturn(new User());
         when(bookingFacade.getBookedTickets(any(User.class), anyInt(), anyInt()))
-                .thenReturn(Collections.singletonList(new TicketImpl()));
+                .thenReturn(Collections.singletonList(new Ticket()));
         when(pdfUtils.getPDFDocument()).thenThrow(new RuntimeException());
 
         RuntimeException actualException = assertThrows(RuntimeException.class,
@@ -93,9 +91,9 @@ public class BookedTicketsPDFControllerTest {
 
     @Test
     public void getBookedTicketsByUserPDFExistingUserIdShouldReturnDocument() {
-        when(bookingFacade.getUserById(anyLong())).thenReturn(new UserImpl());
+        when(bookingFacade.getUserById(anyLong())).thenReturn(new User());
         when(bookingFacade.getBookedTickets(any(User.class), anyInt(), anyInt()))
-                .thenReturn(Collections.singletonList(new TicketImpl()));
+                .thenReturn(Collections.singletonList(new Ticket()));
         when(pdfUtils.getPDFDocument()).thenReturn(any(InputStreamResource.class));
 
         ResponseEntity<Object> actualResponseEntity = bookedTicketsPDFController.getBookedTicketsByUserPDF(1L, 1, 1);

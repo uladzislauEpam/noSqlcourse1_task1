@@ -19,4 +19,5 @@ insert into tickets values (default, 1, 1, 10, 'BAR'),
                            (default, 5, 1, 11, 'PREMIUM'),
                            (default, 3, 5, 1, 'STANDARD');
 
-select * from events;
+insert into user_accounts values (default, 1, 1000),
+                                 (default, 2, 1500);
