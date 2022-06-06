@@ -1,24 +1,18 @@
 package ua.epam.mishchenko.ticketbooking.facade.impl;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.oxm.Unmarshaller;
 import org.springframework.stereotype.Component;
 import ua.epam.mishchenko.ticketbooking.facade.BookingFacade;
-import ua.epam.mishchenko.ticketbooking.model.*;
-import ua.epam.mishchenko.ticketbooking.oxm.model.TicketDTO;
-import ua.epam.mishchenko.ticketbooking.oxm.model.TicketsDTO;
+import ua.epam.mishchenko.ticketbooking.model.Category;
+import ua.epam.mishchenko.ticketbooking.model.Event;
+import ua.epam.mishchenko.ticketbooking.model.Ticket;
+import ua.epam.mishchenko.ticketbooking.model.User;
+import ua.epam.mishchenko.ticketbooking.model.UserAccount;
 import ua.epam.mishchenko.ticketbooking.service.EventService;
 import ua.epam.mishchenko.ticketbooking.service.TicketService;
 import ua.epam.mishchenko.ticketbooking.service.UserAccountService;
 import ua.epam.mishchenko.ticketbooking.service.UserService;
 
-import javax.xml.transform.stream.StreamSource;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStream;
 import java.math.BigDecimal;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -27,11 +21,6 @@ import java.util.List;
  */
 @Component
 public class BookingFacadeImpl implements BookingFacade {
-
-    /**
-     * The constant log.
-     */
-    private static final Logger log = LoggerFactory.getLogger(BookingFacadeImpl.class);
 
     /**
      * The Event service.
@@ -54,26 +43,19 @@ public class BookingFacadeImpl implements BookingFacade {
     private final UserAccountService userAccountService;
 
     /**
-     * The Unmarshaller.
-     */
-    private final Unmarshaller unmarshaller;
-
-    /**
      * Instantiates a new Booking facade.
      *
      * @param eventService       the event service
      * @param userService        the user service
      * @param ticketService      the ticket service
      * @param userAccountService the user account service
-     * @param unmarshaller       the unmarshaller
      */
     public BookingFacadeImpl(EventService eventService, UserService userService, TicketService ticketService,
-                             UserAccountService userAccountService, Unmarshaller unmarshaller) {
+                             UserAccountService userAccountService) {
         this.eventService = eventService;
         this.ticketService = ticketService;
         this.userService = userService;
         this.userAccountService = userAccountService;
-        this.unmarshaller = unmarshaller;
     }
 
     /**
@@ -263,66 +245,6 @@ public class BookingFacadeImpl implements BookingFacade {
     @Override
     public boolean cancelTicket(long ticketId) {
         return ticketService.cancelTicket(ticketId);
-    }
-
-    /**
-     * Preload tickets.
-     */
-    public void preloadTickets(InputStream xmlFile) {
-        List<Ticket> bookedTickets = new ArrayList<>();
-        try {
-            readTicketsFromFileAndSaveToDB(bookedTickets, xmlFile);
-        } catch (RuntimeException e) {
-            log.warn("Can not to save tickets in the data base from tickets.xml", e);
-            rollbackTickets(bookedTickets);
-            throw new RuntimeException("Can not to save the tickets in the data base from tickets.xml", e);
-        } catch (FileNotFoundException e) {
-            log.warn("Can not to find a file", e);
-            throw new RuntimeException("Can not to find a file", e);
-        } catch (IOException e) {
-            log.warn("Can not to read a tickets.xml file", e);
-            throw new RuntimeException("Can not to read a tickets.xml file", e);
-        }
-    }
-
-    /**
-     * Read tickets from file and save to db.
-     *
-     * @param bookedTickets the booked tickets
-     * @param xmlFile       the xml file with tickets
-     * @throws IOException the io exception
-     */
-    private void readTicketsFromFileAndSaveToDB(List<Ticket> bookedTickets, InputStream xmlFile) throws IOException {
-        TicketsDTO ticketsDTO = (TicketsDTO) unmarshaller.unmarshal(new StreamSource(xmlFile));
-        saveToDB(bookedTickets, ticketsDTO);
-    }
-
-    /**
-     * Save to db.
-     *
-     * @param bookedTickets the booked tickets
-     * @param ticketsDTO    the tickets dto
-     */
-    private void saveToDB(List<Ticket> bookedTickets, TicketsDTO ticketsDTO) {
-        for (TicketDTO ticketDTO : ticketsDTO.getTickets()) {
-            Ticket ticket = bookTicket(ticketDTO.getUserId(), ticketDTO.getEventId(), ticketDTO.getPlace(), ticketDTO.getCategory());
-            if (ticket == null) {
-                throw new RuntimeException("Can not to save the ticket: " + ticketDTO);
-            }
-            bookedTickets.add(ticket);
-        }
-    }
-
-    /**
-     * Rollback tickets.
-     *
-     * @param bookedTickets the booked tickets
-     */
-    private void rollbackTickets(List<Ticket> bookedTickets) {
-        log.warn("Rollback tickets from the data base");
-        for (Ticket bookedTicket : bookedTickets) {
-            cancelTicket(bookedTicket.getId());
-        }
     }
 
     public UserAccount refillUserAccount(long userId, BigDecimal money) {

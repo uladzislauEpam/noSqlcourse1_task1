@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.servlet.ModelAndView;
 import ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl;
 import ua.epam.mishchenko.ticketbooking.model.Category;
@@ -17,7 +16,6 @@ import ua.epam.mishchenko.ticketbooking.model.Event;
 import ua.epam.mishchenko.ticketbooking.model.Ticket;
 import ua.epam.mishchenko.ticketbooking.model.User;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -167,18 +165,5 @@ public class TicketsController {
             log.info("The ticket with id: {} not canceled", id);
         }
         return new ModelAndView("ticket", model);
-    }
-
-    @PostMapping("/upload")
-    public ModelAndView preloadTickets(@RequestParam MultipartFile file) {
-        Map<String, Object> model = new HashMap<>();
-        try {
-            bookingFacade.preloadTickets(file.getInputStream());
-            model.put("message", "The tickets from a xml file uploaded successfully");
-        } catch (IOException e) {
-            log.warn("Can not to upload a xml file with tickets", e);
-            model.put("message", "Can not to upload a xml file with tickets");
-        }
-        return new ModelAndView("tickets", model);
     }
 }
