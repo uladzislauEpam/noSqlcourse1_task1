@@ -10,6 +10,6 @@ public class Constants {
     /**
      * The constant DATE_FORMATTER.
      */
-    public static final SimpleDateFormat DATE_FORMATTER = new SimpleDateFormat("dd-MM-yyyy HH:mm");
+    public static final SimpleDateFormat DATE_FORMATTER = new SimpleDateFormat("yyyy-MM-dd HH:mm");
 
 }
