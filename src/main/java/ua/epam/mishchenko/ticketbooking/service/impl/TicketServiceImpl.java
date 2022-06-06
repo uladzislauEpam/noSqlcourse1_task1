@@ -68,12 +68,12 @@ public class TicketServiceImpl implements TicketService {
     }
 
     private Ticket processBookingTicket(long userId, long eventId, int place, Category category) {
-        ifUserNotExistThrowRuntimeException(userId);
-        ifEventNotExistThrowRuntimeException(eventId);
-        ifTicketAlreadyBookedThrowRuntimeException(eventId, place, category);
+        throwRuntimeExceptionIfUserNotExist(userId);
+        throwRuntimeExceptionIfEventNotExist(eventId);
+        throwRuntimeExceptionIfTicketAlreadyBooked(eventId, place, category);
         UserAccount userAccount = getUserAccount(userId);
         Event event = getEvent(eventId);
-        ifUserNotHaveEnoughMoneyThrowRuntimeException(userAccount, event);
+        throwRuntimeExceptionIfUserNotHaveEnoughMoney(userAccount, event);
         buyTicket(userAccount, event);
         Ticket ticket = saveBookedTicket(userId, eventId, place, category);
         log.info("Successfully booking of the ticket: {}", ticket);
@@ -92,7 +92,7 @@ public class TicketServiceImpl implements TicketService {
         return userAccount.getMoney().subtract(event.getTicketPrice());
     }
 
-    private void ifUserNotHaveEnoughMoneyThrowRuntimeException(UserAccount userAccount, Event event) {
+    private void throwRuntimeExceptionIfUserNotHaveEnoughMoney(UserAccount userAccount, Event event) {
         if (!userHasEnoughMoneyForTicket(userAccount, event)) {
             throw new RuntimeException(
                     "The user with id " + userAccount.getUser().getId() +
@@ -101,7 +101,7 @@ public class TicketServiceImpl implements TicketService {
         }
     }
 
-    private void ifTicketAlreadyBookedThrowRuntimeException(long eventId, int place, Category category) {
+    private void throwRuntimeExceptionIfTicketAlreadyBooked(long eventId, int place, Category category) {
         if (ticketRepository.existsByEventIdAndPlaceAndCategory(eventId, place, category)) {
             throw new RuntimeException("This ticket already booked");
         }
@@ -113,17 +113,17 @@ public class TicketServiceImpl implements TicketService {
     }
 
     private UserAccount getUserAccount(long userId) {
-        return userAccountRepository.findById(userId)
-                .orElseThrow(() -> new RuntimeException("Can not to find a user account by id: " + userId));
+        return userAccountRepository.findByUserId(userId)
+                .orElseThrow(() -> new RuntimeException("Can not to find a user account by user id: " + userId));
     }
 
-    private void ifEventNotExistThrowRuntimeException(long eventId) {
+    private void throwRuntimeExceptionIfEventNotExist(long eventId) {
         if (!eventRepository.existsById(eventId)) {
             throw new RuntimeException("The event with id " + eventId + " does not exist");
         }
     }
 
-    private void ifUserNotExistThrowRuntimeException(long userId) {
+    private void throwRuntimeExceptionIfUserNotExist(long userId) {
         if (!userRepository.existsById(userId)) {
             throw new RuntimeException("The user with id " + userId + " does not exist");
         }

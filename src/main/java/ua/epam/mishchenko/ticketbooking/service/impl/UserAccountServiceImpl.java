@@ -28,7 +28,8 @@ public class UserAccountServiceImpl implements UserAccountService {
     public UserAccount refillAccount(long userId, BigDecimal money) {
         log.info("Refilling user account for user with id: {}", userId);
         try {
-            ifUserNotExistThrowRuntimeException(userId);
+            thrownRuntimeExceptionIfMoneyLessZero(money);
+            throwRuntimeExceptionIfUserNotExist(userId);
             UserAccount userAccount = getUserAccountAndRefillIfNotExistCreate(userId, money);
             userAccount = userAccountRepository.save(userAccount);
             log.info("The user account with user id {} successfully refilled", userId);
@@ -36,6 +37,12 @@ public class UserAccountServiceImpl implements UserAccountService {
         } catch (RuntimeException e) {
             log.warn("Can not to refill account with user id: {}", userId);
             return null;
+        }
+    }
+
+    private void thrownRuntimeExceptionIfMoneyLessZero(BigDecimal money) {
+        if (money.compareTo(BigDecimal.ZERO) < 1) {
+            throw new RuntimeException("The money can not to be less zero");
         }
     }
 
@@ -59,7 +66,7 @@ public class UserAccountServiceImpl implements UserAccountService {
         return userAccount;
     }
 
-    private void ifUserNotExistThrowRuntimeException(long userId) {
+    private void throwRuntimeExceptionIfUserNotExist(long userId) {
         if (!userRepository.existsById(userId)) {
             throw new RuntimeException("The user with id " + userId + " does not exist");
         }
