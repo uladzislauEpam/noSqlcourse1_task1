@@ -25,7 +25,8 @@ import static org.junit.Assert.assertTrue;
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @TestPropertySource(properties = {"spring.config.location = classpath:application-test.yml"})
-@Sql(value = {"classpath:sql/clear-database.sql"}, executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
+@Sql(value = {"classpath:sql/clear-database.sql", "classpath:sql/insert-data.sql"},
+        executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
 @Sql(value = {"classpath:sql/clear-database.sql"}, executionPhase = Sql.ExecutionPhase.AFTER_TEST_METHOD)
 public class BookingFacadeImplTest {
 
@@ -70,6 +71,30 @@ public class BookingFacadeImplTest {
 
         assertTrue(bookedTicketsByUserAfterCanceling.isEmpty());
         assertTrue(bookedTicketsByEventAfterCanceling.isEmpty());
+    }
+
+    @Test
+    public void refillUserAccountAndBookTicketWithNotExistingUserAccountShouldBeOk() {
+        long userId = 5;
+        long eventId = 1;
+        int place = 5;
+        Category category = Category.BAR;
+        BigDecimal money = BigDecimal.valueOf(5000);
+
+        UserAccount userAccount = bookingFacade.refillUserAccount(userId, money);
+
+        assertEquals(Long.valueOf(userId), userAccount.getUser().getId());
+        assertEquals(money, userAccount.getMoney());
+
+        Ticket ticket = bookingFacade.bookTicket(userId, eventId, place, category);
+
+        assertNotNull(ticket);
+        assertEquals(Long.valueOf(userId), ticket.getUser().getId());
+
+        User userById = bookingFacade.getUserById(userId);
+
+        assertEquals(userAccount.getMoney().subtract(ticket.getEvent().getTicketPrice()),
+                userById.getUserAccount().getMoney());
     }
 
 }
