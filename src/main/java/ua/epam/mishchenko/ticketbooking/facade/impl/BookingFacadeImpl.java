@@ -2,23 +2,22 @@ package ua.epam.mishchenko.ticketbooking.facade.impl;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.oxm.Unmarshaller;
+import org.springframework.stereotype.Component;
 import ua.epam.mishchenko.ticketbooking.facade.BookingFacade;
-import ua.epam.mishchenko.ticketbooking.model.Event;
-import ua.epam.mishchenko.ticketbooking.model.Ticket;
-import ua.epam.mishchenko.ticketbooking.model.User;
+import ua.epam.mishchenko.ticketbooking.model.*;
 import ua.epam.mishchenko.ticketbooking.oxm.model.TicketDTO;
 import ua.epam.mishchenko.ticketbooking.oxm.model.TicketsDTO;
 import ua.epam.mishchenko.ticketbooking.service.EventService;
 import ua.epam.mishchenko.ticketbooking.service.TicketService;
+import ua.epam.mishchenko.ticketbooking.service.UserAccountService;
 import ua.epam.mishchenko.ticketbooking.service.UserService;
 
 import javax.xml.transform.stream.StreamSource;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -26,6 +25,7 @@ import java.util.List;
 /**
  * The type Booking facade.
  */
+@Component
 public class BookingFacadeImpl implements BookingFacade {
 
     /**
@@ -49,6 +49,11 @@ public class BookingFacadeImpl implements BookingFacade {
     private final UserService userService;
 
     /**
+     * The User Account service.
+     */
+    private final UserAccountService userAccountService;
+
+    /**
      * The Unmarshaller.
      */
     private final Unmarshaller unmarshaller;
@@ -56,16 +61,18 @@ public class BookingFacadeImpl implements BookingFacade {
     /**
      * Instantiates a new Booking facade.
      *
-     * @param eventService  the event service
-     * @param ticketService the ticket service
-     * @param userService   the user service
-     * @param unmarshaller  the unmarshaller
+     * @param eventService       the event service
+     * @param userService        the user service
+     * @param ticketService      the ticket service
+     * @param userAccountService the user account service
+     * @param unmarshaller       the unmarshaller
      */
-    public BookingFacadeImpl(EventService eventService, TicketService ticketService, UserService userService,
-                             Unmarshaller unmarshaller) {
+    public BookingFacadeImpl(EventService eventService, UserService userService, TicketService ticketService,
+                             UserAccountService userAccountService, Unmarshaller unmarshaller) {
         this.eventService = eventService;
         this.ticketService = ticketService;
         this.userService = userService;
+        this.userAccountService = userAccountService;
         this.unmarshaller = unmarshaller;
     }
 
@@ -107,7 +114,7 @@ public class BookingFacadeImpl implements BookingFacade {
     }
 
     /**
-     * Create event event.
+     * Create event.
      *
      * @param event the event
      * @return the event
@@ -118,7 +125,7 @@ public class BookingFacadeImpl implements BookingFacade {
     }
 
     /**
-     * Update event event.
+     * Update event.
      *
      * @param event the event
      * @return the event
@@ -175,7 +182,7 @@ public class BookingFacadeImpl implements BookingFacade {
     }
 
     /**
-     * Create user user.
+     * Create user.
      *
      * @param user the user
      * @return the user
@@ -186,7 +193,7 @@ public class BookingFacadeImpl implements BookingFacade {
     }
 
     /**
-     * Update user user.
+     * Update user.
      *
      * @param user the user
      * @return the user
@@ -208,7 +215,7 @@ public class BookingFacadeImpl implements BookingFacade {
     }
 
     /**
-     * Book ticket ticket.
+     * Book ticket.
      *
      * @param userId   the user id
      * @param eventId  the event id
@@ -217,7 +224,7 @@ public class BookingFacadeImpl implements BookingFacade {
      * @return the ticket
      */
     @Override
-    public Ticket bookTicket(long userId, long eventId, int place, Ticket.Category category) {
+    public Ticket bookTicket(long userId, long eventId, int place, Category category) {
         return ticketService.bookTicket(userId, eventId, place, category);
     }
 
@@ -282,7 +289,7 @@ public class BookingFacadeImpl implements BookingFacade {
      * Read tickets from file and save to db.
      *
      * @param bookedTickets the booked tickets
-     * @param xmlFile the xml file with tickets
+     * @param xmlFile       the xml file with tickets
      * @throws IOException the io exception
      */
     private void readTicketsFromFileAndSaveToDB(List<Ticket> bookedTickets, InputStream xmlFile) throws IOException {
@@ -316,5 +323,9 @@ public class BookingFacadeImpl implements BookingFacade {
         for (Ticket bookedTicket : bookedTickets) {
             cancelTicket(bookedTicket.getId());
         }
+    }
+
+    public UserAccount refillUserAccount(long userId, BigDecimal money) {
+        return userAccountService.refillAccount(userId, money);
     }
 }
