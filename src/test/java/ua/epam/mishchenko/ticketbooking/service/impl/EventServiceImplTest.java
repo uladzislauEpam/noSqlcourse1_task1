@@ -19,8 +19,14 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
-import static org.junit.Assert.*;
-import static org.mockito.ArgumentMatchers.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNull;
+import static org.junit.Assert.assertTrue;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyLong;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.doThrow;
 import static org.mockito.Mockito.when;
 import static ua.epam.mishchenko.ticketbooking.utils.Constants.DATE_FORMATTER;
@@ -153,6 +159,7 @@ public class EventServiceImplTest {
     public void updateEventWithExistsEventShouldBeOk() throws ParseException {
         Event expectedEvent = new Event(1L, "Second event", DATE_FORMATTER.parse("15-05-2022 21:00"), BigDecimal.ONE);
 
+        when(eventRepository.existsById(anyLong())).thenReturn(true);
         when(eventRepository.save(any(Event.class))).thenReturn(expectedEvent);
 
         Event actualEvent = eventService.updateEvent(expectedEvent);
