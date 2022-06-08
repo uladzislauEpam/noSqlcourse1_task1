@@ -27,20 +27,45 @@ public class SecondLevelHibernateCacheTest {
     SessionFactory sessionFactory;
 
     @Test
-    public void getEventByIdWithExistsIdShouldCacheShouldBeWork() {
-        assertEquals(sessionFactory.getStatistics().getSecondLevelCacheHitCount(), 0);
-        assertEquals(sessionFactory.getStatistics().getSecondLevelCacheMissCount(), 0);
+    public void getEventByIdWithExistsIdShouldCacheWorks() {
+        assertEquals(0, sessionFactory.getStatistics().getSecondLevelCacheHitCount());
+        assertEquals(0, sessionFactory.getStatistics().getSecondLevelCacheMissCount());
 
         Session session = sessionFactory.openSession();
         session.find(Event.class, 1L);
 
-        assertEquals(sessionFactory.getStatistics().getSecondLevelCacheHitCount(), 0);
-        assertEquals(sessionFactory.getStatistics().getSecondLevelCacheMissCount(), 1);
+        assertEquals(0, sessionFactory.getStatistics().getSecondLevelCacheHitCount());
+        assertEquals(1, sessionFactory.getStatistics().getSecondLevelCacheMissCount());
 
         session = sessionFactory.openSession();
         session.find(Event.class, 1L);
 
-        assertEquals(sessionFactory.getStatistics().getSecondLevelCacheHitCount(), 1);
-        assertEquals(sessionFactory.getStatistics().getSecondLevelCacheMissCount(), 1);
+        assertEquals(1, sessionFactory.getStatistics().getSecondLevelCacheHitCount());
+        assertEquals(1, sessionFactory.getStatistics().getSecondLevelCacheMissCount());
+    }
+
+    @Test
+    public void getEventsShouldQueryCacheWorks() {
+        assertEquals(0, sessionFactory.getStatistics().getSecondLevelCacheHitCount());
+        assertEquals(0, sessionFactory.getStatistics().getSecondLevelCacheMissCount());
+
+        Session session = sessionFactory.openSession();
+        session.createQuery("select e from Event e order by e.id desc")
+                .setMaxResults(5)
+                .setCacheable(true)
+                .list();
+
+        assertEquals(0, sessionFactory.getStatistics().getQueryCacheHitCount());
+        assertEquals(1, sessionFactory.getStatistics().getQueryCacheMissCount());
+
+        session = sessionFactory.openSession();
+        session.createQuery("select e from Event e order by e.id desc")
+                .setMaxResults(5)
+                .setCacheable(true)
+                .list();
+
+        assertEquals(1, sessionFactory.getStatistics().getQueryCacheHitCount());
+        assertEquals(1, sessionFactory.getStatistics().getQueryCacheMissCount());
+        assertEquals(5, sessionFactory.getStatistics().getSecondLevelCacheHitCount());
     }
 }
