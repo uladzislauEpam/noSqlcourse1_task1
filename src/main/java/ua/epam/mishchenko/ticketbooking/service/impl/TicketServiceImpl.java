@@ -5,8 +5,14 @@ import org.slf4j.LoggerFactory;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Isolation;
 import org.springframework.transaction.annotation.Transactional;
-import ua.epam.mishchenko.ticketbooking.model.*;
+import org.springframework.transaction.interceptor.TransactionAspectSupport;
+import ua.epam.mishchenko.ticketbooking.model.Category;
+import ua.epam.mishchenko.ticketbooking.model.Event;
+import ua.epam.mishchenko.ticketbooking.model.Ticket;
+import ua.epam.mishchenko.ticketbooking.model.User;
+import ua.epam.mishchenko.ticketbooking.model.UserAccount;
 import ua.epam.mishchenko.ticketbooking.repository.EventRepository;
 import ua.epam.mishchenko.ticketbooking.repository.TicketRepository;
 import ua.epam.mishchenko.ticketbooking.repository.UserAccountRepository;
@@ -54,7 +60,7 @@ public class TicketServiceImpl implements TicketService {
      * @return the ticket
      */
     @Override
-    @Transactional
+    @Transactional(isolation = Isolation.SERIALIZABLE)
     public Ticket bookTicket(long userId, long eventId, int place, Category category) {
         log.info("Start booking a ticket for user with id {}, event with id event {}, place {}, category {}",
                 userId, eventId, place, category);
@@ -63,6 +69,8 @@ public class TicketServiceImpl implements TicketService {
         } catch (RuntimeException e) {
             log.warn("Can not to book a ticket for user with id {}, event with id {}, place {}, category {}",
                     userId, eventId, place, category, e);
+            TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+            log.warn("Transaction rollback");
             return null;
         }
     }
