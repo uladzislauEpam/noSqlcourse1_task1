@@ -1,0 +1,18 @@
+[DEBUG] 2022-05-15 14:03:03.373 [main] UserDAOImpl - Start inserting of the user: User{id=0, name='First user', email='First email'}
+[DEBUG] 2022-05-15 14:03:03.385 [main] UserDAOImpl - Successfully insertion of the user: null
+[DEBUG] 2022-05-15 14:03:03.385 [main] UserDAOImpl - Start inserting of the user: User{id=0, name='Second user', email='Second email'}
+[DEBUG] 2022-05-15 14:03:03.386 [main] UserDAOImpl - Successfully insertion of the user: null
+[DEBUG] 2022-05-15 14:03:03.386 [main] UserDAOImpl - Start inserting of the user: User{id=0, name='Third user', email='Third email'}
+[DEBUG] 2022-05-15 14:03:03.387 [main] UserDAOImpl - Successfully insertion of the user: null
+[DEBUG] 2022-05-15 14:03:39.125 [main] UserDAOImpl - Start inserting of the user: User{id=0, name='First user', email='First email'}
+[DEBUG] 2022-05-15 14:05:35.467 [main] UserDAOImpl - Successfully insertion of the user: null
+[DEBUG] 2022-05-15 14:05:35.468 [main] UserDAOImpl - Start inserting of the user: User{id=0, name='Second user', email='Second email'}
+[DEBUG] 2022-05-15 14:05:35.471 [main] UserDAOImpl - Successfully insertion of the user: null
+[DEBUG] 2022-05-15 14:05:35.471 [main] UserDAOImpl - Start inserting of the user: User{id=0, name='Third user', email='Third email'}
+[DEBUG] 2022-05-15 14:05:35.471 [main] UserDAOImpl - Successfully insertion of the user: null
+[DEBUG] 2022-05-15 14:05:43.730 [main] UserDAOImpl - Start inserting of the user: User{id=0, name='First user', email='First email'}
+[DEBUG] 2022-05-15 14:05:43.734 [main] UserDAOImpl - Successfully insertion of the user: User{id=1, name='First user', email='First email'}
+[DEBUG] 2022-05-15 14:05:43.735 [main] UserDAOImpl - Start inserting of the user: User{id=0, name='Second user', email='Second email'}
+[DEBUG] 2022-05-15 14:05:43.735 [main] UserDAOImpl - Successfully insertion of the user: User{id=2, name='Second user', email='Second email'}
+[DEBUG] 2022-05-15 14:05:43.735 [main] UserDAOImpl - Start inserting of the user: User{id=0, name='Third user', email='Third email'}
+[DEBUG] 2022-05-15 14:05:43.735 [main] UserDAOImpl - Successfully insertion of the user: User{id=3, name='Third user', email='Third email'}

@@ -1,0 +1,1267 @@
+[DEBUG] 2022-05-23 12:16:40.971 [main] EventDAOImpl - Start inserting of the event: {'id' : 0, 'title' : 'Second event', 'date' : '15-05-2022 21:00'}
+[DEBUG] 2022-05-23 12:16:40.982 [main] EventDAOImpl - Finding an event by id: 1
+[DEBUG] 2022-05-23 12:16:40.984 [main] EventDAOImpl - Event with id 1 successfully found 
+[DEBUG] 2022-05-23 12:16:40.984 [main] EventDAOImpl - Start updating of the event: {'id' : 1, 'title' : 'Test title', 'date' : '18-05-2022 15:30'}
+[DEBUG] 2022-05-23 12:16:40.985 [main] EventDAOImpl - Successfully update of the event: {'id' : 1, 'title' : 'Test title', 'date' : '18-05-2022 15:30'}
+[DEBUG] 2022-05-23 12:16:40.987 [main] EventDAOImpl - Start deleting of the event with id: 10
+[DEBUG] 2022-05-23 12:16:40.997 [main] EventDAOImpl - Finding an event by id: 10
+[WARN ] 2022-05-23 12:16:40.997 [main] EventDAOImpl - Can not to find an event by id: 10
+[DEBUG] 2022-05-23 12:16:41.001 [main] EventDAOImpl - Finding all events for day 2022-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-23 12:16:41.004 [main] EventDAOImpl - All events successfully found for day '2022-05-15T21:00:00.000+0300' in the database using pagination
+[DEBUG] 2022-05-23 12:16:41.006 [main] EventDAOImpl - Finding an event by id: 3
+[DEBUG] 2022-05-23 12:16:41.007 [main] EventDAOImpl - Event with id 3 successfully found 
+[DEBUG] 2022-05-23 12:16:41.010 [main] EventDAOImpl - Start inserting of the event: {'id' : 0, 'title' : 'Test title', 'date' : '23-05-2022 12:16'}
+[DEBUG] 2022-05-23 12:16:41.012 [main] EventDAOImpl - Successfully insertion of the event: {'id' : 7, 'title' : 'Test title', 'date' : '23-05-2022 12:16'}
+[DEBUG] 2022-05-23 12:16:41.014 [main] EventDAOImpl - Start updating of the event: null
+[DEBUG] 2022-05-23 12:16:41.032 [main] EventDAOImpl - Finding all events for day 2022-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-23 12:16:41.035 [main] EventDAOImpl - Start updating of the event: {'id' : 10, 'title' : 'Test User', 'date' : '23-05-2022 12:16'}
+[DEBUG] 2022-05-23 12:16:41.038 [main] EventDAOImpl - Start deleting of the event with id: 6
+[DEBUG] 2022-05-23 12:16:41.038 [main] EventDAOImpl - Successfully deletion of the event with id: 6
+[DEBUG] 2022-05-23 12:16:41.041 [main] EventDAOImpl - Finding all events by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-23 12:16:41.045 [main] EventDAOImpl - Finding all events for day 2000-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-23 12:16:41.049 [main] EventDAOImpl - Finding all events by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-23 12:16:41.051 [main] EventDAOImpl - Finding all events by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-23 12:16:41.053 [main] EventDAOImpl - All events successfully found by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-23 12:16:41.057 [main] EventDAOImpl - Start inserting of the event: null
+[DEBUG] 2022-05-23 12:16:41.062 [main] EventDAOImpl - Finding all events for day 2022-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-23 12:16:41.066 [main] EventDAOImpl - Finding all events by title 'not exists title' in the database using pagination
+[DEBUG] 2022-05-23 12:17:32.183 [main] TicketDAOImpl - Start deleting of the ticket with id: 10
+[DEBUG] 2022-05-23 12:17:32.196 [main] TicketDAOImpl - Finding all tickets in the database
+[DEBUG] 2022-05-23 12:17:32.201 [main] TicketDAOImpl - All tickets successfully found
+[DEBUG] 2022-05-23 12:17:32.206 [main] TicketDAOImpl - Finding a ticket by id: 10
+[WARN ] 2022-05-23 12:17:32.208 [main] TicketDAOImpl - Can not to find a ticket by id: 10
+[DEBUG] 2022-05-23 12:17:32.211 [main] TicketDAOImpl - Finding a ticket by id: 5
+[DEBUG] 2022-05-23 12:17:32.214 [main] TicketDAOImpl - The ticket with id 5 successfully found 
+[DEBUG] 2022-05-23 12:17:32.217 [main] TicketDAOImpl - Start deleting of the ticket with id: 6
+[DEBUG] 2022-05-23 12:17:32.218 [main] TicketDAOImpl - Successfully deletion of the ticket with id: 6
+[DEBUG] 2022-05-23 12:17:32.227 [main] TicketDAOImpl - Finding all booked tickets by event '[!!!EventImpl@867ba60=>java.lang.NullPointerException:date must not be null!!!]' in the database using pagination
+[DEBUG] 2022-05-23 12:17:32.229 [main] TicketDAOImpl - All booked tickets successfully found by event [!!!EventImpl@867ba60=>java.lang.NullPointerException:date must not be null!!!] in the database using pagination
+[DEBUG] 2022-05-23 12:17:32.232 [main] TicketDAOImpl - Start updating of the ticket: {'id' : 10, 'userId' : 10, 'eventId' : 10, 'place' : 100, 'category' : 'BAR'}
+[DEBUG] 2022-05-23 12:17:32.243 [main] TicketDAOImpl - Start inserting of the ticket: null
+[DEBUG] 2022-05-23 12:17:32.245 [main] TicketDAOImpl - Finding a ticket by id: 5
+[DEBUG] 2022-05-23 12:17:32.246 [main] TicketDAOImpl - The ticket with id 5 successfully found 
+[DEBUG] 2022-05-23 12:17:32.246 [main] TicketDAOImpl - Start updating of the ticket: {'id' : 5, 'userId' : 5, 'eventId' : 1, 'place' : 11, 'category' : 'STANDARD'}
+[DEBUG] 2022-05-23 12:17:32.247 [main] TicketDAOImpl - Successfully update of the ticket: {'id' : 5, 'userId' : 5, 'eventId' : 1, 'place' : 11, 'category' : 'STANDARD'}
+[DEBUG] 2022-05-23 12:17:32.250 [main] TicketDAOImpl - Finding all booked tickets by event '[!!!EventImpl@46b695ec=>java.lang.NullPointerException:date must not be null!!!]' in the database using pagination
+[DEBUG] 2022-05-23 12:17:32.253 [main] TicketDAOImpl - Finding all booked tickets by user '{'id' : 1, 'name' : 'null', 'email' : 'null'}' in the database using pagination
+[DEBUG] 2022-05-23 12:17:32.256 [main] TicketDAOImpl - Start inserting of the ticket: {'id' : null, 'userId' : 5, 'eventId' : 4, 'place' : 20, 'category' : 'STANDARD'}
+[DEBUG] 2022-05-23 12:17:32.260 [main] TicketDAOImpl - Finding all booked tickets by event '{'id' : 100, 'title' : 'null', 'date' : '23-05-2022 12:17'}' in the database using pagination
+[DEBUG] 2022-05-23 12:17:32.264 [main] TicketDAOImpl - Finding all booked tickets by user '{'id' : 1, 'name' : 'null', 'email' : 'null'}' in the database using pagination
+[DEBUG] 2022-05-23 12:17:32.266 [main] TicketDAOImpl - All booked tickets successfully found by user {'id' : 1, 'name' : 'null', 'email' : 'null'} in the database using pagination
+[DEBUG] 2022-05-23 12:17:32.269 [main] TicketDAOImpl - Start updating of the ticket: null
+[DEBUG] 2022-05-23 12:17:32.280 [main] TicketDAOImpl - Start inserting of the ticket: {'id' : null, 'userId' : 5, 'eventId' : 3, 'place' : 20, 'category' : 'STANDARD'}
+[DEBUG] 2022-05-23 12:17:32.283 [main] TicketDAOImpl - Successfully insertion of the ticket: {'id' : 7, 'userId' : 5, 'eventId' : 3, 'place' : 20, 'category' : 'STANDARD'}
+[DEBUG] 2022-05-23 12:17:32.285 [main] TicketDAOImpl - Finding all booked tickets by user '{'id' : 100, 'name' : 'null', 'email' : 'null'}' in the database using pagination
+[DEBUG] 2022-05-23 12:41:05.870 [main] UserDAOImpl - Start inserting of the user: null
+[DEBUG] 2022-05-23 12:41:05.901 [main] UserDAOImpl - Start deleting of the user with id: 2
+[DEBUG] 2022-05-23 12:41:05.907 [main] UserDAOImpl - Successfully deletion of the user with id: 2
+[DEBUG] 2022-05-23 12:41:05.914 [main] UserDAOImpl - Finding all users in the database
+[DEBUG] 2022-05-23 12:41:05.924 [main] UserDAOImpl - All users successfully found
+[DEBUG] 2022-05-23 12:41:05.929 [main] UserDAOImpl - Finding all users by name 'Alex' in the database using pagination
+[DEBUG] 2022-05-23 12:41:05.936 [main] UserDAOImpl - All users successfully found by name 'Alex' in the database using pagination
+[DEBUG] 2022-05-23 12:41:05.939 [main] UserDAOImpl - Finding a user by id: 10
+[WARN ] 2022-05-23 12:41:05.940 [main] UserDAOImpl - Can not to find a user by id: 10
+[DEBUG] 2022-05-23 12:41:05.948 [main] UserDAOImpl - Finding a user by email: notexists@gmail.com
+[WARN ] 2022-05-23 12:41:05.951 [main] UserDAOImpl - Can not to find a user by email: notexists@gmail.com
+[DEBUG] 2022-05-23 12:41:05.954 [main] UserDAOImpl - Finding a user by id: 3
+[DEBUG] 2022-05-23 12:41:05.955 [main] UserDAOImpl - The user with id 3 successfully found 
+[DEBUG] 2022-05-23 12:41:05.960 [main] UserDAOImpl - Finding all users by name 'Not exists' in the database using pagination
+[DEBUG] 2022-05-23 12:41:05.971 [main] UserDAOImpl - Start updating of the user: null
+[DEBUG] 2022-05-23 12:41:05.978 [main] UserDAOImpl - Finding all users by name 'Alex' in the database using pagination
+[DEBUG] 2022-05-23 12:41:05.983 [main] UserDAOImpl - Start deleting of the user with id: 10
+[DEBUG] 2022-05-23 12:41:05.987 [main] UserDAOImpl - Finding a user by email: max@gmail.com
+[DEBUG] 2022-05-23 12:41:05.990 [main] UserDAOImpl - The user with email max@gmail.com successfully found 
+[DEBUG] 2022-05-23 12:41:05.999 [main] UserDAOImpl - Start updating of the user: {'id' : 10, 'name' : 'Test User', 'email' : 'testuser@gmail.com'}
+[DEBUG] 2022-05-23 12:41:06.005 [main] UserDAOImpl - Start inserting of the user: {'id' : 0, 'name' : 'Max', 'email' : 'max@gmail.com'}
+[DEBUG] 2022-05-23 12:41:06.009 [main] UserDAOImpl - Finding a user by id: 1
+[DEBUG] 2022-05-23 12:41:06.012 [main] UserDAOImpl - The user with id 1 successfully found 
+[DEBUG] 2022-05-23 12:41:06.013 [main] UserDAOImpl - Start updating of the user: {'id' : 1, 'name' : 'Test name', 'email' : 'alan@gmail.com'}
+[DEBUG] 2022-05-23 12:41:06.014 [main] UserDAOImpl - Successfully update of the user: {'id' : 1, 'name' : 'Test name', 'email' : 'alan@gmail.com'}
+[DEBUG] 2022-05-23 12:41:06.016 [main] UserDAOImpl - Start inserting of the user: {'id' : 0, 'name' : 'Test User', 'email' : 'testuser@gmail.com'}
+[DEBUG] 2022-05-23 12:41:06.021 [main] UserDAOImpl - Successfully insertion of the user: {'id' : 7, 'name' : 'Test User', 'email' : 'testuser@gmail.com'}
+[INFO ] 2022-05-23 13:02:47.030 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 13:02:47.031 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[ERROR] 2022-05-23 13:02:47.032 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: error while inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+java.lang.RuntimeException: Can not to retrieve prepared data from file
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:64) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.process(StorageBeanPostProcessor.java:41) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.postProcessBeforeInitialization(StorageBeanPostProcessor.java:25) ~[classes/:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) ~[spring-context-5.3.20.jar:5.3.20]
+	at ua.epam.mishchenko.ticketbooking.Main.main(Main.java:10) ~[classes/:?]
+Caused by: java.nio.file.NoSuchFileException: D:\Programing\Java\ticket-booking\src\main\resources\data\prepared-data.txt
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111) ~[?:?]
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:181) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:298) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:357) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4133) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4228) ~[?:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:59) ~[classes/:?]
+	... 26 more
+[INFO ] 2022-05-23 13:02:47.060 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-23 13:02:47.065 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-23 13:02:47.071 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-23 13:02:47.077 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-23 13:02:47.082 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-23 13:02:47.086 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-23 13:02:47.112 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl during initialization
+[INFO ] 2022-05-23 13:02:47.115 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type UserImpl during initialization
+[INFO ] 2022-05-23 13:03:23.271 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 13:03:23.271 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[ERROR] 2022-05-23 13:03:23.272 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: error while inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+java.lang.RuntimeException: Can not to retrieve prepared data from file
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:64) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.process(StorageBeanPostProcessor.java:41) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.postProcessBeforeInitialization(StorageBeanPostProcessor.java:25) ~[classes/:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) ~[spring-context-5.3.20.jar:5.3.20]
+	at ua.epam.mishchenko.ticketbooking.Main.main(Main.java:10) ~[classes/:?]
+Caused by: java.nio.file.NoSuchFileException: D:\Programing\Java\ticket-booking\src\main\resources\data\prepared-data.txt
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111) ~[?:?]
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:181) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:298) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:357) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4133) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4228) ~[?:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:59) ~[classes/:?]
+	... 26 more
+[INFO ] 2022-05-23 13:03:23.295 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-23 13:03:23.299 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-23 13:03:23.311 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-23 13:03:23.319 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-23 13:03:23.326 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-23 13:03:23.337 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-23 13:03:23.374 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl during initialization
+[INFO ] 2022-05-23 13:03:23.383 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type UserImpl during initialization
+[INFO ] 2022-05-23 13:07:02.815 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 13:07:02.816 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[ERROR] 2022-05-23 13:07:02.817 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: error while inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+java.lang.RuntimeException: Can not to retrieve prepared data from file
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:64) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.process(StorageBeanPostProcessor.java:41) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.postProcessBeforeInitialization(StorageBeanPostProcessor.java:25) ~[classes/:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) ~[spring-context-5.3.20.jar:5.3.20]
+	at ua.epam.mishchenko.ticketbooking.Main.main(Main.java:10) ~[classes/:?]
+Caused by: java.nio.file.NoSuchFileException: D:\Programing\Java\ticket-booking\src\main\resources\data\prepared-data.txt
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111) ~[?:?]
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:181) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:298) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:357) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4133) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4228) ~[?:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:59) ~[classes/:?]
+	... 26 more
+[INFO ] 2022-05-23 13:07:02.842 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-23 13:07:02.847 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-23 13:07:02.852 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-23 13:07:02.858 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-23 13:07:02.863 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-23 13:07:02.868 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-23 13:07:02.892 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl during initialization
+[INFO ] 2022-05-23 13:07:02.895 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type UserImpl during initialization
+[INFO ] 2022-05-23 13:10:55.428 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 13:10:55.428 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[ERROR] 2022-05-23 13:10:55.429 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: error while inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+java.lang.RuntimeException: Can not to retrieve prepared data from file
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:64) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.process(StorageBeanPostProcessor.java:41) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.postProcessBeforeInitialization(StorageBeanPostProcessor.java:25) ~[classes/:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) ~[spring-context-5.3.20.jar:5.3.20]
+	at ua.epam.mishchenko.ticketbooking.Main.main(Main.java:10) ~[classes/:?]
+Caused by: java.nio.file.NoSuchFileException: D:\Programing\Java\ticket-booking\src\main\resources\data\prepared-data.txt
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111) ~[?:?]
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:181) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:298) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:357) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4133) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4228) ~[?:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:59) ~[classes/:?]
+	... 26 more
+[INFO ] 2022-05-23 13:10:55.452 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-23 13:10:55.457 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-23 13:10:55.462 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-23 13:10:55.466 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-23 13:11:22.010 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 13:11:22.011 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[ERROR] 2022-05-23 13:11:22.011 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: error while inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+java.lang.RuntimeException: Can not to retrieve prepared data from file
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:64) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.process(StorageBeanPostProcessor.java:41) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.postProcessBeforeInitialization(StorageBeanPostProcessor.java:25) ~[classes/:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) ~[spring-context-5.3.20.jar:5.3.20]
+	at ua.epam.mishchenko.ticketbooking.Main.main(Main.java:10) ~[classes/:?]
+Caused by: java.nio.file.NoSuchFileException: D:\Programing\Java\ticket-booking\src\main\resources\data\prepared-data.txt
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111) ~[?:?]
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:181) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:298) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:357) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4133) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4228) ~[?:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:59) ~[classes/:?]
+	... 26 more
+[INFO ] 2022-05-23 13:11:22.034 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-23 13:11:22.038 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-23 13:11:22.042 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-23 13:11:22.045 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-23 13:11:47.009 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 13:11:47.010 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[ERROR] 2022-05-23 13:11:47.011 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: error while inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+java.lang.RuntimeException: Can not to retrieve prepared data from file
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:64) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.process(StorageBeanPostProcessor.java:41) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.postProcessBeforeInitialization(StorageBeanPostProcessor.java:25) ~[classes/:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) ~[spring-context-5.3.20.jar:5.3.20]
+	at ua.epam.mishchenko.ticketbooking.Main.main(Main.java:10) ~[classes/:?]
+Caused by: java.nio.file.NoSuchFileException: D:\Programing\Java\ticket-booking\src\main\resources\data\prepared-data.txt
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111) ~[?:?]
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:181) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:298) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:357) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4133) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4228) ~[?:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:59) ~[classes/:?]
+	... 26 more
+[INFO ] 2022-05-23 13:11:47.033 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-23 13:11:47.038 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-23 13:11:47.044 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-23 13:11:47.048 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-23 13:19:28.561 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 13:19:28.562 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[ERROR] 2022-05-23 13:19:28.563 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: error while inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+java.lang.RuntimeException: Can not to retrieve prepared data from file
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:64) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.process(StorageBeanPostProcessor.java:41) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.postProcessBeforeInitialization(StorageBeanPostProcessor.java:25) ~[classes/:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) ~[spring-context-5.3.20.jar:5.3.20]
+	at ua.epam.mishchenko.ticketbooking.Main.main(Main.java:10) ~[classes/:?]
+Caused by: java.nio.file.NoSuchFileException: D:\Programing\Java\ticket-booking\src\main\resources\data\prepared-data.txt
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111) ~[?:?]
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:181) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:298) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:357) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4133) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4228) ~[?:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:59) ~[classes/:?]
+	... 26 more
+[INFO ] 2022-05-23 13:19:28.588 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-23 13:19:28.594 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-23 13:19:28.605 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-23 13:19:28.613 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-23 13:19:28.614 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-23 13:19:42.879 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 13:19:42.880 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[ERROR] 2022-05-23 13:19:42.882 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: error while inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+java.lang.RuntimeException: Can not to retrieve prepared data from file
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:64) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.process(StorageBeanPostProcessor.java:41) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.postProcessBeforeInitialization(StorageBeanPostProcessor.java:25) ~[classes/:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) ~[spring-context-5.3.20.jar:5.3.20]
+	at ua.epam.mishchenko.ticketbooking.Main.main(Main.java:10) ~[classes/:?]
+Caused by: java.nio.file.NoSuchFileException: D:\Programing\Java\ticket-booking\src\main\resources\data\prepared-data.txt
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111) ~[?:?]
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:181) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:298) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:357) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4133) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4228) ~[?:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:59) ~[classes/:?]
+	... 26 more
+[INFO ] 2022-05-23 13:19:42.920 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-23 13:19:42.938 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-23 13:19:42.948 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-23 13:19:42.967 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-23 13:19:42.969 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-23 13:20:20.855 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 13:20:20.856 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[ERROR] 2022-05-23 13:20:20.857 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: error while inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+java.lang.RuntimeException: Can not to retrieve prepared data from file
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:64) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.process(StorageBeanPostProcessor.java:41) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.postProcessBeforeInitialization(StorageBeanPostProcessor.java:25) ~[classes/:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) ~[spring-context-5.3.20.jar:5.3.20]
+	at ua.epam.mishchenko.ticketbooking.Main.main(Main.java:10) ~[classes/:?]
+Caused by: java.nio.file.NoSuchFileException: D:\Programing\Java\ticket-booking\src\main\resources\data\prepared-data.txt
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111) ~[?:?]
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:181) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:298) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:357) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4133) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4228) ~[?:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:59) ~[classes/:?]
+	... 26 more
+[INFO ] 2022-05-23 13:20:20.887 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-23 13:20:20.893 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-23 13:20:20.900 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-23 13:20:20.912 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-23 13:20:20.913 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-23 13:20:31.375 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 13:20:31.376 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[ERROR] 2022-05-23 13:20:31.377 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: error while inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+java.lang.RuntimeException: Can not to retrieve prepared data from file
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:64) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.process(StorageBeanPostProcessor.java:41) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.postProcessBeforeInitialization(StorageBeanPostProcessor.java:25) ~[classes/:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) ~[spring-context-5.3.20.jar:5.3.20]
+	at ua.epam.mishchenko.ticketbooking.Main.main(Main.java:10) ~[classes/:?]
+Caused by: java.nio.file.NoSuchFileException: D:\Programing\Java\ticket-booking\src\main\resources\data\prepared-data.txt
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111) ~[?:?]
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:181) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:298) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:357) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4133) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4228) ~[?:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:59) ~[classes/:?]
+	... 26 more
+[INFO ] 2022-05-23 13:20:31.411 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-23 13:20:31.418 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-23 13:20:31.425 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-23 13:20:31.429 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-23 13:20:31.431 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-23 13:21:07.524 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 13:21:07.534 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[ERROR] 2022-05-23 13:21:07.538 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: error while inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+java.lang.RuntimeException: Can not to retrieve prepared data from file
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:64) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.process(StorageBeanPostProcessor.java:41) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.postProcessBeforeInitialization(StorageBeanPostProcessor.java:25) ~[classes/:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) ~[spring-context-5.3.20.jar:5.3.20]
+	at ua.epam.mishchenko.ticketbooking.Main.main(Main.java:10) ~[classes/:?]
+Caused by: java.nio.file.NoSuchFileException: D:\Programing\Java\ticket-booking\src\main\resources\data\prepared-data.txt
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111) ~[?:?]
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:181) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:298) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:357) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4133) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4228) ~[?:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:59) ~[classes/:?]
+	... 26 more
+[INFO ] 2022-05-23 13:21:07.612 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-23 13:21:07.619 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-23 13:21:07.630 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-23 13:21:07.634 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-23 13:21:07.636 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-23 13:21:36.011 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 13:21:36.012 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[ERROR] 2022-05-23 13:21:36.013 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: error while inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+java.lang.RuntimeException: Can not to retrieve prepared data from file
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:64) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.process(StorageBeanPostProcessor.java:41) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.postProcessBeforeInitialization(StorageBeanPostProcessor.java:25) ~[classes/:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) ~[spring-context-5.3.20.jar:5.3.20]
+	at ua.epam.mishchenko.ticketbooking.Main.main(Main.java:10) ~[classes/:?]
+Caused by: java.nio.file.NoSuchFileException: D:\Programing\Java\ticket-booking\src\main\resources\data\prepared-data.txt
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111) ~[?:?]
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:181) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:298) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:357) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4133) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4228) ~[?:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:59) ~[classes/:?]
+	... 26 more
+[INFO ] 2022-05-23 13:21:36.038 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-23 13:21:36.043 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-23 13:21:36.048 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-23 13:21:36.052 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-23 13:21:36.054 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-23 13:21:59.871 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 13:21:59.872 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[ERROR] 2022-05-23 13:21:59.873 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: error while inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+java.lang.RuntimeException: Can not to retrieve prepared data from file
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:64) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.process(StorageBeanPostProcessor.java:41) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.postProcessBeforeInitialization(StorageBeanPostProcessor.java:25) ~[classes/:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) ~[spring-context-5.3.20.jar:5.3.20]
+	at ua.epam.mishchenko.ticketbooking.Main.main(Main.java:10) ~[classes/:?]
+Caused by: java.nio.file.NoSuchFileException: D:\Programing\Java\ticket-booking\src\main\resources\data\prepared-data.txt
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111) ~[?:?]
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:181) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:298) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:357) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4133) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4228) ~[?:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:59) ~[classes/:?]
+	... 26 more
+[INFO ] 2022-05-23 13:21:59.905 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-23 13:21:59.916 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-23 13:21:59.944 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-23 13:21:59.958 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-23 13:21:59.960 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-23 13:21:59.979 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-23 13:22:10.462 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 13:22:10.463 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[ERROR] 2022-05-23 13:22:10.464 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: error while inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+java.lang.RuntimeException: Can not to retrieve prepared data from file
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:64) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.process(StorageBeanPostProcessor.java:41) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.postProcessBeforeInitialization(StorageBeanPostProcessor.java:25) ~[classes/:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) ~[spring-context-5.3.20.jar:5.3.20]
+	at ua.epam.mishchenko.ticketbooking.Main.main(Main.java:10) ~[classes/:?]
+Caused by: java.nio.file.NoSuchFileException: D:\Programing\Java\ticket-booking\src\main\resources\data\prepared-data.txt
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111) ~[?:?]
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:181) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:298) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:357) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4133) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4228) ~[?:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:59) ~[classes/:?]
+	... 26 more
+[INFO ] 2022-05-23 13:22:10.498 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-23 13:22:10.504 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-23 13:22:10.510 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-23 13:22:10.515 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-23 13:22:10.516 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-23 13:22:10.521 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-23 13:25:40.756 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 13:25:40.757 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[ERROR] 2022-05-23 13:25:40.757 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: error while inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+java.lang.RuntimeException: Can not to retrieve prepared data from file
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:64) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.process(StorageBeanPostProcessor.java:41) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.postProcessBeforeInitialization(StorageBeanPostProcessor.java:25) ~[classes/:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) ~[spring-context-5.3.20.jar:5.3.20]
+	at ua.epam.mishchenko.ticketbooking.Main.main(Main.java:10) ~[classes/:?]
+Caused by: java.nio.file.NoSuchFileException: D:\Programing\Java\ticket-booking\src\main\resources\data\prepared-data.txt
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111) ~[?:?]
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:181) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:298) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:357) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4133) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4228) ~[?:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:59) ~[classes/:?]
+	... 26 more
+[INFO ] 2022-05-23 13:25:40.784 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-23 13:25:40.790 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-23 13:25:40.797 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-23 13:25:40.801 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-23 13:25:40.806 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-23 13:25:40.809 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-23 13:25:40.863 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl during initialization
+[INFO ] 2022-05-23 13:48:43.690 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 13:48:43.691 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[ERROR] 2022-05-23 13:48:43.692 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: error while inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+java.lang.RuntimeException: Can not to retrieve prepared data from file
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:64) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.process(StorageBeanPostProcessor.java:41) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.postProcessBeforeInitialization(StorageBeanPostProcessor.java:25) ~[classes/:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) ~[spring-context-5.3.20.jar:5.3.20]
+	at ua.epam.mishchenko.ticketbooking.Main.main(Main.java:10) ~[classes/:?]
+Caused by: java.nio.file.NoSuchFileException: D:\Programing\Java\ticket-booking\src\main\resources\data\prepared-data.txt
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111) ~[?:?]
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:181) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:298) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:357) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4133) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4228) ~[?:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:59) ~[classes/:?]
+	... 26 more
+[INFO ] 2022-05-23 13:48:43.726 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-23 13:48:43.737 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-23 13:48:43.742 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-23 13:48:43.750 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-23 13:48:43.755 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-23 13:48:43.764 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-23 13:48:43.788 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl during initialization
+[INFO ] 2022-05-23 13:48:58.760 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 13:48:58.761 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[ERROR] 2022-05-23 13:48:58.762 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: error while inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+java.lang.RuntimeException: Can not to retrieve prepared data from file
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:64) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.process(StorageBeanPostProcessor.java:41) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.postProcessBeforeInitialization(StorageBeanPostProcessor.java:25) ~[classes/:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) ~[spring-context-5.3.20.jar:5.3.20]
+	at ua.epam.mishchenko.ticketbooking.Main.main(Main.java:10) ~[classes/:?]
+Caused by: java.nio.file.NoSuchFileException: D:\Programing\Java\ticket-booking\src\main\resources\data\prepared-data.txt
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111) ~[?:?]
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:181) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:298) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:357) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4133) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4228) ~[?:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.readPreparedDataFromFile(StorageBeanPostProcessor.java:59) ~[classes/:?]
+	... 26 more
+[INFO ] 2022-05-23 13:48:58.789 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-23 13:48:58.795 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-23 13:48:58.807 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-23 13:48:58.823 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-23 13:48:58.830 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-23 13:48:58.844 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-23 13:48:58.902 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl during initialization
+[INFO ] 2022-05-23 14:04:57.980 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 14:04:57.981 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[ERROR] 2022-05-23 14:04:57.981 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: error while inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+java.lang.NullPointerException: Cannot invoke "ua.epam.mishchenko.ticketbooking.postprocessor.FileReader.readPreparedDataFromFile()" because "this.fileReader" is null
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.process(StorageBeanPostProcessor.java:41) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.postProcessBeforeInitialization(StorageBeanPostProcessor.java:25) ~[classes/:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) ~[spring-context-5.3.20.jar:5.3.20]
+	at ua.epam.mishchenko.ticketbooking.Main.main(Main.java:10) ~[classes/:?]
+[INFO ] 2022-05-23 14:04:58.010 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-23 14:04:58.016 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-23 14:04:58.026 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-23 14:04:58.040 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-23 14:04:58.057 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-23 14:04:58.063 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-23 14:04:58.100 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl during initialization
+[INFO ] 2022-05-23 14:06:01.209 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 14:06:01.210 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[ERROR] 2022-05-23 14:06:01.211 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: error while inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+java.lang.NullPointerException: Cannot invoke "ua.epam.mishchenko.ticketbooking.postprocessor.FileReader.readPreparedDataFromFile()" because "this.fileReader" is null
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.process(StorageBeanPostProcessor.java:41) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.postProcessBeforeInitialization(StorageBeanPostProcessor.java:25) ~[classes/:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) ~[spring-context-5.3.20.jar:5.3.20]
+	at ua.epam.mishchenko.ticketbooking.Main.main(Main.java:10) ~[classes/:?]
+[INFO ] 2022-05-23 14:06:01.236 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-23 14:06:01.252 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-23 14:06:01.260 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-23 14:06:01.271 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-23 14:06:01.280 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-23 14:06:01.287 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-23 14:06:01.316 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl during initialization
+[INFO ] 2022-05-23 14:06:01.323 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.postprocessor.FileReader during initialization
+[INFO ] 2022-05-23 14:07:39.643 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 14:07:39.644 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[ERROR] 2022-05-23 14:07:39.644 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: error while inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+java.lang.NullPointerException: Cannot invoke "ua.epam.mishchenko.ticketbooking.postprocessor.FileReader.readPreparedDataFromFile()" because "this.fileReader" is null
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.process(StorageBeanPostProcessor.java:41) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.postProcessBeforeInitialization(StorageBeanPostProcessor.java:25) ~[classes/:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) ~[spring-context-5.3.20.jar:5.3.20]
+	at ua.epam.mishchenko.ticketbooking.Main.main(Main.java:11) ~[classes/:?]
+[INFO ] 2022-05-23 14:07:39.667 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-23 14:07:39.674 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-23 14:07:39.680 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-23 14:07:39.687 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-23 14:07:39.693 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-23 14:07:39.697 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-23 14:07:39.733 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl during initialization
+[INFO ] 2022-05-23 14:07:39.736 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.postprocessor.FileReader during initialization
+[DEBUG] 2022-05-23 14:07:39.774 [main] UserDAOImpl - Finding a user by id: 1
+[WARN ] 2022-05-23 14:07:39.775 [main] UserDAOImpl - Can not to find a user by id: 1
+[INFO ] 2022-05-23 14:08:02.871 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 14:08:02.876 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[ERROR] 2022-05-23 14:08:02.877 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: error while inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+java.lang.NullPointerException: Cannot invoke "ua.epam.mishchenko.ticketbooking.postprocessor.FileReader.readPreparedDataFromFile()" because "this.fileReader" is null
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.process(StorageBeanPostProcessor.java:41) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.postProcessBeforeInitialization(StorageBeanPostProcessor.java:25) ~[classes/:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) ~[spring-context-5.3.20.jar:5.3.20]
+	at ua.epam.mishchenko.ticketbooking.Main.main(Main.java:11) ~[classes/:?]
+[INFO ] 2022-05-23 14:08:02.906 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-23 14:08:02.913 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-23 14:08:02.918 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-23 14:08:02.951 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-23 14:08:02.957 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-23 14:08:02.968 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-23 14:08:03.000 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl during initialization
+[INFO ] 2022-05-23 14:08:03.004 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.postprocessor.FileReader during initialization
+[DEBUG] 2022-05-23 14:08:03.035 [main] UserDAOImpl - Finding a user by id: 1
+[WARN ] 2022-05-23 14:08:03.035 [main] UserDAOImpl - Can not to find a user by id: 1
+[INFO ] 2022-05-23 14:08:14.243 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 14:08:14.244 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[ERROR] 2022-05-23 14:08:14.244 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: error while inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+java.lang.NullPointerException: Cannot invoke "ua.epam.mishchenko.ticketbooking.postprocessor.FileReader.readPreparedDataFromFile()" because "this.fileReader" is null
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.process(StorageBeanPostProcessor.java:41) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.postProcessBeforeInitialization(StorageBeanPostProcessor.java:25) ~[classes/:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) ~[spring-context-5.3.20.jar:5.3.20]
+	at ua.epam.mishchenko.ticketbooking.Main.main(Main.java:11) ~[classes/:?]
+[INFO ] 2022-05-23 14:08:14.267 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-23 14:08:14.307 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-23 14:08:14.312 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-23 14:08:14.319 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-23 14:08:14.324 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-23 14:08:14.328 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-23 14:08:14.342 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl during initialization
+[INFO ] 2022-05-23 14:08:14.394 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.postprocessor.FileReader during initialization
+[DEBUG] 2022-05-23 14:08:14.411 [main] UserDAOImpl - Finding a user by id: 1
+[WARN ] 2022-05-23 14:08:14.411 [main] UserDAOImpl - Can not to find a user by id: 1
+[INFO ] 2022-05-23 14:08:29.884 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 14:08:29.885 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[ERROR] 2022-05-23 14:08:29.886 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: error while inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+java.lang.NullPointerException: Cannot invoke "ua.epam.mishchenko.ticketbooking.postprocessor.FileReader.readPreparedDataFromFile()" because "this.fileReader" is null
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.process(StorageBeanPostProcessor.java:41) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.postProcessBeforeInitialization(StorageBeanPostProcessor.java:25) ~[classes/:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) ~[spring-context-5.3.20.jar:5.3.20]
+	at ua.epam.mishchenko.ticketbooking.Main.main(Main.java:11) ~[classes/:?]
+[INFO ] 2022-05-23 14:08:29.918 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-23 14:08:29.950 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-23 14:08:29.958 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-23 14:08:29.969 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-23 14:08:29.976 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-23 14:08:29.999 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-23 14:08:30.024 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl during initialization
+[INFO ] 2022-05-23 14:08:30.037 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.postprocessor.FileReader during initialization
+[DEBUG] 2022-05-23 14:09:11.849 [main] UserDAOImpl - Finding a user by id: 1
+[WARN ] 2022-05-23 14:09:11.850 [main] UserDAOImpl - Can not to find a user by id: 1
+[INFO ] 2022-05-23 14:09:16.787 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 14:09:16.787 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[ERROR] 2022-05-23 14:09:52.469 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: error while inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+java.lang.NullPointerException: Cannot invoke "ua.epam.mishchenko.ticketbooking.postprocessor.FileReader.readPreparedDataFromFile()" because "this.fileReader" is null
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.process(StorageBeanPostProcessor.java:41) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.postProcessBeforeInitialization(StorageBeanPostProcessor.java:25) ~[classes/:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) ~[spring-context-5.3.20.jar:5.3.20]
+	at ua.epam.mishchenko.ticketbooking.Main.main(Main.java:11) ~[classes/:?]
+[INFO ] 2022-05-23 14:10:28.630 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 14:10:28.632 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[ERROR] 2022-05-23 14:11:06.112 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: error while inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+java.lang.RuntimeException: Can not to retrieve prepared data from file
+	at ua.epam.mishchenko.ticketbooking.postprocessor.FileReader.readPreparedDataFromFile(FileReader.java:22) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.process(StorageBeanPostProcessor.java:41) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.StorageBeanPostProcessor.postProcessBeforeInitialization(StorageBeanPostProcessor.java:25) ~[classes/:?]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:440) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:330) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:113) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1707) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1452) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:953) ~[spring-beans-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:144) ~[spring-context-5.3.20.jar:5.3.20]
+	at org.springframework.context.support.ClassPathXmlApplicationContext.<init>(ClassPathXmlApplicationContext.java:85) ~[spring-context-5.3.20.jar:5.3.20]
+	at ua.epam.mishchenko.ticketbooking.Main.main(Main.java:11) ~[classes/:?]
+Caused by: java.nio.file.NoSuchFileException: /data/prepared-data.txt
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:106) ~[?:?]
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111) ~[?:?]
+	at sun.nio.fs.UnixFileSystemProvider.newFileChannel(UnixFileSystemProvider.java:181) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:298) ~[?:?]
+	at java.nio.channels.FileChannel.open(FileChannel.java:357) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4133) ~[?:?]
+	at java.nio.file.Files.lines(Files.java:4228) ~[?:?]
+	at ua.epam.mishchenko.ticketbooking.postprocessor.FileReader.readPreparedDataFromFile(FileReader.java:17) ~[classes/:?]
+	... 26 more
+[INFO ] 2022-05-23 14:11:10.178 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-23 14:11:10.179 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-23 14:11:10.182 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: successfully inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-23 14:11:10.189 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-23 14:11:10.194 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-23 14:11:10.199 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-23 14:11:10.213 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-23 14:11:10.220 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-23 14:11:10.225 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-23 14:11:10.244 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.facade.impl.BookingFacadeImpl during initialization
+[DEBUG] 2022-05-23 14:11:10.267 [main] UserDAOImpl - Finding a user by id: 1
+[DEBUG] 2022-05-23 14:11:10.268 [main] UserDAOImpl - The user with id 1 successfully found 
+[DEBUG] 2022-05-23 14:18:54.822 [main] EventDAOImpl - Start inserting of the event: {'id' : 0, 'title' : 'Second event', 'date' : '15-05-2022 21:00'}
+[DEBUG] 2022-05-23 14:18:54.841 [main] EventDAOImpl - Finding an event by id: 1
+[DEBUG] 2022-05-23 14:18:54.842 [main] EventDAOImpl - Event with id 1 successfully found 
+[DEBUG] 2022-05-23 14:18:54.842 [main] EventDAOImpl - Start updating of the event: {'id' : 1, 'title' : 'Test title', 'date' : '18-05-2022 15:30'}
+[DEBUG] 2022-05-23 14:18:54.843 [main] EventDAOImpl - Successfully update of the event: {'id' : 1, 'title' : 'Test title', 'date' : '18-05-2022 15:30'}
+[DEBUG] 2022-05-23 14:18:54.845 [main] EventDAOImpl - Start deleting of the event with id: 10
+[DEBUG] 2022-05-23 14:18:54.858 [main] EventDAOImpl - Finding an event by id: 10
+[WARN ] 2022-05-23 14:18:54.859 [main] EventDAOImpl - Can not to find an event by id: 10
+[DEBUG] 2022-05-23 14:18:54.863 [main] EventDAOImpl - Finding all events for day 2022-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-23 14:18:54.868 [main] EventDAOImpl - All events successfully found for day '2022-05-15T21:00:00.000+0300' in the database using pagination
+[DEBUG] 2022-05-23 14:18:54.874 [main] EventDAOImpl - Finding an event by id: 3
+[DEBUG] 2022-05-23 14:18:54.875 [main] EventDAOImpl - Event with id 3 successfully found 
+[DEBUG] 2022-05-23 14:18:54.882 [main] EventDAOImpl - Start inserting of the event: {'id' : 0, 'title' : 'Test title', 'date' : '23-05-2022 14:18'}
+[DEBUG] 2022-05-23 14:18:54.884 [main] EventDAOImpl - Successfully insertion of the event: {'id' : 7, 'title' : 'Test title', 'date' : '23-05-2022 14:18'}
+[DEBUG] 2022-05-23 14:18:54.889 [main] EventDAOImpl - Start updating of the event: null
+[DEBUG] 2022-05-23 14:18:54.895 [main] EventDAOImpl - Finding all events for day 2022-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-23 14:18:54.900 [main] EventDAOImpl - Start updating of the event: {'id' : 10, 'title' : 'Test User', 'date' : '23-05-2022 14:18'}
+[DEBUG] 2022-05-23 14:18:54.908 [main] EventDAOImpl - Start deleting of the event with id: 6
+[DEBUG] 2022-05-23 14:18:54.909 [main] EventDAOImpl - Successfully deletion of the event with id: 6
+[DEBUG] 2022-05-23 14:18:54.911 [main] EventDAOImpl - Finding all events by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-23 14:18:54.915 [main] EventDAOImpl - Finding all events for day 2000-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-23 14:18:54.920 [main] EventDAOImpl - Finding all events by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-23 14:18:54.922 [main] EventDAOImpl - Finding all events by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-23 14:18:54.925 [main] EventDAOImpl - All events successfully found by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-23 14:18:54.928 [main] EventDAOImpl - Start inserting of the event: null
+[DEBUG] 2022-05-23 14:18:54.936 [main] EventDAOImpl - Finding all events for day 2022-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-23 14:18:54.951 [main] EventDAOImpl - Finding all events by title 'not exists title' in the database using pagination
+[DEBUG] 2022-05-23 14:24:38.236 [main] EventDAOImpl - Start inserting of the event: {'id' : 0, 'title' : 'Second event', 'date' : '15-05-2022 21:00'}
+[DEBUG] 2022-05-23 14:24:38.258 [main] EventDAOImpl - Finding an event by id: 1
+[DEBUG] 2022-05-23 14:24:38.259 [main] EventDAOImpl - Event with id 1 successfully found 
+[DEBUG] 2022-05-23 14:24:38.259 [main] EventDAOImpl - Start updating of the event: {'id' : 1, 'title' : 'Test title', 'date' : '18-05-2022 15:30'}
+[DEBUG] 2022-05-23 14:24:38.261 [main] EventDAOImpl - Successfully update of the event: {'id' : 1, 'title' : 'Test title', 'date' : '18-05-2022 15:30'}
+[DEBUG] 2022-05-23 14:24:38.271 [main] EventDAOImpl - Start deleting of the event with id: 10
+[DEBUG] 2022-05-23 14:24:38.289 [main] EventDAOImpl - Finding an event by id: 10
+[WARN ] 2022-05-23 14:24:38.289 [main] EventDAOImpl - Can not to find an event by id: 10
+[DEBUG] 2022-05-23 14:24:38.299 [main] EventDAOImpl - Finding all events for day 2022-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-23 14:24:38.313 [main] EventDAOImpl - All events successfully found for day '2022-05-15T21:00:00.000+0300' in the database using pagination
+[DEBUG] 2022-05-23 14:24:38.324 [main] EventDAOImpl - Finding an event by id: 3
+[DEBUG] 2022-05-23 14:24:38.325 [main] EventDAOImpl - Event with id 3 successfully found 
+[DEBUG] 2022-05-23 14:24:38.340 [main] EventDAOImpl - Start inserting of the event: {'id' : 0, 'title' : 'Test title', 'date' : '23-05-2022 14:24'}
+[DEBUG] 2022-05-23 14:24:38.341 [main] EventDAOImpl - Successfully insertion of the event: {'id' : 7, 'title' : 'Test title', 'date' : '23-05-2022 14:24'}
+[DEBUG] 2022-05-23 14:24:38.363 [main] EventDAOImpl - Start updating of the event: null
+[DEBUG] 2022-05-23 14:24:38.371 [main] EventDAOImpl - Finding all events for day 2022-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-23 14:24:38.388 [main] EventDAOImpl - Start updating of the event: {'id' : 10, 'title' : 'Test User', 'date' : '23-05-2022 14:24'}
+[DEBUG] 2022-05-23 14:24:38.396 [main] EventDAOImpl - Start deleting of the event with id: 6
+[DEBUG] 2022-05-23 14:24:38.397 [main] EventDAOImpl - Successfully deletion of the event with id: 6
+[DEBUG] 2022-05-23 14:24:38.404 [main] EventDAOImpl - Finding all events by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-23 14:24:38.423 [main] EventDAOImpl - Finding all events for day 2000-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-23 14:24:38.432 [main] EventDAOImpl - Finding all events by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-23 14:24:38.443 [main] EventDAOImpl - Finding all events by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-23 14:24:38.445 [main] EventDAOImpl - All events successfully found by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-23 14:24:38.485 [main] EventDAOImpl - Start inserting of the event: null
+[DEBUG] 2022-05-23 14:24:38.500 [main] EventDAOImpl - Finding all events for day 2022-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-23 14:24:38.520 [main] EventDAOImpl - Finding all events by title 'not exists title' in the database using pagination

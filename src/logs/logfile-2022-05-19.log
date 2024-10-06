@@ -1,0 +1,588 @@
+[DEBUG] 2022-05-19 01:08:01.917 [main] EventDAOImpl - Finding an event by id: 1
+[INFO ] 2022-05-19 01:36:41.641 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-19 01:36:41.642 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:36:41.649 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: successfully inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:36:41.655 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-19 01:36:41.662 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:36:41.667 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-19 01:36:41.670 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-19 01:36:41.677 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-19 01:36:41.682 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-19 01:37:21.919 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-19 01:37:21.920 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:37:21.925 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: successfully inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:37:21.928 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-19 01:37:21.935 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:37:21.941 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-19 01:37:21.944 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-19 01:37:21.950 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-19 01:37:21.954 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-19 01:37:21.972 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImplTest during initialization
+[INFO ] 2022-05-19 01:37:21.973 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:37:21.974 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[INFO ] 2022-05-19 01:37:21.977 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImplTest during initialization
+[INFO ] 2022-05-19 01:37:21.979 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImplTest during initialization
+[INFO ] 2022-05-19 01:37:21.981 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImplTest during initialization
+[INFO ] 2022-05-19 01:37:22.000 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[INFO ] 2022-05-19 01:38:14.720 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-19 01:38:14.721 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:38:14.728 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: successfully inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:38:14.732 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-19 01:38:14.740 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:38:14.745 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-19 01:38:14.750 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-19 01:38:14.756 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-19 01:38:14.760 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-19 01:38:14.781 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImplTest during initialization
+[INFO ] 2022-05-19 01:38:14.782 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:38:14.784 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[INFO ] 2022-05-19 01:38:14.787 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImplTest during initialization
+[INFO ] 2022-05-19 01:38:14.789 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImplTest during initialization
+[INFO ] 2022-05-19 01:38:14.792 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImplTest during initialization
+[INFO ] 2022-05-19 01:38:14.810 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[INFO ] 2022-05-19 01:39:45.376 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-19 01:39:45.376 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:39:45.381 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: successfully inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:39:45.385 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-19 01:39:45.391 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:39:45.397 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-19 01:39:45.402 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-19 01:39:45.408 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-19 01:39:45.412 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-19 01:39:45.432 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImplTest during initialization
+[INFO ] 2022-05-19 01:39:45.433 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:39:45.434 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[INFO ] 2022-05-19 01:39:45.437 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImplTest during initialization
+[INFO ] 2022-05-19 01:39:45.447 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImplTest during initialization
+[INFO ] 2022-05-19 01:39:45.450 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImplTest during initialization
+[INFO ] 2022-05-19 01:39:45.471 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[INFO ] 2022-05-19 01:42:07.987 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-19 01:42:07.988 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:42:07.996 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: successfully inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:42:08.000 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-19 01:42:08.007 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:42:08.012 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-19 01:42:08.018 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-19 01:42:08.023 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-19 01:42:08.027 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-19 01:42:08.047 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImplTest during initialization
+[INFO ] 2022-05-19 01:42:08.048 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:42:08.049 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[INFO ] 2022-05-19 01:42:08.051 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImplTest during initialization
+[INFO ] 2022-05-19 01:42:08.054 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImplTest during initialization
+[INFO ] 2022-05-19 01:42:08.057 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImplTest during initialization
+[INFO ] 2022-05-19 01:42:08.080 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[DEBUG] 2022-05-19 01:42:09.138 [main] EventDAOImpl - Finding an event by id: 3
+[DEBUG] 2022-05-19 01:42:09.139 [main] EventDAOImpl - Event with id 3 successfully found 
+[INFO ] 2022-05-19 01:42:46.793 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-19 01:42:46.796 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:42:46.800 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: successfully inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:42:46.805 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-19 01:42:46.812 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:42:46.819 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-19 01:42:46.826 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-19 01:42:46.831 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-19 01:42:46.836 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-19 01:42:46.855 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImplTest during initialization
+[INFO ] 2022-05-19 01:42:46.856 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:42:46.858 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[INFO ] 2022-05-19 01:42:46.860 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImplTest during initialization
+[INFO ] 2022-05-19 01:42:46.864 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImplTest during initialization
+[INFO ] 2022-05-19 01:42:46.866 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImplTest during initialization
+[INFO ] 2022-05-19 01:42:46.884 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[DEBUG] 2022-05-19 01:42:47.891 [main] EventDAOImpl - Finding an event by id: 3
+[DEBUG] 2022-05-19 01:42:47.892 [main] EventDAOImpl - Event with id 3 successfully found 
+[INFO ] 2022-05-19 01:43:23.848 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-19 01:43:23.848 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:43:23.857 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: successfully inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:43:23.862 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-19 01:43:23.870 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:43:23.875 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-19 01:43:23.881 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-19 01:43:23.887 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-19 01:43:23.895 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-19 01:43:23.914 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImplTest during initialization
+[INFO ] 2022-05-19 01:43:23.915 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:43:23.916 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[INFO ] 2022-05-19 01:43:23.919 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImplTest during initialization
+[INFO ] 2022-05-19 01:43:23.922 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImplTest during initialization
+[INFO ] 2022-05-19 01:43:23.925 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImplTest during initialization
+[INFO ] 2022-05-19 01:43:23.950 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[DEBUG] 2022-05-19 01:43:31.623 [main] EventDAOImpl - Finding an event by id: 3
+[DEBUG] 2022-05-19 01:43:39.265 [main] EventDAOImpl - Event with id 3 successfully found 
+[INFO ] 2022-05-19 01:44:26.232 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-19 01:44:26.233 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:44:26.237 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: successfully inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:44:26.241 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-19 01:44:26.248 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:44:26.252 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-19 01:44:26.256 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-19 01:44:26.261 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-19 01:44:26.264 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-19 01:44:26.282 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImplTest during initialization
+[INFO ] 2022-05-19 01:44:26.282 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:44:26.283 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[INFO ] 2022-05-19 01:44:26.287 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImplTest during initialization
+[INFO ] 2022-05-19 01:44:26.289 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImplTest during initialization
+[INFO ] 2022-05-19 01:44:26.291 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImplTest during initialization
+[INFO ] 2022-05-19 01:44:26.311 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[DEBUG] 2022-05-19 01:44:27.310 [main] EventDAOImpl - Finding an event by id: 3
+[DEBUG] 2022-05-19 01:44:27.311 [main] EventDAOImpl - Event with id 3 successfully found 
+[INFO ] 2022-05-19 01:44:49.173 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-19 01:44:49.174 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:44:49.180 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: successfully inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:44:49.187 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-19 01:44:49.196 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:44:49.203 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-19 01:44:49.211 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-19 01:44:49.217 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-19 01:44:49.222 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-19 01:44:49.241 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImplTest during initialization
+[INFO ] 2022-05-19 01:44:49.242 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:44:49.244 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[INFO ] 2022-05-19 01:44:49.247 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImplTest during initialization
+[INFO ] 2022-05-19 01:44:49.250 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImplTest during initialization
+[INFO ] 2022-05-19 01:44:49.253 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImplTest during initialization
+[INFO ] 2022-05-19 01:44:49.277 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[DEBUG] 2022-05-19 01:44:50.336 [main] EventDAOImpl - Finding an event by id: 3
+[DEBUG] 2022-05-19 01:44:50.337 [main] EventDAOImpl - Event with id 3 successfully found 
+[INFO ] 2022-05-19 01:45:54.494 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-19 01:45:54.495 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:45:54.500 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: successfully inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:45:54.504 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-19 01:45:54.512 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:45:54.519 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-19 01:45:54.527 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-19 01:45:54.532 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-19 01:45:54.539 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-19 01:45:54.570 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImplTest during initialization
+[INFO ] 2022-05-19 01:45:54.571 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:45:54.572 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[INFO ] 2022-05-19 01:45:54.576 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImplTest during initialization
+[INFO ] 2022-05-19 01:45:54.578 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImplTest during initialization
+[INFO ] 2022-05-19 01:45:54.581 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImplTest during initialization
+[INFO ] 2022-05-19 01:45:54.602 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[INFO ] 2022-05-19 01:46:11.105 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-19 01:46:11.105 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:46:11.112 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: successfully inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:46:11.117 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-19 01:46:11.122 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:46:11.130 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-19 01:46:11.134 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-19 01:46:11.140 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-19 01:46:11.145 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-19 01:46:11.166 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImplTest during initialization
+[INFO ] 2022-05-19 01:46:11.167 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:46:11.169 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[INFO ] 2022-05-19 01:46:11.172 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImplTest during initialization
+[INFO ] 2022-05-19 01:46:11.175 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImplTest during initialization
+[INFO ] 2022-05-19 01:46:11.179 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImplTest during initialization
+[INFO ] 2022-05-19 01:46:11.196 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[INFO ] 2022-05-19 01:46:29.691 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-19 01:46:29.692 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:46:29.696 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: successfully inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:46:29.702 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-19 01:46:29.707 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:46:29.713 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-19 01:46:29.718 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-19 01:46:29.721 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-19 01:46:29.726 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-19 01:46:29.743 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImplTest during initialization
+[INFO ] 2022-05-19 01:46:29.744 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:46:29.745 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[INFO ] 2022-05-19 01:46:29.748 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImplTest during initialization
+[INFO ] 2022-05-19 01:46:29.750 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImplTest during initialization
+[INFO ] 2022-05-19 01:46:29.753 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImplTest during initialization
+[INFO ] 2022-05-19 01:46:29.772 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[DEBUG] 2022-05-19 01:46:30.975 [main] EventDAOImpl - Finding an event by id: 3
+[DEBUG] 2022-05-19 01:46:30.975 [main] EventDAOImpl - Event with id 3 successfully found 
+[INFO ] 2022-05-19 01:47:36.710 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-19 01:47:36.710 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:47:36.715 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: successfully inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:47:36.721 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-19 01:47:36.727 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:47:36.736 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-19 01:47:36.740 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-19 01:47:36.744 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-19 01:47:36.749 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-19 01:47:36.765 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImplTest during initialization
+[INFO ] 2022-05-19 01:47:36.766 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:47:36.767 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[INFO ] 2022-05-19 01:47:36.769 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImplTest during initialization
+[INFO ] 2022-05-19 01:47:36.771 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImplTest during initialization
+[INFO ] 2022-05-19 01:47:36.774 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImplTest during initialization
+[INFO ] 2022-05-19 01:47:36.792 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[DEBUG] 2022-05-19 01:47:37.830 [main] EventDAOImpl - Finding an event by id: 3
+[DEBUG] 2022-05-19 01:47:37.831 [main] EventDAOImpl - Event with id 3 successfully found 
+[INFO ] 2022-05-19 01:48:03.321 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-19 01:48:03.322 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:48:03.328 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: successfully inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:48:03.332 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-19 01:48:03.340 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:48:03.344 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-19 01:48:03.351 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-19 01:48:03.356 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-19 01:48:03.361 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-19 01:48:03.383 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImplTest during initialization
+[INFO ] 2022-05-19 01:48:03.384 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:48:03.386 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[INFO ] 2022-05-19 01:48:03.390 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImplTest during initialization
+[INFO ] 2022-05-19 01:48:03.392 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImplTest during initialization
+[INFO ] 2022-05-19 01:48:03.394 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImplTest during initialization
+[INFO ] 2022-05-19 01:48:03.413 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[INFO ] 2022-05-19 01:50:23.597 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-19 01:50:23.598 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:50:23.602 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: successfully inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:50:23.609 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-19 01:50:23.615 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:50:23.621 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-19 01:50:23.625 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-19 01:50:23.630 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-19 01:50:23.635 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-19 01:50:23.656 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImplTest during initialization
+[INFO ] 2022-05-19 01:50:23.657 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:50:23.661 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[INFO ] 2022-05-19 01:50:23.663 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImplTest during initialization
+[INFO ] 2022-05-19 01:50:23.665 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImplTest during initialization
+[INFO ] 2022-05-19 01:50:23.668 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImplTest during initialization
+[INFO ] 2022-05-19 01:50:23.687 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[INFO ] 2022-05-19 01:50:46.621 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-19 01:50:46.622 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:50:46.628 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: successfully inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:50:46.634 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-19 01:50:46.641 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:50:46.646 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-19 01:50:46.652 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-19 01:50:46.657 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-19 01:50:46.664 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-19 01:50:46.684 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImplTest during initialization
+[INFO ] 2022-05-19 01:50:46.684 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:50:46.686 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[INFO ] 2022-05-19 01:50:46.689 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImplTest during initialization
+[INFO ] 2022-05-19 01:50:46.692 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImplTest during initialization
+[INFO ] 2022-05-19 01:50:46.694 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImplTest during initialization
+[INFO ] 2022-05-19 01:50:46.714 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[DEBUG] 2022-05-19 01:50:59.667 [main] EventDAOImpl - Finding an event by id: 3
+[DEBUG] 2022-05-19 01:50:59.668 [main] EventDAOImpl - Event with id 3 successfully found 
+[INFO ] 2022-05-19 01:51:23.728 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.db.Storage during initialization
+[INFO ] 2022-05-19 01:51:23.728 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:51:23.735 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: successfully inserting prepared data in bean of type ua.epam.mishchenko.ticketbooking.db.Storage
+[INFO ] 2022-05-19 01:51:23.740 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImpl during initialization
+[INFO ] 2022-05-19 01:51:23.748 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:51:23.753 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl during initialization
+[INFO ] 2022-05-19 01:51:23.758 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImpl during initialization
+[INFO ] 2022-05-19 01:51:23.764 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImpl during initialization
+[INFO ] 2022-05-19 01:51:23.769 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl during initialization
+[INFO ] 2022-05-19 01:51:23.790 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.UserDAOImplTest during initialization
+[INFO ] 2022-05-19 01:51:23.790 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.TicketDAOImpl during initialization
+[INFO ] 2022-05-19 01:51:23.792 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[INFO ] 2022-05-19 01:51:23.794 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.UserServiceImplTest during initialization
+[INFO ] 2022-05-19 01:51:23.796 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.TicketServiceImplTest during initialization
+[INFO ] 2022-05-19 01:51:23.800 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImplTest during initialization
+[INFO ] 2022-05-19 01:51:23.821 [main] StorageBeanPostProcessor - StorageBeanPostProcessor: processing bean of type ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImplTest during initialization
+[DEBUG] 2022-05-19 01:51:29.309 [main] EventDAOImpl - Finding an event by id: 3
+[DEBUG] 2022-05-19 01:52:47.596 [main] EventDAOImpl - Event with id 3 successfully found 
+[DEBUG] 2022-05-19 01:53:09.859 [main] EventDAOImpl - Finding an event by id: 3
+[DEBUG] 2022-05-19 01:54:12.216 [main] EventDAOImpl - Finding an event by id: 3
+[DEBUG] 2022-05-19 02:11:59.575 [main] EventDAOImpl - Finding an event by id: 3
+[DEBUG] 2022-05-19 02:12:16.144 [main] EventDAOImpl - Finding an event by id: 3
+[DEBUG] 2022-05-19 02:13:13.463 [main] EventDAOImpl - Finding an event by id: 3
+[DEBUG] 2022-05-19 02:13:13.471 [main] EventDAOImpl - Event with id 3 successfully found 
+[DEBUG] 2022-05-19 02:14:00.605 [main] EventDAOImpl - Finding an event by id: 3
+[DEBUG] 2022-05-19 02:14:00.612 [main] EventDAOImpl - Event with id 3 successfully found 
+[DEBUG] 2022-05-19 02:14:19.908 [main] EventDAOImpl - Finding an event by id: 3
+[DEBUG] 2022-05-19 02:14:19.916 [main] EventDAOImpl - Event with id 3 successfully found 
+[DEBUG] 2022-05-19 02:14:44.359 [main] EventDAOImpl - Finding an event by id: 3
+[DEBUG] 2022-05-19 02:14:44.370 [main] EventDAOImpl - Event with id 3 successfully found 
+[DEBUG] 2022-05-19 02:16:35.595 [main] EventDAOImpl - Finding an event by id: 10
+[WARN ] 2022-05-19 02:16:35.603 [main] EventDAOImpl - Can not to find an event by id: 10
+[DEBUG] 2022-05-19 02:16:45.358 [main] EventDAOImpl - Finding an event by id: 3
+[DEBUG] 2022-05-19 02:16:45.372 [main] EventDAOImpl - Event with id 3 successfully found 
+[DEBUG] 2022-05-19 02:16:54.523 [main] EventDAOImpl - Finding an event by id: 10
+[WARN ] 2022-05-19 02:16:54.532 [main] EventDAOImpl - Can not to find an event by id: 10
+[DEBUG] 2022-05-19 02:19:10.128 [main] EventDAOImpl - Finding an event by id: 10
+[WARN ] 2022-05-19 02:19:10.136 [main] EventDAOImpl - Can not to find an event by id: 10
+[DEBUG] 2022-05-19 02:20:05.575 [main] EventDAOImpl - Finding an event by id: 10
+[WARN ] 2022-05-19 02:20:05.583 [main] EventDAOImpl - Can not to find an event by id: 10
+[DEBUG] 2022-05-19 16:23:23.894 [main] EventDAOImpl - Finding an event by id: 3
+[DEBUG] 2022-05-19 16:23:23.901 [main] EventDAOImpl - Event with id 3 successfully found 
+[DEBUG] 2022-05-19 16:23:55.509 [main] EventDAOImpl - Finding an event by id: 10
+[WARN ] 2022-05-19 16:23:55.516 [main] EventDAOImpl - Can not to find an event by id: 10
+[DEBUG] 2022-05-19 16:24:08.787 [main] EventDAOImpl - Finding an event by id: 10
+[WARN ] 2022-05-19 16:24:08.794 [main] EventDAOImpl - Can not to find an event by id: 10
+[DEBUG] 2022-05-19 16:30:45.993 [main] EventDAOImpl - Finding all events by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-19 16:30:46.002 [main] EventDAOImpl - All events successfully found by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-19 16:32:04.207 [main] EventDAOImpl - Finding all events by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-19 16:32:04.216 [main] EventDAOImpl - All events successfully found by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-19 16:32:58.759 [main] EventDAOImpl - Finding all events by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-19 16:32:58.768 [main] EventDAOImpl - All events successfully found by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-19 16:34:02.430 [main] EventDAOImpl - Finding all events by title 'not exists title' in the database using pagination
+[DEBUG] 2022-05-19 16:34:26.271 [main] EventDAOImpl - Finding all events by title 'not exists title' in the database using pagination
+[DEBUG] 2022-05-19 16:35:11.578 [main] EventDAOImpl - Finding all events by title 'not exists title' in the database using pagination
+[DEBUG] 2022-05-19 16:35:50.242 [main] EventDAOImpl - Finding all events by title 'First title' in the database using pagination
+[DEBUG] 2022-05-19 16:36:37.526 [main] EventDAOImpl - Finding all events by title 'not exists title' in the database using pagination
+[DEBUG] 2022-05-19 16:36:44.670 [main] EventDAOImpl - Finding all events by title 'First title' in the database using pagination
+[DEBUG] 2022-05-19 16:37:05.336 [main] EventDAOImpl - Finding all events by title 'First title' in the database using pagination
+[DEBUG] 2022-05-19 16:40:39.343 [main] EventDAOImpl - Finding all events by title 'First title' in the database using pagination
+[DEBUG] 2022-05-19 16:41:12.290 [main] EventDAOImpl - Finding all events by title 'First title' in the database using pagination
+[DEBUG] 2022-05-19 16:41:46.580 [main] EventDAOImpl - Finding all events by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-19 16:42:14.475 [main] EventDAOImpl - Finding all events by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-19 16:43:41.650 [main] EventDAOImpl - Finding all events for day 2022-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-19 16:43:41.660 [main] EventDAOImpl - All events successfully found for day '2022-05-15T21:00:00.000+0300' in the database using pagination
+[DEBUG] 2022-05-19 16:44:04.990 [main] EventDAOImpl - Finding all events for day 2022-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-19 16:44:05.000 [main] EventDAOImpl - All events successfully found for day '2022-05-15T21:00:00.000+0300' in the database using pagination
+[DEBUG] 2022-05-19 16:45:42.240 [main] EventDAOImpl - Finding all events for day 2000-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-19 16:47:57.908 [main] EventDAOImpl - Finding all events for day 2022-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-19 16:48:13.021 [main] EventDAOImpl - Finding all events for day 2022-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-19 16:49:14.649 [main] EventDAOImpl - Finding all events for day 2022-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-19 16:49:28.715 [main] EventDAOImpl - Finding all events for day 2022-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-19 16:51:06.501 [main] EventDAOImpl - Start inserting of the event: null
+[DEBUG] 2022-05-19 16:51:21.644 [main] EventDAOImpl - Start inserting of the event: null
+[DEBUG] 2022-05-19 16:52:11.009 [main] EventDAOImpl - Start inserting of the event: {'id' : 0, 'title' : 'Second event', 'date' : '15-05-2022 21:00'}
+[DEBUG] 2022-05-19 16:52:28.908 [main] EventDAOImpl - Start inserting of the event: {'id' : 0, 'title' : 'Second event', 'date' : '15-05-2022 21:00'}
+[DEBUG] 2022-05-19 16:52:48.531 [main] EventDAOImpl - Start inserting of the event: {'id' : 0, 'title' : 'Second event', 'date' : '15-05-2022 21:00'}
+[DEBUG] 2022-05-19 16:54:35.723 [main] EventDAOImpl - Start inserting of the event: {'id' : 0, 'title' : 'Test title', 'date' : '19-05-2022 16:54'}
+[DEBUG] 2022-05-19 16:54:35.735 [main] EventDAOImpl - Successfully insertion of the event: {'id' : 7, 'title' : 'Test title', 'date' : '19-05-2022 16:54'}
+[DEBUG] 2022-05-19 16:55:13.250 [main] EventDAOImpl - Finding an event by id: 1
+[DEBUG] 2022-05-19 16:55:13.258 [main] EventDAOImpl - Event with id 1 successfully found 
+[DEBUG] 2022-05-19 16:55:13.258 [main] EventDAOImpl - Start updating of the event: {'id' : 1, 'title' : 'Test title', 'date' : '18-05-2022 15:30'}
+[DEBUG] 2022-05-19 16:55:13.259 [main] EventDAOImpl - Successfully update of the event: {'id' : 1, 'title' : 'Test title', 'date' : '18-05-2022 15:30'}
+[DEBUG] 2022-05-19 16:56:46.055 [main] EventDAOImpl - Start inserting of the event: null
+[DEBUG] 2022-05-19 16:56:57.594 [main] EventDAOImpl - Start updating of the event: null
+[DEBUG] 2022-05-19 16:57:12.917 [main] EventDAOImpl - Start updating of the event: null
+[DEBUG] 2022-05-19 16:58:19.981 [main] EventDAOImpl - Start updating of the event: {'id' : 10, 'title' : 'Test User', 'date' : '19-05-2022 16:58'}
+[DEBUG] 2022-05-19 16:58:33.884 [main] EventDAOImpl - Start updating of the event: {'id' : 10, 'title' : 'Test User', 'date' : '19-05-2022 16:58'}
+[DEBUG] 2022-05-19 16:58:44.834 [main] EventDAOImpl - Start deleting of the event with id: 6
+[DEBUG] 2022-05-19 16:58:44.842 [main] EventDAOImpl - Successfully deletion of the event with id: 6
+[DEBUG] 2022-05-19 16:59:28.317 [main] EventDAOImpl - Start updating of the event: {'id' : 10, 'title' : 'Test User', 'date' : '19-05-2022 16:59'}
+[DEBUG] 2022-05-19 16:59:42.668 [main] EventDAOImpl - Start deleting of the event with id: 10
+[DEBUG] 2022-05-19 16:59:57.729 [main] EventDAOImpl - Start deleting of the event with id: 10
+[DEBUG] 2022-05-19 17:00:10.978 [main] EventDAOImpl - Start inserting of the event: {'id' : 0, 'title' : 'Second event', 'date' : '15-05-2022 21:00'}
+[DEBUG] 2022-05-19 17:00:10.989 [main] EventDAOImpl - Finding an event by id: 1
+[DEBUG] 2022-05-19 17:00:10.990 [main] EventDAOImpl - Event with id 1 successfully found 
+[DEBUG] 2022-05-19 17:00:10.990 [main] EventDAOImpl - Start updating of the event: {'id' : 1, 'title' : 'Test title', 'date' : '18-05-2022 15:30'}
+[DEBUG] 2022-05-19 17:00:10.991 [main] EventDAOImpl - Successfully update of the event: {'id' : 1, 'title' : 'Test title', 'date' : '18-05-2022 15:30'}
+[DEBUG] 2022-05-19 17:00:10.993 [main] EventDAOImpl - Start deleting of the event with id: 10
+[DEBUG] 2022-05-19 17:00:11.004 [main] EventDAOImpl - Finding an event by id: 10
+[WARN ] 2022-05-19 17:00:11.005 [main] EventDAOImpl - Can not to find an event by id: 10
+[DEBUG] 2022-05-19 17:00:11.007 [main] EventDAOImpl - Finding all events for day 2022-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-19 17:00:11.009 [main] EventDAOImpl - All events successfully found for day '2022-05-15T21:00:00.000+0300' in the database using pagination
+[DEBUG] 2022-05-19 17:00:11.011 [main] EventDAOImpl - Finding an event by id: 3
+[DEBUG] 2022-05-19 17:00:11.012 [main] EventDAOImpl - Event with id 3 successfully found 
+[DEBUG] 2022-05-19 17:00:11.013 [main] EventDAOImpl - Start inserting of the event: {'id' : 0, 'title' : 'Test title', 'date' : '19-05-2022 17:00'}
+[DEBUG] 2022-05-19 17:00:11.015 [main] EventDAOImpl - Successfully insertion of the event: {'id' : 7, 'title' : 'Test title', 'date' : '19-05-2022 17:00'}
+[DEBUG] 2022-05-19 17:00:11.017 [main] EventDAOImpl - Start updating of the event: null
+[DEBUG] 2022-05-19 17:00:11.020 [main] EventDAOImpl - Finding all events for day 2022-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-19 17:00:11.023 [main] EventDAOImpl - Start updating of the event: {'id' : 10, 'title' : 'Test User', 'date' : '19-05-2022 17:00'}
+[DEBUG] 2022-05-19 17:00:11.026 [main] EventDAOImpl - Start deleting of the event with id: 6
+[DEBUG] 2022-05-19 17:00:11.026 [main] EventDAOImpl - Successfully deletion of the event with id: 6
+[DEBUG] 2022-05-19 17:00:11.029 [main] EventDAOImpl - Finding all events by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-19 17:00:11.032 [main] EventDAOImpl - Finding all events for day 2000-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-19 17:00:11.035 [main] EventDAOImpl - Finding all events by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-19 17:00:11.039 [main] EventDAOImpl - Finding all events by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-19 17:00:11.045 [main] EventDAOImpl - All events successfully found by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-19 17:00:11.048 [main] EventDAOImpl - Start inserting of the event: null
+[DEBUG] 2022-05-19 17:00:11.052 [main] EventDAOImpl - Finding all events for day 2022-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-19 17:00:11.057 [main] EventDAOImpl - Finding all events by title 'not exists title' in the database using pagination
+[DEBUG] 2022-05-19 17:03:30.849 [main] TicketDAOImpl - Finding a ticket by id: 5
+[DEBUG] 2022-05-19 17:03:30.856 [main] TicketDAOImpl - The ticket with id 5 successfully found 
+[DEBUG] 2022-05-19 17:03:37.980 [main] TicketDAOImpl - Start deleting of the ticket with id: 10
+[DEBUG] 2022-05-19 17:03:37.991 [main] TicketDAOImpl - Finding all tickets in the database
+[DEBUG] 2022-05-19 17:03:37.995 [main] TicketDAOImpl - All tickets successfully found
+[DEBUG] 2022-05-19 17:03:37.997 [main] TicketDAOImpl - Finding a ticket by id: 10
+[WARN ] 2022-05-19 17:03:37.998 [main] TicketDAOImpl - Can not to find a ticket by id: 10
+[DEBUG] 2022-05-19 17:03:37.999 [main] TicketDAOImpl - Finding a ticket by id: 5
+[DEBUG] 2022-05-19 17:03:38.000 [main] TicketDAOImpl - The ticket with id 5 successfully found 
+[DEBUG] 2022-05-19 17:03:38.002 [main] TicketDAOImpl - Start deleting of the ticket with id: 6
+[DEBUG] 2022-05-19 17:03:38.002 [main] TicketDAOImpl - Successfully deletion of the ticket with id: 6
+[DEBUG] 2022-05-19 17:03:38.010 [main] TicketDAOImpl - Finding all booked tickets by event '[!!!EventImpl@63a5d002=>java.lang.NullPointerException:date must not be null!!!]' in the database using pagination
+[DEBUG] 2022-05-19 17:03:38.013 [main] TicketDAOImpl - All booked tickets successfully found by event [!!!EventImpl@63a5d002=>java.lang.NullPointerException:date must not be null!!!] in the database using pagination
+[DEBUG] 2022-05-19 17:03:38.017 [main] TicketDAOImpl - Start updating of the ticket: {'id' : 10, 'userId' : 10, 'eventId' : 10, 'place' : 100, 'category' : 'BAR'}
+[DEBUG] 2022-05-19 17:03:38.019 [main] TicketDAOImpl - Start inserting of the ticket: null
+[DEBUG] 2022-05-19 17:03:38.021 [main] TicketDAOImpl - Finding a ticket by id: 5
+[DEBUG] 2022-05-19 17:03:38.022 [main] TicketDAOImpl - The ticket with id 5 successfully found 
+[DEBUG] 2022-05-19 17:03:38.022 [main] TicketDAOImpl - Start updating of the ticket: {'id' : 5, 'userId' : 5, 'eventId' : 1, 'place' : 11, 'category' : 'STANDARD'}
+[DEBUG] 2022-05-19 17:03:38.022 [main] TicketDAOImpl - Successfully update of the ticket: {'id' : 5, 'userId' : 5, 'eventId' : 1, 'place' : 11, 'category' : 'STANDARD'}
+[DEBUG] 2022-05-19 17:03:38.026 [main] TicketDAOImpl - Finding all booked tickets by event '[!!!EventImpl@410e94e=>java.lang.NullPointerException:date must not be null!!!]' in the database using pagination
+[DEBUG] 2022-05-19 17:03:38.028 [main] TicketDAOImpl - Finding all booked tickets by user '{'id' : 1, 'name' : 'null', 'email' : 'null'}' in the database using pagination
+[DEBUG] 2022-05-19 17:03:38.030 [main] TicketDAOImpl - Start inserting of the ticket: {'id' : null, 'userId' : 5, 'eventId' : 4, 'place' : 20, 'category' : 'STANDARD'}
+[DEBUG] 2022-05-19 17:03:38.032 [main] TicketDAOImpl - Finding all booked tickets by event '[!!!EventImpl@6bfdb014=>java.lang.NullPointerException:date must not be null!!!]' in the database using pagination
+[DEBUG] 2022-05-19 17:03:38.054 [main] TicketDAOImpl - Finding all booked tickets by user '{'id' : 1, 'name' : 'null', 'email' : 'null'}' in the database using pagination
+[DEBUG] 2022-05-19 17:03:38.056 [main] TicketDAOImpl - All booked tickets successfully found by user {'id' : 1, 'name' : 'null', 'email' : 'null'} in the database using pagination
+[DEBUG] 2022-05-19 17:03:38.060 [main] TicketDAOImpl - Start updating of the ticket: null
+[DEBUG] 2022-05-19 17:03:38.064 [main] TicketDAOImpl - Start inserting of the ticket: {'id' : null, 'userId' : 5, 'eventId' : 3, 'place' : 20, 'category' : 'STANDARD'}
+[DEBUG] 2022-05-19 17:03:38.067 [main] TicketDAOImpl - Successfully insertion of the ticket: {'id' : 7, 'userId' : 5, 'eventId' : 3, 'place' : 20, 'category' : 'STANDARD'}
+[DEBUG] 2022-05-19 17:03:38.074 [main] TicketDAOImpl - Finding all booked tickets by user '{'id' : 100, 'name' : 'null', 'email' : 'null'}' in the database using pagination
+[DEBUG] 2022-05-19 17:04:45.245 [main] TicketDAOImpl - Finding all booked tickets by event '[!!!EventImpl@3f3c7bdb=>java.lang.NullPointerException:date must not be null!!!]' in the database using pagination
+[DEBUG] 2022-05-19 17:05:10.991 [main] TicketDAOImpl - Finding all booked tickets by event '[!!!EventImpl@2a3a299=>java.lang.NullPointerException:date must not be null!!!]' in the database using pagination
+[DEBUG] 2022-05-19 17:06:46.929 [main] TicketDAOImpl - Finding all booked tickets by event '[!!!EventImpl@3f3c7bdb=>java.lang.NullPointerException:date must not be null!!!]' in the database using pagination
+[DEBUG] 2022-05-19 17:08:53.373 [main] TicketDAOImpl - Finding all booked tickets by event '{'id' : 100, 'title' : 'null', 'date' : '19-05-2022 17:08'}' in the database using pagination
+[DEBUG] 2022-05-19 17:18:25.240 [main] TicketDAOImpl - Start deleting of the ticket with id: 10
+[DEBUG] 2022-05-19 17:18:25.271 [main] TicketDAOImpl - Finding all tickets in the database
+[DEBUG] 2022-05-19 17:18:25.275 [main] TicketDAOImpl - All tickets successfully found
+[DEBUG] 2022-05-19 17:18:25.277 [main] TicketDAOImpl - Finding a ticket by id: 10
+[WARN ] 2022-05-19 17:18:25.278 [main] TicketDAOImpl - Can not to find a ticket by id: 10
+[DEBUG] 2022-05-19 17:18:25.290 [main] TicketDAOImpl - Finding a ticket by id: 5
+[DEBUG] 2022-05-19 17:18:25.291 [main] TicketDAOImpl - The ticket with id 5 successfully found 
+[DEBUG] 2022-05-19 17:18:25.294 [main] TicketDAOImpl - Start deleting of the ticket with id: 6
+[DEBUG] 2022-05-19 17:18:25.294 [main] TicketDAOImpl - Successfully deletion of the ticket with id: 6
+[DEBUG] 2022-05-19 17:18:25.301 [main] TicketDAOImpl - Finding all booked tickets by event '[!!!EventImpl@5f2afe62=>java.lang.NullPointerException:date must not be null!!!]' in the database using pagination
+[DEBUG] 2022-05-19 17:18:25.303 [main] TicketDAOImpl - All booked tickets successfully found by event [!!!EventImpl@5f2afe62=>java.lang.NullPointerException:date must not be null!!!] in the database using pagination
+[DEBUG] 2022-05-19 17:18:25.307 [main] TicketDAOImpl - Start updating of the ticket: {'id' : 10, 'userId' : 10, 'eventId' : 10, 'place' : 100, 'category' : 'BAR'}
+[DEBUG] 2022-05-19 17:18:25.310 [main] TicketDAOImpl - Start inserting of the ticket: null
+[DEBUG] 2022-05-19 17:18:25.315 [main] TicketDAOImpl - Finding a ticket by id: 5
+[DEBUG] 2022-05-19 17:18:25.315 [main] TicketDAOImpl - The ticket with id 5 successfully found 
+[DEBUG] 2022-05-19 17:18:25.316 [main] TicketDAOImpl - Start updating of the ticket: {'id' : 5, 'userId' : 5, 'eventId' : 1, 'place' : 11, 'category' : 'STANDARD'}
+[DEBUG] 2022-05-19 17:18:25.316 [main] TicketDAOImpl - Successfully update of the ticket: {'id' : 5, 'userId' : 5, 'eventId' : 1, 'place' : 11, 'category' : 'STANDARD'}
+[DEBUG] 2022-05-19 17:18:25.320 [main] TicketDAOImpl - Finding all booked tickets by event '[!!!EventImpl@3e6fd0b9=>java.lang.NullPointerException:date must not be null!!!]' in the database using pagination
+[DEBUG] 2022-05-19 17:18:25.324 [main] TicketDAOImpl - Finding all booked tickets by user '{'id' : 1, 'name' : 'null', 'email' : 'null'}' in the database using pagination
+[DEBUG] 2022-05-19 17:18:25.327 [main] TicketDAOImpl - Start inserting of the ticket: {'id' : null, 'userId' : 5, 'eventId' : 4, 'place' : 20, 'category' : 'STANDARD'}
+[DEBUG] 2022-05-19 17:18:25.332 [main] TicketDAOImpl - Finding all booked tickets by event '{'id' : 100, 'title' : 'null', 'date' : '19-05-2022 17:18'}' in the database using pagination
+[DEBUG] 2022-05-19 17:18:25.337 [main] TicketDAOImpl - Finding all booked tickets by user '{'id' : 1, 'name' : 'null', 'email' : 'null'}' in the database using pagination
+[DEBUG] 2022-05-19 17:18:25.339 [main] TicketDAOImpl - All booked tickets successfully found by user {'id' : 1, 'name' : 'null', 'email' : 'null'} in the database using pagination
+[DEBUG] 2022-05-19 17:18:25.342 [main] TicketDAOImpl - Start updating of the ticket: null
+[DEBUG] 2022-05-19 17:18:25.348 [main] TicketDAOImpl - Start inserting of the ticket: {'id' : null, 'userId' : 5, 'eventId' : 3, 'place' : 20, 'category' : 'STANDARD'}
+[DEBUG] 2022-05-19 17:18:25.350 [main] TicketDAOImpl - Successfully insertion of the ticket: {'id' : 7, 'userId' : 5, 'eventId' : 3, 'place' : 20, 'category' : 'STANDARD'}
+[DEBUG] 2022-05-19 17:18:25.354 [main] TicketDAOImpl - Finding all booked tickets by user '{'id' : 100, 'name' : 'null', 'email' : 'null'}' in the database using pagination
+[DEBUG] 2022-05-19 17:19:01.346 [main] TicketDAOImpl - Finding a ticket by id: 10
+[WARN ] 2022-05-19 17:19:01.353 [main] TicketDAOImpl - Can not to find a ticket by id: 10
+[DEBUG] 2022-05-19 17:19:16.801 [main] TicketDAOImpl - Start deleting of the ticket with id: 10
+[DEBUG] 2022-05-19 17:19:16.821 [main] TicketDAOImpl - Finding all tickets in the database
+[DEBUG] 2022-05-19 17:19:16.824 [main] TicketDAOImpl - All tickets successfully found
+[DEBUG] 2022-05-19 17:19:16.827 [main] TicketDAOImpl - Finding a ticket by id: 10
+[WARN ] 2022-05-19 17:19:16.827 [main] TicketDAOImpl - Can not to find a ticket by id: 10
+[DEBUG] 2022-05-19 17:19:16.829 [main] TicketDAOImpl - Finding a ticket by id: 5
+[DEBUG] 2022-05-19 17:19:16.830 [main] TicketDAOImpl - The ticket with id 5 successfully found 
+[DEBUG] 2022-05-19 17:19:16.831 [main] TicketDAOImpl - Start deleting of the ticket with id: 6
+[DEBUG] 2022-05-19 17:19:16.832 [main] TicketDAOImpl - Successfully deletion of the ticket with id: 6
+[DEBUG] 2022-05-19 17:19:16.840 [main] TicketDAOImpl - Finding all booked tickets by event '[!!!EventImpl@43d455c9=>java.lang.NullPointerException:date must not be null!!!]' in the database using pagination
+[DEBUG] 2022-05-19 17:19:16.842 [main] TicketDAOImpl - All booked tickets successfully found by event [!!!EventImpl@43d455c9=>java.lang.NullPointerException:date must not be null!!!] in the database using pagination
+[DEBUG] 2022-05-19 17:19:16.845 [main] TicketDAOImpl - Start updating of the ticket: {'id' : 10, 'userId' : 10, 'eventId' : 10, 'place' : 100, 'category' : 'BAR'}
+[DEBUG] 2022-05-19 17:19:16.859 [main] TicketDAOImpl - Start inserting of the ticket: null
+[DEBUG] 2022-05-19 17:19:16.862 [main] TicketDAOImpl - Finding a ticket by id: 5
+[DEBUG] 2022-05-19 17:19:16.863 [main] TicketDAOImpl - The ticket with id 5 successfully found 
+[DEBUG] 2022-05-19 17:19:16.863 [main] TicketDAOImpl - Start updating of the ticket: {'id' : 5, 'userId' : 5, 'eventId' : 1, 'place' : 11, 'category' : 'STANDARD'}
+[DEBUG] 2022-05-19 17:19:16.864 [main] TicketDAOImpl - Successfully update of the ticket: {'id' : 5, 'userId' : 5, 'eventId' : 1, 'place' : 11, 'category' : 'STANDARD'}
+[DEBUG] 2022-05-19 17:19:16.866 [main] TicketDAOImpl - Finding all booked tickets by event '[!!!EventImpl@1a78dacd=>java.lang.NullPointerException:date must not be null!!!]' in the database using pagination
+[DEBUG] 2022-05-19 17:19:16.870 [main] TicketDAOImpl - Finding all booked tickets by user '{'id' : 1, 'name' : 'null', 'email' : 'null'}' in the database using pagination
+[DEBUG] 2022-05-19 17:19:16.875 [main] TicketDAOImpl - Start inserting of the ticket: {'id' : null, 'userId' : 5, 'eventId' : 4, 'place' : 20, 'category' : 'STANDARD'}
+[DEBUG] 2022-05-19 17:19:16.880 [main] TicketDAOImpl - Finding all booked tickets by event '{'id' : 100, 'title' : 'null', 'date' : '19-05-2022 17:19'}' in the database using pagination
+[DEBUG] 2022-05-19 17:19:16.884 [main] TicketDAOImpl - Finding all booked tickets by user '{'id' : 1, 'name' : 'null', 'email' : 'null'}' in the database using pagination
+[DEBUG] 2022-05-19 17:19:16.886 [main] TicketDAOImpl - All booked tickets successfully found by user {'id' : 1, 'name' : 'null', 'email' : 'null'} in the database using pagination
+[DEBUG] 2022-05-19 17:19:16.890 [main] TicketDAOImpl - Start updating of the ticket: null
+[DEBUG] 2022-05-19 17:19:16.896 [main] TicketDAOImpl - Start inserting of the ticket: {'id' : null, 'userId' : 5, 'eventId' : 3, 'place' : 20, 'category' : 'STANDARD'}
+[DEBUG] 2022-05-19 17:19:16.898 [main] TicketDAOImpl - Successfully insertion of the ticket: {'id' : 7, 'userId' : 5, 'eventId' : 3, 'place' : 20, 'category' : 'STANDARD'}
+[DEBUG] 2022-05-19 17:19:16.902 [main] TicketDAOImpl - Finding all booked tickets by user '{'id' : 100, 'name' : 'null', 'email' : 'null'}' in the database using pagination
+[DEBUG] 2022-05-19 17:21:21.283 [main] TicketDAOImpl - Start deleting of the ticket with id: 10
+[DEBUG] 2022-05-19 17:21:21.304 [main] TicketDAOImpl - Finding all tickets in the database
+[DEBUG] 2022-05-19 17:21:21.307 [main] TicketDAOImpl - All tickets successfully found
+[DEBUG] 2022-05-19 17:21:21.310 [main] TicketDAOImpl - Finding a ticket by id: 10
+[WARN ] 2022-05-19 17:21:21.310 [main] TicketDAOImpl - Can not to find a ticket by id: 10
+[DEBUG] 2022-05-19 17:21:21.312 [main] TicketDAOImpl - Finding a ticket by id: 5
+[DEBUG] 2022-05-19 17:21:21.313 [main] TicketDAOImpl - The ticket with id 5 successfully found 
+[DEBUG] 2022-05-19 17:21:21.315 [main] TicketDAOImpl - Start deleting of the ticket with id: 6
+[DEBUG] 2022-05-19 17:21:21.316 [main] TicketDAOImpl - Successfully deletion of the ticket with id: 6
+[DEBUG] 2022-05-19 17:21:21.324 [main] TicketDAOImpl - Finding all booked tickets by event '[!!!EventImpl@6974a715=>java.lang.NullPointerException:date must not be null!!!]' in the database using pagination
+[DEBUG] 2022-05-19 17:21:21.325 [main] TicketDAOImpl - All booked tickets successfully found by event [!!!EventImpl@6974a715=>java.lang.NullPointerException:date must not be null!!!] in the database using pagination
+[DEBUG] 2022-05-19 17:21:21.328 [main] TicketDAOImpl - Start updating of the ticket: {'id' : 10, 'userId' : 10, 'eventId' : 10, 'place' : 100, 'category' : 'BAR'}
+[DEBUG] 2022-05-19 17:21:21.331 [main] TicketDAOImpl - Start inserting of the ticket: null
+[DEBUG] 2022-05-19 17:21:21.333 [main] TicketDAOImpl - Finding a ticket by id: 5
+[DEBUG] 2022-05-19 17:21:21.333 [main] TicketDAOImpl - The ticket with id 5 successfully found 
+[DEBUG] 2022-05-19 17:21:21.334 [main] TicketDAOImpl - Start updating of the ticket: {'id' : 5, 'userId' : 5, 'eventId' : 1, 'place' : 11, 'category' : 'STANDARD'}
+[DEBUG] 2022-05-19 17:21:21.335 [main] TicketDAOImpl - Successfully update of the ticket: {'id' : 5, 'userId' : 5, 'eventId' : 1, 'place' : 11, 'category' : 'STANDARD'}
+[DEBUG] 2022-05-19 17:21:21.338 [main] TicketDAOImpl - Finding all booked tickets by event '[!!!EventImpl@4e6d7365=>java.lang.NullPointerException:date must not be null!!!]' in the database using pagination
+[DEBUG] 2022-05-19 17:21:21.341 [main] TicketDAOImpl - Finding all booked tickets by user '{'id' : 1, 'name' : 'null', 'email' : 'null'}' in the database using pagination
+[DEBUG] 2022-05-19 17:21:21.343 [main] TicketDAOImpl - Start inserting of the ticket: {'id' : null, 'userId' : 5, 'eventId' : 4, 'place' : 20, 'category' : 'STANDARD'}
+[DEBUG] 2022-05-19 17:21:21.347 [main] TicketDAOImpl - Finding all booked tickets by event '{'id' : 100, 'title' : 'null', 'date' : '19-05-2022 17:21'}' in the database using pagination
+[DEBUG] 2022-05-19 17:21:21.349 [main] TicketDAOImpl - Finding all booked tickets by user '{'id' : 1, 'name' : 'null', 'email' : 'null'}' in the database using pagination
+[DEBUG] 2022-05-19 17:21:21.351 [main] TicketDAOImpl - All booked tickets successfully found by user {'id' : 1, 'name' : 'null', 'email' : 'null'} in the database using pagination
+[DEBUG] 2022-05-19 17:21:21.355 [main] TicketDAOImpl - Start updating of the ticket: null
+[DEBUG] 2022-05-19 17:21:21.359 [main] TicketDAOImpl - Start inserting of the ticket: {'id' : null, 'userId' : 5, 'eventId' : 3, 'place' : 20, 'category' : 'STANDARD'}
+[DEBUG] 2022-05-19 17:21:21.366 [main] TicketDAOImpl - Successfully insertion of the ticket: {'id' : 7, 'userId' : 5, 'eventId' : 3, 'place' : 20, 'category' : 'STANDARD'}
+[DEBUG] 2022-05-19 17:21:21.372 [main] TicketDAOImpl - Finding all booked tickets by user '{'id' : 100, 'name' : 'null', 'email' : 'null'}' in the database using pagination
+[DEBUG] 2022-05-19 17:22:25.093 [main] UserDAOImpl - Start inserting of the user: null
+[DEBUG] 2022-05-19 17:22:25.099 [main] UserDAOImpl - Start deleting of the user with id: 2
+[DEBUG] 2022-05-19 17:22:25.103 [main] UserDAOImpl - Successfully deletion of the user with id: 2
+[DEBUG] 2022-05-19 17:22:25.107 [main] UserDAOImpl - Finding all users in the database
+[DEBUG] 2022-05-19 17:22:25.110 [main] UserDAOImpl - All users successfully found
+[DEBUG] 2022-05-19 17:22:25.111 [main] UserDAOImpl - Finding all users by name 'Alex' in the database using pagination
+[DEBUG] 2022-05-19 17:22:25.113 [main] UserDAOImpl - All users successfully found by name 'Alex' in the database using pagination
+[DEBUG] 2022-05-19 17:22:25.115 [main] UserDAOImpl - Finding a user by id: 10
+[WARN ] 2022-05-19 17:22:25.115 [main] UserDAOImpl - Can not to find a user by id: 10
+[DEBUG] 2022-05-19 17:22:25.117 [main] UserDAOImpl - Finding a user by email: notexists@gmail.com
+[WARN ] 2022-05-19 17:22:25.119 [main] UserDAOImpl - Can not to find a user by email: notexists@gmail.com
+[DEBUG] 2022-05-19 17:22:25.121 [main] UserDAOImpl - Finding a user by id: 3
+[DEBUG] 2022-05-19 17:22:25.122 [main] UserDAOImpl - The user with id 3 successfully found 
+[DEBUG] 2022-05-19 17:22:25.123 [main] UserDAOImpl - Finding all users by name 'Not exists' in the database using pagination
+[DEBUG] 2022-05-19 17:22:25.127 [main] UserDAOImpl - Start updating of the user: null
+[DEBUG] 2022-05-19 17:22:25.128 [main] UserDAOImpl - Finding all users by name 'Alex' in the database using pagination
+[DEBUG] 2022-05-19 17:22:25.130 [main] UserDAOImpl - Start deleting of the user with id: 10
+[DEBUG] 2022-05-19 17:22:25.132 [main] UserDAOImpl - Finding a user by email: max@gmail.com
+[DEBUG] 2022-05-19 17:22:25.134 [main] UserDAOImpl - The user with email max@gmail.com successfully found 
+[DEBUG] 2022-05-19 17:22:25.135 [main] UserDAOImpl - Start updating of the user: {'id' : 10, 'name' : 'Test User', 'email' : 'testuser@gmail.com'}
+[DEBUG] 2022-05-19 17:22:25.138 [main] UserDAOImpl - Start inserting of the user: {'id' : 0, 'name' : 'Max', 'email' : 'max@gmail.com'}
+[DEBUG] 2022-05-19 17:22:25.147 [main] UserDAOImpl - Finding a user by id: 1
+[DEBUG] 2022-05-19 17:22:25.149 [main] UserDAOImpl - The user with id 1 successfully found 
+[DEBUG] 2022-05-19 17:22:25.154 [main] UserDAOImpl - Start updating of the user: {'id' : 1, 'name' : 'Test name', 'email' : 'alan@gmail.com'}
+[DEBUG] 2022-05-19 17:22:25.156 [main] UserDAOImpl - Successfully update of the user: {'id' : 1, 'name' : 'Test name', 'email' : 'alan@gmail.com'}
+[DEBUG] 2022-05-19 17:22:25.160 [main] UserDAOImpl - Start inserting of the user: {'id' : 0, 'name' : 'Test User', 'email' : 'testuser@gmail.com'}
+[DEBUG] 2022-05-19 17:22:25.162 [main] UserDAOImpl - Successfully insertion of the user: {'id' : 7, 'name' : 'Test User', 'email' : 'testuser@gmail.com'}
+[DEBUG] 2022-05-19 18:12:41.437 [main] UserDAOImpl - Start inserting of the user: null
+[DEBUG] 2022-05-19 18:12:41.462 [main] UserDAOImpl - Start deleting of the user with id: 2
+[DEBUG] 2022-05-19 18:12:41.468 [main] UserDAOImpl - Successfully deletion of the user with id: 2
+[DEBUG] 2022-05-19 18:12:41.472 [main] UserDAOImpl - Finding all users in the database
+[DEBUG] 2022-05-19 18:12:41.475 [main] UserDAOImpl - All users successfully found
+[DEBUG] 2022-05-19 18:12:41.478 [main] UserDAOImpl - Finding all users by name 'Alex' in the database using pagination
+[DEBUG] 2022-05-19 18:12:41.480 [main] UserDAOImpl - All users successfully found by name 'Alex' in the database using pagination
+[DEBUG] 2022-05-19 18:12:41.482 [main] UserDAOImpl - Finding a user by id: 10
+[WARN ] 2022-05-19 18:12:41.482 [main] UserDAOImpl - Can not to find a user by id: 10
+[DEBUG] 2022-05-19 18:12:41.488 [main] UserDAOImpl - Finding a user by email: notexists@gmail.com
+[WARN ] 2022-05-19 18:12:41.489 [main] UserDAOImpl - Can not to find a user by email: notexists@gmail.com
+[DEBUG] 2022-05-19 18:12:41.494 [main] UserDAOImpl - Finding a user by id: 3
+[DEBUG] 2022-05-19 18:12:41.495 [main] UserDAOImpl - The user with id 3 successfully found 
+[DEBUG] 2022-05-19 18:12:41.499 [main] UserDAOImpl - Finding all users by name 'Not exists' in the database using pagination
+[DEBUG] 2022-05-19 18:12:41.503 [main] UserDAOImpl - Start updating of the user: null
+[DEBUG] 2022-05-19 18:12:41.508 [main] UserDAOImpl - Finding all users by name 'Alex' in the database using pagination
+[DEBUG] 2022-05-19 18:12:41.512 [main] UserDAOImpl - Start deleting of the user with id: 10
+[DEBUG] 2022-05-19 18:12:41.515 [main] UserDAOImpl - Finding a user by email: max@gmail.com
+[DEBUG] 2022-05-19 18:12:41.517 [main] UserDAOImpl - The user with email max@gmail.com successfully found 
+[DEBUG] 2022-05-19 18:12:41.520 [main] UserDAOImpl - Start updating of the user: {'id' : 10, 'name' : 'Test User', 'email' : 'testuser@gmail.com'}
+[DEBUG] 2022-05-19 18:12:41.529 [main] UserDAOImpl - Start inserting of the user: {'id' : 0, 'name' : 'Max', 'email' : 'max@gmail.com'}
+[DEBUG] 2022-05-19 18:12:41.549 [main] UserDAOImpl - Finding a user by id: 1
+[DEBUG] 2022-05-19 18:12:41.551 [main] UserDAOImpl - The user with id 1 successfully found 
+[DEBUG] 2022-05-19 18:12:41.559 [main] UserDAOImpl - Start updating of the user: {'id' : 1, 'name' : 'Test name', 'email' : 'alan@gmail.com'}
+[DEBUG] 2022-05-19 18:12:41.560 [main] UserDAOImpl - Successfully update of the user: {'id' : 1, 'name' : 'Test name', 'email' : 'alan@gmail.com'}
+[DEBUG] 2022-05-19 18:12:41.569 [main] UserDAOImpl - Start inserting of the user: {'id' : 0, 'name' : 'Test User', 'email' : 'testuser@gmail.com'}
+[DEBUG] 2022-05-19 18:12:41.572 [main] UserDAOImpl - Successfully insertion of the user: {'id' : 7, 'name' : 'Test User', 'email' : 'testuser@gmail.com'}
+[DEBUG] 2022-05-19 18:13:43.238 [main] UserDAOImpl - Start inserting of the user: null
+[DEBUG] 2022-05-19 18:13:43.252 [main] UserDAOImpl - Start deleting of the user with id: 2
+[DEBUG] 2022-05-19 18:13:43.256 [main] UserDAOImpl - Successfully deletion of the user with id: 2
+[DEBUG] 2022-05-19 18:13:43.260 [main] UserDAOImpl - Finding all users in the database
+[DEBUG] 2022-05-19 18:13:43.263 [main] UserDAOImpl - All users successfully found
+[DEBUG] 2022-05-19 18:13:43.264 [main] UserDAOImpl - Finding all users by name 'Alex' in the database using pagination
+[DEBUG] 2022-05-19 18:13:43.266 [main] UserDAOImpl - All users successfully found by name 'Alex' in the database using pagination
+[DEBUG] 2022-05-19 18:13:43.268 [main] UserDAOImpl - Finding a user by id: 10
+[WARN ] 2022-05-19 18:13:43.269 [main] UserDAOImpl - Can not to find a user by id: 10
+[DEBUG] 2022-05-19 18:13:43.272 [main] UserDAOImpl - Finding a user by email: notexists@gmail.com
+[WARN ] 2022-05-19 18:13:43.274 [main] UserDAOImpl - Can not to find a user by email: notexists@gmail.com
+[DEBUG] 2022-05-19 18:13:43.275 [main] UserDAOImpl - Finding a user by id: 3
+[DEBUG] 2022-05-19 18:13:43.276 [main] UserDAOImpl - The user with id 3 successfully found 
+[DEBUG] 2022-05-19 18:13:43.278 [main] UserDAOImpl - Finding all users by name 'Not exists' in the database using pagination
+[DEBUG] 2022-05-19 18:13:43.282 [main] UserDAOImpl - Start updating of the user: null
+[DEBUG] 2022-05-19 18:13:43.284 [main] UserDAOImpl - Finding all users by name 'Alex' in the database using pagination
+[DEBUG] 2022-05-19 18:13:43.287 [main] UserDAOImpl - Start deleting of the user with id: 10
+[DEBUG] 2022-05-19 18:13:43.289 [main] UserDAOImpl - Finding a user by email: max@gmail.com
+[DEBUG] 2022-05-19 18:13:43.290 [main] UserDAOImpl - The user with email max@gmail.com successfully found 
+[DEBUG] 2022-05-19 18:13:43.293 [main] UserDAOImpl - Start updating of the user: {'id' : 10, 'name' : 'Test User', 'email' : 'testuser@gmail.com'}
+[DEBUG] 2022-05-19 18:13:43.296 [main] UserDAOImpl - Start inserting of the user: {'id' : 0, 'name' : 'Max', 'email' : 'max@gmail.com'}
+[DEBUG] 2022-05-19 18:13:43.303 [main] UserDAOImpl - Finding a user by id: 1
+[DEBUG] 2022-05-19 18:13:43.307 [main] UserDAOImpl - The user with id 1 successfully found 
+[DEBUG] 2022-05-19 18:13:43.307 [main] UserDAOImpl - Start updating of the user: {'id' : 1, 'name' : 'Test name', 'email' : 'alan@gmail.com'}
+[DEBUG] 2022-05-19 18:13:43.308 [main] UserDAOImpl - Successfully update of the user: {'id' : 1, 'name' : 'Test name', 'email' : 'alan@gmail.com'}
+[DEBUG] 2022-05-19 18:13:43.314 [main] UserDAOImpl - Start inserting of the user: {'id' : 0, 'name' : 'Test User', 'email' : 'testuser@gmail.com'}
+[DEBUG] 2022-05-19 18:13:43.317 [main] UserDAOImpl - Successfully insertion of the user: {'id' : 7, 'name' : 'Test User', 'email' : 'testuser@gmail.com'}
+[DEBUG] 2022-05-19 18:16:25.491 [main] EventServiceImpl - Finding an event by id: 3
+[DEBUG] 2022-05-19 18:20:06.308 [main] EventServiceImpl - Finding an event by id: 3
+[DEBUG] 2022-05-19 18:21:54.928 [main] EventServiceImpl - Finding an event by id: 3
+[DEBUG] 2022-05-19 18:26:00.398 [main] EventServiceImpl - Finding an event by id: 3
+[DEBUG] 2022-05-19 18:26:00.407 [main] EventServiceImpl - Event with id 3 successfully found 

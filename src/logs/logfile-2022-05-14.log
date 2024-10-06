@@ -1,0 +1,17 @@
+[DEBUG] 2022-05-14 16:47:52.058 [main] EventDAOImpl - Finding all events by title in the database using pagination
+[DEBUG] 2022-05-14 16:48:30.221 [main] EventDAOImpl - Finding all events by title in the database using pagination
+[DEBUG] 2022-05-14 16:50:42.476 [main] EventDAOImpl - Finding all events by title 'Fourth title' in the database using pagination
+[DEBUG] 2022-05-14 16:50:42.482 [main] EventDAOImpl - All events successfully found by title 'Fourth title' in the database using pagination
+[DEBUG] 2022-05-14 16:51:03.212 [main] EventDAOImpl - Finding all events by title 'Fourth title' in the database using pagination
+[DEBUG] 2022-05-14 16:51:03.216 [main] EventDAOImpl - All events successfully found by title 'Fourth title' in the database using pagination
+[DEBUG] 2022-05-14 16:51:20.262 [main] EventDAOImpl - Finding all events by title 'Fourth title' in the database using pagination
+[DEBUG] 2022-05-14 16:51:20.266 [main] EventDAOImpl - All events successfully found by title 'Fourth title' in the database using pagination
+[DEBUG] 2022-05-14 16:59:54.750 [main] EventServiceImpl - Finding all events by title test with page size 1 and number of page 2
+[DEBUG] 2022-05-14 16:59:54.754 [main] EventDAOImpl - Finding all events by title 'test' in the database using pagination
+[DEBUG] 2022-05-14 17:01:23.072 [main] EventServiceImpl - Finding all events by title test with page size 1 and number of page 2
+[DEBUG] 2022-05-14 17:01:23.078 [main] EventDAOImpl - Finding all events by title 'test' in the database using pagination
+[WARN ] 2022-05-14 17:01:23.082 [main] EventServiceImpl - Can not to get an event by id test
+ua.epam.mishchenko.ticketbooking.exception.DbException: List of all events by title 'test' is empty.
+	at ua.epam.mishchenko.ticketbooking.dao.impl.EventDAOImpl.getEventsByTitle(EventDAOImpl.java:75) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl.getEventsByTitle(EventServiceImpl.java:48) ~[classes/:?]
+	at ua.epam.mishchenko.ticketbooking.service.impl.EventServiceImpl.main(EventServiceImpl.java:64) ~[classes/:?]

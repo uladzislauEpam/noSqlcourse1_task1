@@ -1,6 +1,7 @@
 package ua.epam.mishchenko.ticketbooking.model;
 
 import org.hibernate.annotations.CacheConcurrencyStrategy;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.*;
 import java.util.ArrayList;

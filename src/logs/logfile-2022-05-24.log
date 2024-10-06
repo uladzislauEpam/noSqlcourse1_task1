@@ -1,0 +1,27 @@
+[DEBUG] 2022-05-24 17:53:41.947 [main] EventDAOImpl - Start inserting of the event: {'id' : 0, 'title' : 'Second event', 'date' : '15-05-2022 21:00'}
+[DEBUG] 2022-05-24 17:53:41.971 [main] EventDAOImpl - Finding an event by id: 1
+[DEBUG] 2022-05-24 17:53:41.972 [main] EventDAOImpl - Event with id 1 successfully found 
+[DEBUG] 2022-05-24 17:53:41.973 [main] EventDAOImpl - Start updating of the event: {'id' : 1, 'title' : 'Test title', 'date' : '18-05-2022 15:30'}
+[DEBUG] 2022-05-24 17:53:41.974 [main] EventDAOImpl - Successfully update of the event: {'id' : 1, 'title' : 'Test title', 'date' : '18-05-2022 15:30'}
+[DEBUG] 2022-05-24 17:53:42.022 [main] EventDAOImpl - Start deleting of the event with id: 10
+[DEBUG] 2022-05-24 17:53:42.062 [main] EventDAOImpl - Finding an event by id: 10
+[WARN ] 2022-05-24 17:53:42.063 [main] EventDAOImpl - Can not to find an event by id: 10
+[DEBUG] 2022-05-24 17:53:42.076 [main] EventDAOImpl - Finding all events for day 2022-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-24 17:53:42.082 [main] EventDAOImpl - All events successfully found for day '2022-05-15T21:00:00.000+0300' in the database using pagination
+[DEBUG] 2022-05-24 17:53:42.117 [main] EventDAOImpl - Finding an event by id: 3
+[DEBUG] 2022-05-24 17:53:42.120 [main] EventDAOImpl - Event with id 3 successfully found 
+[DEBUG] 2022-05-24 17:53:42.141 [main] EventDAOImpl - Start inserting of the event: {'id' : 0, 'title' : 'Test title', 'date' : '24-05-2022 17:53'}
+[DEBUG] 2022-05-24 17:53:42.146 [main] EventDAOImpl - Successfully insertion of the event: {'id' : 7, 'title' : 'Test title', 'date' : '24-05-2022 17:53'}
+[DEBUG] 2022-05-24 17:53:42.155 [main] EventDAOImpl - Start updating of the event: null
+[DEBUG] 2022-05-24 17:53:42.172 [main] EventDAOImpl - Finding all events for day 2022-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-24 17:53:42.204 [main] EventDAOImpl - Start updating of the event: {'id' : 10, 'title' : 'Test User', 'date' : '24-05-2022 17:53'}
+[DEBUG] 2022-05-24 17:53:42.220 [main] EventDAOImpl - Start deleting of the event with id: 6
+[DEBUG] 2022-05-24 17:53:42.220 [main] EventDAOImpl - Successfully deletion of the event with id: 6
+[DEBUG] 2022-05-24 17:53:42.231 [main] EventDAOImpl - Finding all events by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-24 17:53:42.266 [main] EventDAOImpl - Finding all events for day 2000-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-24 17:53:42.300 [main] EventDAOImpl - Finding all events by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-24 17:53:42.310 [main] EventDAOImpl - Finding all events by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-24 17:53:42.312 [main] EventDAOImpl - All events successfully found by title 'Third event' in the database using pagination
+[DEBUG] 2022-05-24 17:53:42.325 [main] EventDAOImpl - Start inserting of the event: null
+[DEBUG] 2022-05-24 17:53:42.340 [main] EventDAOImpl - Finding all events for day 2022-05-15T21:00:00.000+0300 in the database using pagination
+[DEBUG] 2022-05-24 17:53:42.353 [main] EventDAOImpl - Finding all events by title 'not exists title' in the database using pagination

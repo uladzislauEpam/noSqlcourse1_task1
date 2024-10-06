@@ -1,4 +1,9 @@
 spring:
+  main:
+    allow-bean-definition-overriding: true
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/ticket_booking
   jpa:
     properties:
       hibernate:
@@ -18,7 +23,7 @@ spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/ticket_booking
     username: postgres
-    password: pass
+    password: postgres
     driver-class-name: org.postgresql.Driver
 
 logging:
